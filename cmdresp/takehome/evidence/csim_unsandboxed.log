@@ -1,0 +1,91 @@
+
+****** vitis-run v2026.1 (64-bit)
+  **** SW Build 6497934 on 2026-06-16-10:22:25
+  **** Start of session at: Wed Oct 28 13:44:46 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2026.1 6493734
+Sourcing Tcl script '/home/cp4523/hwdesign-work/cmdresp/takehome/run.tcl'
+INFO: [HLS 200-1510] Running: open_project qgemv_hls 
+WARNING: [HLS 200-2182] The 'qgemv_hls' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Opening solution '/home/cp4523/hwdesign-work/cmdresp/takehome/qgemv_hls'.
+INFO: [HLS 200-1510] Running: set_top qgemv 
+INFO: [HLS 200-1510] Running: add_files qgemv.cpp -cflags -I. 
+INFO: [HLS 200-10] Adding design file 'qgemv.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb tb.cpp -cflags -I. 
+INFO: [HLS 200-10] Adding test bench file 'tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 -flow_target vivado 
+INFO: [HLS 200-10] Opening solution '/home/cp4523/hwdesign-work/cmdresp/takehome/qgemv_hls/solution1'.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+WARNING: [HLS 200-2149] The 'flow_target' option is deprecated and will be removed in a future release. For 'vivado' value you may simply remove the option for equivalent behavior.
+WARNING: [HLS 200-484] The 'open_solution -flow_target' command is deprecated and will be removed in a future release.
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1510] Running: create_clock -period 8 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1510] Running: csim_design -argv /home/cp4523/hwdesign-work/cmdresp/takehome/data/cases.txt /home/cp4523/hwdesign-work/cmdresp/takehome/evidence/csim_comparison.csv 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../tb.cpp in debug mode
+   Compiling ../../../../qgemv.cpp in debug mode
+   Generating csim.exe
+identity_n1 PASS
+dot_bias PASS
+zero_n32 PASS
+saturation PASS
+ties_shift1 PASS
+nonties_shift2 PASS
+shift15 PASS
+mixed_n32_shift0 PASS
+mixed_n32_shift15 PASS
+persistence_replacement PASS
+end_only PASS
+header_undecodable PASS
+recovery_header_undecodable PASS
+header_decodable PASS
+recovery_header_decodable PASS
+header_missing_last PASS
+recovery_header_missing_last PASS
+header_padding PASS
+recovery_header_padding PASS
+header_bad_tx_padding PASS
+recovery_header_bad_tx_padding PASS
+unknown PASS
+recovery_unknown PASS
+reserved PASS
+recovery_reserved PASS
+config_shift16 PASS
+recovery_config_shift16 PASS
+config_shift_unsignedmax PASS
+recovery_config_shift_unsignedmax PASS
+process_zero PASS
+recovery_process_zero PASS
+process_33 PASS
+recovery_process_33 PASS
+process_unsignedmax PASS
+recovery_process_unsignedmax PASS
+no_config PASS
+recovery_no_config PASS
+config_early PASS
+recovery_config_early PASS
+config_missing PASS
+recovery_config_missing PASS
+process_early PASS
+recovery_process_early PASS
+process_missing PASS
+recovery_process_missing PASS
+end_param PASS
+recovery_end_param PASS
+reserved_end PASS
+recovery_reserved_end PASS
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 73
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:04; Allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 6.01 seconds. Total CPU system time: 0.84 seconds. Total elapsed time: 7.11 seconds; peak allocated memory: 286.570 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 9s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

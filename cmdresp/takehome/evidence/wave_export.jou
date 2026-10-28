@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2026.1 (64-bit)
+# SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+# IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+# SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+# Start of session at: Wed Oct 28 13:49:09 2026
+# Process ID         : 258541
+# Current directory  : /home/cp4523/hwdesign-work/cmdresp/takehome
+# Command line       : vivado -mode batch -source export_wave.tcl -log evidence/wave_export.log -journal evidence/wave_export.jou
+# Log file           : /home/cp4523/hwdesign-work/cmdresp/takehome/evidence/wave_export.log
+# Journal file       : /home/cp4523/hwdesign-work/cmdresp/takehome/evidence/wave_export.jou
+# Running On         : ecs03.poly.edu
+# Platform           : rhel
+# Operating System   : Red Hat Enterprise Linux 9.8 (Plow)
+# Processor Detail   : Intel(R) Xeon(R) Gold 6338N CPU @ 2.20GHz
+# CPU Frequency      : 800.000 MHz
+# CPU Physical cores : 64
+# CPU Logical cores  : 64
+# Host memory        : 1064171 MB
+# Swap memory        : 274877 MB
+# Total Virtual      : 1339049 MB
+# Available Virtual  : 1314285 MB
+#-----------------------------------------------------------
+source export_wave.tcl
+open_wave_config qgemv_hls/solution1/sim/verilog/qgemv.wcfg

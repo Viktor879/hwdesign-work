@@ -1,0 +1,9 @@
+PASS exactly seven required results.md sections: ['Interface', 'Design', 'Targets', 'Verification', 'Assumptions', 'Open Items', 'Run History']
+PASS prompt.md hash unchanged since recorded read
+PASS csim_comparison 49 activations
+PASS rtl_comparison 49 activations
+PASS rtl_protocol_checks 49 activations
+PASS four 32-vector RTL batches; each 86 cycles, 2.6875 cycles/vector
+PASS report source and evidence presence
+PASS synthesis contains exactly 64 multiplication instances: 24 fabric, 40 DSP multiply-add
+PASS final analysis rerun after adding synthesis instance-count check; no kernel/testbench changes after C/RTL verification

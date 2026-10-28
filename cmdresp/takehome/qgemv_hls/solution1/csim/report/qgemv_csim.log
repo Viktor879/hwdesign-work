@@ -1,0 +1,56 @@
+INFO: [SIM 2] *************** CSIM start ***************
+   Compiling ../../../../tb.cpp in debug mode
+   Compiling ../../../../qgemv.cpp in debug mode
+   Generating csim.exe
+identity_n1 PASS
+dot_bias PASS
+zero_n32 PASS
+saturation PASS
+ties_shift1 PASS
+nonties_shift2 PASS
+shift15 PASS
+mixed_n32_shift0 PASS
+mixed_n32_shift15 PASS
+persistence_replacement PASS
+end_only PASS
+header_undecodable PASS
+recovery_header_undecodable PASS
+header_decodable PASS
+recovery_header_decodable PASS
+header_missing_last PASS
+recovery_header_missing_last PASS
+header_padding PASS
+recovery_header_padding PASS
+header_bad_tx_padding PASS
+recovery_header_bad_tx_padding PASS
+unknown PASS
+recovery_unknown PASS
+reserved PASS
+recovery_reserved PASS
+config_shift16 PASS
+recovery_config_shift16 PASS
+config_shift_unsignedmax PASS
+recovery_config_shift_unsignedmax PASS
+process_zero PASS
+recovery_process_zero PASS
+process_33 PASS
+recovery_process_33 PASS
+process_unsignedmax PASS
+recovery_process_unsignedmax PASS
+no_config PASS
+recovery_no_config PASS
+config_early PASS
+recovery_config_early PASS
+config_missing PASS
+recovery_config_missing PASS
+process_early PASS
+recovery_process_early PASS
+process_missing PASS
+recovery_process_missing PASS
+end_param PASS
+recovery_end_param PASS
+reserved_end PASS
+recovery_reserved_end PASS
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 73
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

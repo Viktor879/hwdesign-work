@@ -1,0 +1,19 @@
+{
+  "clock_ns": 6.913,
+  "resources": {
+    "LUT": 7365,
+    "FF": 5199,
+    "DSP": 40,
+    "BRAM_18K": 4
+  },
+  "compute_II": 1,
+  "compute_depth": 11,
+  "multiply_instances": 64,
+  "fabric_multiply_instances": 24,
+  "dsp_multiply_add_instances": 40
+}
+PASS: exact accepted RTL input/output transfers, framing, counts, and C/RTL status comparisons for all 49 activations
+{'scenario': 'zero_n32', 'tx_id': 11, 'nvec': 32, 'first_input_cycle': 269, 'first_output_cycle': 323, 'last_output_cycle': 354, 'first_output_latency_inclusive': 55, 'batch_cycles_inclusive': 86, 'cycles_per_vector': 2.6875, 'vectors_per_second_at_8ns': 46511627.906976745, 'external_stalls': 0, 'target_status': 'PASS'}
+{'scenario': 'mixed_n32_shift0', 'tx_id': 11, 'nvec': 32, 'first_input_cycle': 843, 'first_output_cycle': 897, 'last_output_cycle': 928, 'first_output_latency_inclusive': 55, 'batch_cycles_inclusive': 86, 'cycles_per_vector': 2.6875, 'vectors_per_second_at_8ns': 46511627.906976745, 'external_stalls': 0, 'target_status': 'PASS'}
+{'scenario': 'mixed_n32_shift15', 'tx_id': 11, 'nvec': 32, 'first_input_cycle': 1007, 'first_output_cycle': 1061, 'last_output_cycle': 1092, 'first_output_latency_inclusive': 55, 'batch_cycles_inclusive': 86, 'cycles_per_vector': 2.6875, 'vectors_per_second_at_8ns': 46511627.906976745, 'external_stalls': 0, 'target_status': 'PASS'}
+{'scenario': 'persistence_replacement', 'tx_id': 22, 'nvec': 32, 'first_input_cycle': 1273, 'first_output_cycle': 1327, 'last_output_cycle': 1358, 'first_output_latency_inclusive': 55, 'batch_cycles_inclusive': 86, 'cycles_per_vector': 2.6875, 'vectors_per_second_at_8ns': 46511627.906976745, 'external_stalls': 0, 'target_status': 'PASS'}

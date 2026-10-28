@@ -1,0 +1,27 @@
+INFO: [Common 17-3922] A valid Vivado Design Suite ENTERPRISE license has been detected. Your current license is active and will expire on 31-jul-2027.
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Wed Oct 28 13:47:21 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source inspect_wave.tcl
+# open_wave_database qgemv_hls/solution1/sim/verilog/qgemv.wdb
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/AESL_inst_qgemv_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_1_fu_571/grp_qgemv_Pipeline_1_fu_571_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_compute_fu_678/grp_qgemv_Pipeline_compute_fu_678_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_header_fu_577/grp_qgemv_Pipeline_header_fu_577_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_load_rows_fu_609/grp_qgemv_Pipeline_load_rows_fu_609_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_receive_fu_593/grp_qgemv_Pipeline_receive_fu_593_activity
+open_wave_config qgemv_hls/solution1/sim/verilog/qgemv.wcfg
+# puts "WAVE_COMMANDS [info commands *vcd*]"
+WAVE_COMMANDS checkpoint_vcd log_vcd close_vcd current_vcd limit_vcd stop_vcd generate_vcd_ports open_vcd read_vcd flush_vcd start_vcd
+# puts "VALUE_COMMANDS [info commands *value*]"
+VALUE_COMMANDS get_value_database report_values find_next_wave_value set_value list_attribute_value list_property_value get_value
+# help get_value
+# help write_vcd
+ERROR: [Common 17-25] No topics matched 'write_vcd'
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 28 13:47:26 2026...

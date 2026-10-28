@@ -1,0 +1,458 @@
+INFO: [Common 17-3922] A valid Vivado Design Suite ENTERPRISE license has been detected. Your current license is active and will expire on 31-jul-2027.
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Wed Oct 28 13:47:52 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source inspect_wave.tcl
+# open_wave_database qgemv_hls/solution1/sim/verilog/qgemv.wdb
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/AESL_inst_qgemv_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_1_fu_571/grp_qgemv_Pipeline_1_fu_571_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_compute_fu_678/grp_qgemv_Pipeline_compute_fu_678_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_header_fu_577/grp_qgemv_Pipeline_header_fu_577_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_load_rows_fu_609/grp_qgemv_Pipeline_load_rows_fu_609_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_receive_fu_593/grp_qgemv_Pipeline_receive_fu_593_activity
+open_wave_config qgemv_hls/solution1/sim/verilog/qgemv.wcfg
+# foreach cmd {get_value report_values find_next_wave_value} {
+#  catch "$cmd -help" msg
+#  puts "$cmd HELP: $msg"
+# }
+get_value
+
+Description: 
+Get current value of the selected HDL object (variable, signal, wire, reg)
+
+Syntax: 
+get_value  [-radix <arg>] [-quiet] [-verbose] <hdl_object>
+
+Returns: 
+Returns a string representation of value of a hdl_object
+
+Usage: 
+  Name          Description
+  -------------------------
+  [-radix]      radix specifies the radix to use for printing the values of the
+                hdl_objects. Allowed values are: default, dec, bin, oct,hex, 
+                unsigned, ascii, smag
+  [-quiet]      Ignore command errors
+  [-verbose]    Suspend message limits during command execution
+  <hdl_object>  The hdl_object to retrieve the current value
+
+Categories: 
+Simulation
+
+Description:
+
+  Get the value of a single HDL object at the current simulation run time.
+
+  Note: Use the report_values command to return the values of more than one
+  HDL objects.
+
+  HDL objects include HDL signals, variables, or constants as defined in the
+  Verilog or VHDL test bench and source files. An HDL signal includes Verilog
+  wire or reg entities, and VHDL signals. Examples of HDL variables include
+  Verilog real, realtime, time, and event.
+
+  HDL constants include Verilog parameters and localparams, and VHDL generic
+  and constants. The HDL scope, or scope, is defined by a declarative region
+  in the HDL code such as a module, function, task, process, or begin-end
+  blocks in Verilog. VHDL scopes include entity/architecture definitions,
+  block, function, procedure, and process blocks.
+
+Arguments:
+
+  -radix <arg> - (Optional) Specifies the radix to use when returning the
+  value of the specified object. Allowed values are: default, dec, bin, oct,
+  hex, unsigned, ascii, or smag.
+
+  Note: The radix dec indicates a signed decimal. Specify the radix unsigned
+  when dealing with unsigned data.
+
+  -quiet - (Optional) Execute the command quietly, returning no messages from
+  the command. The command also returns TCL_OK regardless of any errors
+  encountered during execution.
+
+  Note: Any errors encountered on the command-line, while launching the
+  command, will be returned. Only errors occurring inside the command will be
+  trapped.
+
+  -verbose - (Optional) Temporarily override any message limits and return
+  all messages from this command.
+
+  Note: Message limits can be defined with the set_msg_config command.
+
+  <hdl_object> - (Required) Specifies a single HDL object to get the value
+  of. The object can be specified by name, or can be returned as an object
+  from the get_objects command.
+
+Examples:
+
+  The following example gets the value of the sysClk signal:
+
+    get_value sysClk  
+       Z 
+    
+
+  This example shows the difference between the bin, dec, and unsigned radix
+  on the value returned from the specified bus:
+
+    get_value -radix bin /test/bench_VStatus_pad_0_i[7:0]  
+       10100101  
+    get_value -radix unsigned /test/bench_VStatus_pad_0_i[7:0]  
+       165  
+    get_value -radix dec /test/bench_VStatus_pad_0_i[7:0]  
+       -91 
+    
+
+See Also:
+
+   *  current_time
+   *  get_objects
+   *  set_value
+   *  report_values
+get_value HELP: get_value
+
+Description: 
+Get current value of the selected HDL object (variable, signal, wire, reg)
+
+Syntax: 
+get_value  [-radix <arg>] [-quiet] [-verbose] <hdl_object>
+
+Returns: 
+Returns a string representation of value of a hdl_object
+
+Usage: 
+  Name          Description
+  -------------------------
+  [-radix]      radix specifies the radix to use for printing the values of the
+                hdl_objects. Allowed values are: default, dec, bin, oct,hex, 
+                unsigned, ascii, smag
+  [-quiet]      Ignore command errors
+  [-verbose]    Suspend message limits during command execution
+  <hdl_object>  The hdl_object to retrieve the current value
+
+Categories: 
+Simulation
+
+Description:
+
+  Get the value of a single HDL object at the current simulation run time.
+
+  Note: Use the report_values command to return the values of more than one
+  HDL objects.
+
+  HDL objects include HDL signals, variables, or constants as defined in the
+  Verilog or VHDL test bench and source files. An HDL signal includes Verilog
+  wire or reg entities, and VHDL signals. Examples of HDL variables include
+  Verilog real, realtime, time, and event.
+
+  HDL constants include Verilog parameters and localparams, and VHDL generic
+  and constants. The HDL scope, or scope, is defined by a declarative region
+  in the HDL code such as a module, function, task, process, or begin-end
+  blocks in Verilog. VHDL scopes include entity/architecture definitions,
+  block, function, procedure, and process blocks.
+
+Arguments:
+
+  -radix <arg> - (Optional) Specifies the radix to use when returning the
+  value of the specified object. Allowed values are: default, dec, bin, oct,
+  hex, unsigned, ascii, or smag.
+
+  Note: The radix dec indicates a signed decimal. Specify the radix unsigned
+  when dealing with unsigned data.
+
+  -quiet - (Optional) Execute the command quietly, returning no messages from
+  the command. The command also returns TCL_OK regardless of any errors
+  encountered during execution.
+
+  Note: Any errors encountered on the command-line, while launching the
+  command, will be returned. Only errors occurring inside the command will be
+  trapped.
+
+  -verbose - (Optional) Temporarily override any message limits and return
+  all messages from this command.
+
+  Note: Message limits can be defined with the set_msg_config command.
+
+  <hdl_object> - (Required) Specifies a single HDL object to get the value
+  of. The object can be specified by name, or can be returned as an object
+  from the get_objects command.
+
+Examples:
+
+  The following example gets the value of the sysClk signal:
+
+    get_value sysClk  
+       Z 
+    
+
+  This example shows the difference between the bin, dec, and unsigned radix
+  on the value returned from the specified bus:
+
+    get_value -radix bin /test/bench_VStatus_pad_0_i[7:0]  
+       10100101  
+    get_value -radix unsigned /test/bench_VStatus_pad_0_i[7:0]  
+       165  
+    get_value -radix dec /test/bench_VStatus_pad_0_i[7:0]  
+       -91 
+    
+
+See Also:
+
+   *  current_time
+   *  get_objects
+   *  set_value
+   *  report_values
+
+report_values
+
+Description: 
+Print current simulated value of given HDL objects (variable, signal, wire, or reg)
+
+Syntax: 
+report_values  [-radix <arg>] [-print_type] [-quiet] [-verbose]
+               [<hdl_objects>...]
+
+Returns: 
+Print name and value of HDL objects on the console in textual format
+
+Usage: 
+  Name             Description
+  ----------------------------
+  [-radix]         The radix specifies the radix to use for printing the values
+                   of the hdl_objects. Allowed values are: default, dec, bin, 
+                   oct, hex, unsigned, ascii, smag.
+  [-print_type]    Print type information for the object.
+  [-quiet]         Ignore command errors
+  [-verbose]       Suspend message limits during command execution
+  [<hdl_objects>]  The hdl_objects to report.  Default is report_objects 
+                   [get_objects *]
+
+Categories: 
+Simulation
+
+Description:
+
+  Report the values of the specified HDL objects at the current simulation
+  run time.
+
+  HDL objects include HDL signals, variables, or constants as defined in the
+  Verilog or VHDL test bench and source files. An HDL signal includes Verilog
+  wire or reg entities, and VHDL signals. Examples of HDL variables include
+  Verilog real, realtime, time, and event.
+
+  HDL constants include Verilog parameters and localparams, and VHDL generic
+  and constants. The HDL scope, or scope, is defined by a declarative region
+  in the HDL code such as a module, function, task, process, or begin-end
+  blocks in Verilog. VHDL scopes include entity/architecture definitions,
+  block, function, procedure, and process blocks.
+
+Arguments:
+
+  -radix <arg> - (Optional) Specifies the radix to use when returning the
+  value of the specified objects. Allowed values are: default, dec, bin, oct,
+  hex, unsigned, ascii, or smag.
+
+  Note: The radix dec indicates a signed decimal. Specify the radix unsigned
+  when dealing with unsigned data.
+
+  -quiet - (Optional) Execute the command quietly, returning no messages from
+  the command. The command also returns TCL_OK regardless of any errors
+  encountered during execution.
+
+  Note: Any errors encountered on the command-line, while launching the
+  command, will be returned. Only errors occurring inside the command will be
+  trapped.
+
+  -print_type - (Optional) Print type information for the object along with value(s).
+
+  -verbose - (Optional) Temporarily override any message limits and return
+  all messages from this command.
+
+  Note: Message limits can be defined with the set_msg_config command.
+
+  <hdl_objects> - (Required) Specifies one or more HDL objects to return the
+  values of. The object can be specified by name, or can be returned as an
+  object from the get_objects command.
+
+Examples:
+
+  The following example reports the value of all objects at the current time:
+
+    report_values [get_objects] 
+    
+
+  This example shows the difference between the bin, dec, and unsigned radix
+  on the value returned from the specified bus:
+
+    report_values -radix bin /test/bench_VStatus_pad_0_i[7:0]  
+      Declared: {/test/bench_VStatus_pad_0_i[7:0]} Verilog 10100101  
+    report_values -radix unsigned /test/bench_VStatus_pad_0_i[7:0]  
+      Declared: {/test/bench_VStatus_pad_0_i[7:0]} Verilog 165  
+    report_values -radix dec /test/bench_VStatus_pad_0_i[7:0]  
+      Declared: {/test/bench_VStatus_pad_0_i[7:0]} Verilog -91 
+    report_values r -print_type
+                  Variable: {r}    Verilog Type: Logic    1
+
+See Also:
+
+   *  current_time
+   *  get_objects
+   *  get_value
+   *  set_value
+report_values HELP: report_values
+
+Description: 
+Print current simulated value of given HDL objects (variable, signal, wire, or reg)
+
+Syntax: 
+report_values  [-radix <arg>] [-print_type] [-quiet] [-verbose]
+               [<hdl_objects>...]
+
+Returns: 
+Print name and value of HDL objects on the console in textual format
+
+Usage: 
+  Name             Description
+  ----------------------------
+  [-radix]         The radix specifies the radix to use for printing the values
+                   of the hdl_objects. Allowed values are: default, dec, bin, 
+                   oct, hex, unsigned, ascii, smag.
+  [-print_type]    Print type information for the object.
+  [-quiet]         Ignore command errors
+  [-verbose]       Suspend message limits during command execution
+  [<hdl_objects>]  The hdl_objects to report.  Default is report_objects 
+                   [get_objects *]
+
+Categories: 
+Simulation
+
+Description:
+
+  Report the values of the specified HDL objects at the current simulation
+  run time.
+
+  HDL objects include HDL signals, variables, or constants as defined in the
+  Verilog or VHDL test bench and source files. An HDL signal includes Verilog
+  wire or reg entities, and VHDL signals. Examples of HDL variables include
+  Verilog real, realtime, time, and event.
+
+  HDL constants include Verilog parameters and localparams, and VHDL generic
+  and constants. The HDL scope, or scope, is defined by a declarative region
+  in the HDL code such as a module, function, task, process, or begin-end
+  blocks in Verilog. VHDL scopes include entity/architecture definitions,
+  block, function, procedure, and process blocks.
+
+Arguments:
+
+  -radix <arg> - (Optional) Specifies the radix to use when returning the
+  value of the specified objects. Allowed values are: default, dec, bin, oct,
+  hex, unsigned, ascii, or smag.
+
+  Note: The radix dec indicates a signed decimal. Specify the radix unsigned
+  when dealing with unsigned data.
+
+  -quiet - (Optional) Execute the command quietly, returning no messages from
+  the command. The command also returns TCL_OK regardless of any errors
+  encountered during execution.
+
+  Note: Any errors encountered on the command-line, while launching the
+  command, will be returned. Only errors occurring inside the command will be
+  trapped.
+
+  -print_type - (Optional) Print type information for the object along with value(s).
+
+  -verbose - (Optional) Temporarily override any message limits and return
+  all messages from this command.
+
+  Note: Message limits can be defined with the set_msg_config command.
+
+  <hdl_objects> - (Required) Specifies one or more HDL objects to return the
+  values of. The object can be specified by name, or can be returned as an
+  object from the get_objects command.
+
+Examples:
+
+  The following example reports the value of all objects at the current time:
+
+    report_values [get_objects] 
+    
+
+  This example shows the difference between the bin, dec, and unsigned radix
+  on the value returned from the specified bus:
+
+    report_values -radix bin /test/bench_VStatus_pad_0_i[7:0]  
+      Declared: {/test/bench_VStatus_pad_0_i[7:0]} Verilog 10100101  
+    report_values -radix unsigned /test/bench_VStatus_pad_0_i[7:0]  
+      Declared: {/test/bench_VStatus_pad_0_i[7:0]} Verilog 165  
+    report_values -radix dec /test/bench_VStatus_pad_0_i[7:0]  
+      Declared: {/test/bench_VStatus_pad_0_i[7:0]} Verilog -91 
+    report_values r -print_type
+                  Variable: {r}    Verilog Type: Logic    1
+
+See Also:
+
+   *  current_time
+   *  get_objects
+   *  get_value
+   *  set_value
+
+find_next_wave_value
+
+Description: 
+Find next waveform value
+
+Syntax: 
+find_next_wave_value  [-wave <arg>] [-radix <arg>] [-match <arg>] [-time <arg>]
+                      [-quiet] [-verbose] [<pattern>]
+
+Usage: 
+  Name         Description
+  ------------------------
+  [-wave]      the wave object to search for value
+  [-radix]     radix specifies the radix to use for the value pattern. Allowed
+               values are: dec, bin, oct,hex, unsigned
+  [-match]     match specifies the match location to use for the value 
+               pattern. Allowed values are: exact, beginning, end
+  [-time]      starting time. The defaul time unit is ns.
+  [-quiet]     Ignore command errors
+  [-verbose]   Suspend message limits during command execution
+  [<pattern>]  value pattern to be search
+
+Categories: 
+Waveform
+find_next_wave_value HELP: find_next_wave_value
+
+Description: 
+Find next waveform value
+
+Syntax: 
+find_next_wave_value  [-wave <arg>] [-radix <arg>] [-match <arg>] [-time <arg>]
+                      [-quiet] [-verbose] [<pattern>]
+
+Usage: 
+  Name         Description
+  ------------------------
+  [-wave]      the wave object to search for value
+  [-radix]     radix specifies the radix to use for the value pattern. Allowed
+               values are: dec, bin, oct,hex, unsigned
+  [-match]     match specifies the match location to use for the value 
+               pattern. Allowed values are: exact, beginning, end
+  [-time]      starting time. The defaul time unit is ns.
+  [-quiet]     Ignore command errors
+  [-verbose]   Suspend message limits during command execution
+  [<pattern>]  value pattern to be search
+
+Categories: 
+Waveform
+
+# catch {get_value -radix unsigned -time 100ns /apatb_qgemv_top/AESL_inst_qgemv/in_r_TVALID} msg
+# puts "TEST_VALUE $msg"
+TEST_VALUE ERROR: [Common 17-170] Unknown option '-time', please type 'get_value -help' for usage info.
+
+# exit
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 28 13:47:56 2026...

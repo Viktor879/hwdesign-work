@@ -1,0 +1,32 @@
+scenario,tx_id,nvec,first_input_cycle,first_output_cycle,last_output_cycle,first_output_latency_inclusive,batch_cycles_inclusive,cycles_per_vector,vectors_per_second_at_8ns,external_stalls,target_status
+identity_n1,11,1,65,88,88,24,24,24.0,5208333.333333333,0,no target
+dot_bias,11,1,167,190,190,24,24,24.0,5208333.333333333,0,no target
+zero_n32,11,32,269,323,354,55,86,2.6875,46511627.906976745,0,PASS
+saturation,11,2,433,457,458,25,26,13.0,9615384.615384614,0,no target
+ties_shift1,11,1,537,560,560,24,24,24.0,5208333.333333333,0,no target
+nonties_shift2,11,1,639,662,662,24,24,24.0,5208333.333333333,0,no target
+shift15,11,1,741,764,764,24,24,24.0,5208333.333333333,0,no target
+mixed_n32_shift0,11,32,843,897,928,55,86,2.6875,46511627.906976745,0,PASS
+mixed_n32_shift15,11,32,1007,1061,1092,55,86,2.6875,46511627.906976745,0,PASS
+persistence_replacement,4294967294,1,1171,1194,1194,24,24,24.0,5208333.333333333,0,no target
+persistence_replacement,20,2,1202,1226,1227,25,26,13.0,9615384.615384614,0,no target
+persistence_replacement,22,32,1273,1327,1358,55,86,2.6875,46511627.906976745,0,PASS
+recovery_header_undecodable,11,1,1570,1593,1593,24,24,24.0,5208333.333333333,0,no target
+recovery_header_decodable,11,1,1773,1796,1796,24,24,24.0,5208333.333333333,0,no target
+recovery_header_missing_last,11,1,1908,1931,1931,24,24,24.0,5208333.333333333,0,no target
+recovery_header_padding,11,1,2043,2066,2066,24,24,24.0,5208333.333333333,0,no target
+recovery_header_bad_tx_padding,11,1,2246,2269,2269,24,24,24.0,5208333.333333333,0,no target
+recovery_unknown,11,1,2381,2404,2404,24,24,24.0,5208333.333333333,0,no target
+recovery_reserved,11,1,2516,2539,2539,24,24,24.0,5208333.333333333,0,no target
+recovery_config_shift16,11,1,2720,2743,2743,24,24,24.0,5208333.333333333,0,no target
+recovery_config_shift_unsignedmax,11,1,2855,2878,2878,24,24,24.0,5208333.333333333,0,no target
+recovery_process_zero,11,1,2990,3013,3013,24,24,24.0,5208333.333333333,0,no target
+recovery_process_33,11,1,3125,3148,3148,24,24,24.0,5208333.333333333,0,no target
+recovery_process_unsignedmax,11,1,3260,3283,3283,24,24,24.0,5208333.333333333,0,no target
+recovery_no_config,11,1,3395,3418,3418,24,24,24.0,5208333.333333333,0,no target
+recovery_config_early,11,1,3604,3627,3627,24,24,24.0,5208333.333333333,0,no target
+recovery_config_missing,11,1,3822,3845,3845,24,24,24.0,5208333.333333333,0,no target
+recovery_process_early,11,1,4031,4054,4054,24,24,24.0,5208333.333333333,0,no target
+recovery_process_missing,11,1,4240,4263,4263,24,24,24.0,5208333.333333333,0,no target
+recovery_end_param,11,1,4375,4398,4398,24,24,24.0,5208333.333333333,0,no target
+recovery_reserved_end,11,1,4510,4533,4533,24,24,24.0,5208333.333333333,0,no target
