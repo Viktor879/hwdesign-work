@@ -1,5 +1,6 @@
 """Untimed integer golden model, independent NumPy checks, and protocol fixtures."""
 import json
+import os
 from pathlib import Path
 import numpy as np
 
@@ -31,7 +32,9 @@ def process(xs,tx): return header(2,tx,len(xs))+[(pack(x,8),int(k==len(xs)-1)) f
 def response(w,b,s,xs,tx): return [(tx,1)]+[(pack(gemv(w,b,x,s),8),int(k==len(xs)-1)) for k,x in enumerate(xs)]
 
 def main():
-    Path('data').mkdir(exist_ok=True);Path('evidence').mkdir(exist_ok=True)
+    v3 = os.environ.get('QGEMV_VERSION') == 'v3'
+    data = Path('data/v3' if v3 else 'data'); evidence = Path('evidence/v3' if v3 else 'evidence')
+    data.mkdir(exist_ok=True); evidence.mkdir(exist_ok=True)
     eye=np.eye(8,dtype=int).tolist();zero=[[0]*8 for _ in range(8)];b0=[0]*8
     x=[10,-5,20,3,8,0,-12,7]
     checks=[]
@@ -51,7 +54,7 @@ def main():
             w=rng.integers(-128,128,(8,8)).tolist();b=rng.integers(-32768,32768,8).tolist();xx=rng.integers(-128,128,8).tolist()
             assert gemv(w,b,xx,s)==numpy_ref(w,b,xx,s)
     checks.append(dict(name='numpy_int64_3200_vectors_all_shifts',result='PASS'))
-    Path('evidence/python_checks.json').write_text(json.dumps(checks,indent=2))
+    (evidence/'python_checks.json').write_text(json.dumps(checks,indent=2))
     cases=[]
     def add(name,ins,outs,h=0,e=0,t=0):cases.append(dict(name=name,ins=ins,outs=outs,halted=h,error=e,tx_id=t))
     def valid(name,w,b,s,xs):
@@ -93,11 +96,45 @@ def main():
     failure('process_missing',header(2,137,1)+[(0,0)],7,137,True)
     failure('end_param',header(3,138,1),3,138)
     failure('reserved_end',header(3,0xffffffff),3,0xffffffff)
-    Path('data/cases.json').write_text(json.dumps(cases,indent=2))
-    with open('data/cases.txt','w') as f:
+    if v3:
+        for tx in [0, 7, 0xfffffffe]:
+            add(f'repeated_id_{tx}',
+                config(eye,b0,0,tx)+process([x],tx)+process([x,x],tx)
+                +config(zero,[3,-3,1,-1,5,-5,0,127],1,tx)+process([x],tx)+header(3,tx),
+                [(tx,1)]+response(eye,b0,0,[x],tx)+response(eye,b0,0,[x,x],tx)
+                +[(tx,1)]+response(zero,[3,-3,1,-1,5,-5,0,127],1,[x],tx))
+        # Check each header position, each enable independently, and missing low/high bytes.
+        for k in range(3):
+            for side in ['keep','strb']:
+                for mask in [0, 0xfe, 0x7f]:
+                    words = [(d,last,255,255) for d,last in header(2,201,1)[:k+1]]
+                    w = list(words[-1]); w[2 if side=='keep' else 3] = mask; words[-1] = tuple(w)
+                    failure(f'header_{k}_{side}_{mask}',words,1,201 if k==2 else 0xffffffff,True)
+        failure('unknown_reserved',header(99,0xffffffff,0xffffffff),2,0xffffffff)
+        failure('unknown_malformed',[(99,1)],1,0xffffffff)
+        failure('reserved_config_shift',header(1,0xffffffff,16),3,0xffffffff)
+        failure('reserved_process_33',header(2,0xffffffff,33),3,0xffffffff)
+        failure('end_param_after_results',header(3,202,0xffffffff),3,202,True)
+        # Receiver must ignore payload enables for CONFIG and PROCESS, even all zero.
+        ins = config(eye,b0,0,203)+process([x,x],203)+header(3,203)
+        ins = [(d,last,0,0) if 3<=i<13 or 16<=i<18 else (d,last,255,255)
+               for i,(d,last) in enumerate(ins)]
+        add('payload_enables_ignored',ins,[(203,1)]+response(eye,b0,0,[x,x],203))
+        for c in cases:
+            c['ins'] = [tuple(w) if len(w)==4 else (*w,255,255) for w in c['ins']]
+        # Preserve the historical scenarios as an exact prefix, apart from enable serialization.
+        old = json.loads(Path('data/cases.json').read_text())
+        for a,b in zip(old,cases):
+            assert a['name']==b['name'] and a['outs']==[list(w) for w in b['outs']]
+            assert a['ins']==[list(w[:2]) for w in b['ins']]
+        for i,c in enumerate(cases):
+            if c['error']:
+                assert cases[i+1]['name']=='recovery_'+c['name'] and cases[i+1]['error']==0
+    (data/'cases.json').write_text(json.dumps(cases,indent=2))
+    with open(data/'cases.txt','w') as f:
         f.write(str(len(cases))+'\n')
         for c in cases:
             f.write(f"{c['name']} {len(c['ins'])} {len(c['outs'])} {c['halted']} {c['error']} {c['tx_id']}\n")
-            for d,last in c['ins']+c['outs']: f.write(f'{d} {last}\n')
+            for w in c['ins']+c['outs']: f.write(' '.join(str(v) for v in w)+'\n')
     print(f'PASS independent hand checks, 3200 NumPy comparisons; {len(cases)} activation fixtures')
 if __name__=='__main__':main()

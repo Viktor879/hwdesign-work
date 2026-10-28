@@ -1,0 +1,12 @@
+Historical v2 trace checked against v3 sequencing: 61 FAIL boundaries; evidence/v3/baseline_sequencing.csv (historical finding)
+PASS authoritative v3 prompt unchanged at e380d18; evidence/v3/spec.sha256
+PASS original v2 fixtures, evidence and reports unchanged: 89 files; baseline_manifest.json
+PASS executed implementation/testbench/fixture identities; executed_sources.sha256
+PASS exactly seven required sections; Runs 1–10 preserved verbatim; v3/feedback provenance explicit
+PASS scenario rows, Python expectations, C/RTL comparisons and immediate recoveries: 99 activations
+Traceback (most recent call last):
+  File "/home/cp4523/hwdesign-work/cmdresp/takehome/audit_v3.py", line 129, in <module>
+    main()
+  File "/home/cp4523/hwdesign-work/cmdresp/takehome/audit_v3.py", line 91, in main
+    assert (ROOT/ref).exists(), ref
+AssertionError: evidence/v3/submission_manifest.sha256

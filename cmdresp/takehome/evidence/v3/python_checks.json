@@ -1,0 +1,198 @@
+[
+  {
+    "name": "identity",
+    "result": "PASS",
+    "observed": [
+      10,
+      -5,
+      20,
+      3,
+      8,
+      0,
+      -12,
+      7
+    ],
+    "expected": [
+      10,
+      -5,
+      20,
+      3,
+      8,
+      0,
+      -12,
+      7
+    ]
+  },
+  {
+    "name": "dot_bias",
+    "result": "PASS",
+    "observed": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+    ],
+    "expected": [
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8,
+      8
+    ]
+  },
+  {
+    "name": "zero",
+    "result": "PASS",
+    "observed": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "expected": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "name": "round_3_1",
+    "result": "PASS",
+    "observed": 2,
+    "expected": 2
+  },
+  {
+    "name": "round_-3_1",
+    "result": "PASS",
+    "observed": -2,
+    "expected": -2
+  },
+  {
+    "name": "round_1_2",
+    "result": "PASS",
+    "observed": 0,
+    "expected": 0
+  },
+  {
+    "name": "round_-1_2",
+    "result": "PASS",
+    "observed": 0,
+    "expected": 0
+  },
+  {
+    "name": "round_5_2",
+    "result": "PASS",
+    "observed": 1,
+    "expected": 1
+  },
+  {
+    "name": "round_-5_2",
+    "result": "PASS",
+    "observed": -1,
+    "expected": -1
+  },
+  {
+    "name": "round_16384_15",
+    "result": "PASS",
+    "observed": 1,
+    "expected": 1
+  },
+  {
+    "name": "round_-16384_15",
+    "result": "PASS",
+    "observed": -1,
+    "expected": -1
+  },
+  {
+    "name": "round_16383_15",
+    "result": "PASS",
+    "observed": 0,
+    "expected": 0
+  },
+  {
+    "name": "round_-16383_15",
+    "result": "PASS",
+    "observed": 0,
+    "expected": 0
+  },
+  {
+    "name": "round_32767_15",
+    "result": "PASS",
+    "observed": 1,
+    "expected": 1
+  },
+  {
+    "name": "round_-32768_15",
+    "result": "PASS",
+    "observed": -1,
+    "expected": -1
+  },
+  {
+    "name": "sat_positive",
+    "result": "PASS",
+    "observed": [
+      127,
+      127,
+      127,
+      127,
+      127,
+      127,
+      127,
+      127
+    ],
+    "expected": [
+      127,
+      127,
+      127,
+      127,
+      127,
+      127,
+      127,
+      127
+    ]
+  },
+  {
+    "name": "sat_negative",
+    "result": "PASS",
+    "observed": [
+      -128,
+      -128,
+      -128,
+      -128,
+      -128,
+      -128,
+      -128,
+      -128
+    ],
+    "expected": [
+      -128,
+      -128,
+      -128,
+      -128,
+      -128,
+      -128,
+      -128,
+      -128
+    ]
+  },
+  {
+    "name": "numpy_int64_3200_vectors_all_shifts",
+    "result": "PASS"
+  }
+]

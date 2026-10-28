@@ -1,0 +1,15 @@
+{
+  "clock_ns": 6.913,
+  "resources": {
+    "LUT": 7348,
+    "FF": 5444,
+    "DSP": 40,
+    "BRAM_18K": 4
+  },
+  "compute_II": 1,
+  "compute_depth": 11,
+  "multiply_instances": 64,
+  "fabric_multiply_instances": 24,
+  "dsp_multiply_add_instances": 40,
+  "receive_II": 1
+}

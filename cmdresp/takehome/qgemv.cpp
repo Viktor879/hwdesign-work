@@ -5,8 +5,8 @@ static Word word(ap_uint<64> data, bool last) {
 }
 void qgemv(hls::stream<Word>& in, hls::stream<Word>& out,
            unsigned &halted, unsigned &error, unsigned &tx_id) {
-#pragma HLS INTERFACE axis port=in
-#pragma HLS INTERFACE axis port=out
+#pragma HLS INTERFACE axis register_mode=off port=in
+#pragma HLS INTERFACE axis register_mode=off port=out
 #pragma HLS INTERFACE s_axilite port=halted bundle=control
 #pragma HLS INTERFACE s_axilite port=error bundle=control
 #pragma HLS INTERFACE s_axilite port=tx_id bundle=control

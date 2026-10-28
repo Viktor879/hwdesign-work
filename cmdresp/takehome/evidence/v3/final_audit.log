@@ -1,0 +1,11 @@
+Historical v2 trace checked against v3 sequencing: 61 FAIL boundaries; evidence/v3/baseline_sequencing.csv (historical finding)
+PASS authoritative v3 prompt unchanged at e380d18; evidence/v3/spec.sha256
+PASS original v2 fixtures, evidence and reports unchanged: 89 files; baseline_manifest.json
+PASS executed implementation/testbench/fixture identities; executed_sources.sha256
+PASS exactly seven required sections; Runs 1–10 preserved verbatim; v3/feedback provenance explicit
+PASS scenario rows, Python expectations, C/RTL comparisons and immediate recoveries: 99 activations
+PASS concrete evidence references exist and every scenario verdict cites comparison/trace evidence
+PASS strict clock and unchanged throughput targets; compute/receive II=1; 64 products; sequential acceptance: 178 commands
+PASS waveform sample window covers total RTL execution: 9166 cycles
+PASS submission candidate audit: 194 files; scratch builds and credentials excluded; submission_manifest.sha256
+PASS no commit/push performed; final working tree intentionally contains reviewable changes

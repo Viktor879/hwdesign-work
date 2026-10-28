@@ -1,0 +1,174 @@
+
+
+================================================================
+== Vitis HLS Report for 'qgemv_Pipeline_header'
+================================================================
+* Date:           Wed Oct 28 14:51:48 2026
+
+* Version:        2026.1 (Build 6493734 on Jun 16 2026)
+* Project:        qgemv_hls_v3
+* Solution:       solution1 (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg484-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  8.00 ns|  5.118 ns|     2.16 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+    |  Latency (cycles) |   Latency (absolute)  |  Interval |      Pipeline     |
+    |   min   |   max   |    min    |    max    | min | max |        Type       |
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+    |        3|        5|  24.000 ns|  40.000 ns|    0|    0|  loop pipeline stp|
+    +---------+---------+-----------+-----------+-----+-----+-------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+-------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  |  Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count | Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+-------+----------+
+        |- header  |        1|        3|         2|          1|        N/A|  0 ~ 3|       yes|
+        +----------+---------+---------+----------+-----------+-----------+-------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|    242|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     54|    -|
+|Register         |        -|    -|      74|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      74|    296|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |add_ln24_fu_166_p2         |         +|   0|  0|  10|           2|           1|
+    |and_ln27_fu_192_p2         |       and|   0|  0|   2|           1|           1|
+    |and_ln28_fu_226_p2         |       and|   0|  0|   8|           8|           8|
+    |ap_block_pp0_stage0_01001  |       and|   0|  0|   2|           1|           1|
+    |ap_condition_296           |       and|   0|  0|   2|           1|           1|
+    |icmp_ln24_fu_262_p2        |      icmp|   0|  0|  10|           2|           2|
+    |icmp_ln27_1_fu_186_p2      |      icmp|   0|  0|  15|           8|           2|
+    |icmp_ln27_2_fu_201_p2      |      icmp|   0|  0|  15|           8|           2|
+    |icmp_ln27_fu_180_p2        |      icmp|   0|  0|  39|          32|           1|
+    |icmp_ln28_1_fu_232_p2      |      icmp|   0|  0|  15|           8|           2|
+    |icmp_ln28_2_fu_238_p2      |      icmp|   0|  0|  11|           2|           3|
+    |icmp_ln28_fu_220_p2        |      icmp|   0|  0|  39|          32|           1|
+    |demorgan_fu_268_p2         |        or|   0|  0|   2|           1|           1|
+    |or_ln28_1_fu_256_p2        |        or|   0|  0|   2|           1|           1|
+    |or_ln28_fu_250_p2          |        or|   0|  0|   2|           1|           1|
+    |err_1_out                  |    select|   0|  0|  32|           1|           1|
+    |select_ln27_fu_207_p3      |    select|   0|  0|  32|           1|          32|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    |xor_ln28_fu_244_p2         |       xor|   0|  0|   2|           1|           1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0| 242|         112|          64|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |err_fu_66                |   9|          2|   32|         64|
+    |id_fu_74                 |   9|          2|   32|         64|
+    |in_r_TDATA_blk_n         |   9|          2|    1|          2|
+    |k_fu_70                  |   9|          2|    2|          4|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  54|         12|   69|        138|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------+----+----+-----+-----------+
+    |                    Name                   | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                  |   1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp0_done_reg  |   1|   0|    1|          0|
+    |ap_done_reg                                |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                    |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter2                    |   1|   0|    1|          0|
+    |ap_loop_exit_ready_pp0_iter2_reg           |   1|   0|    1|          0|
+    |demorgan_reg_332                           |   1|   0|    1|          0|
+    |err_fu_66                                  |  32|   0|   32|          0|
+    |id_fu_74                                   |  32|   0|   32|          0|
+    |k_fu_70                                    |   2|   0|    2|          0|
+    |or_ln28_1_reg_327                          |   1|   0|    1|          0|
+    +-------------------------------------------+----+----+-----+-----------+
+    |Total                                      |  74|   0|   74|          0|
+    +-------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------+-----+-----+------------+-----------------------+--------------+
+|     RTL Ports    | Dir | Bits|  Protocol  |     Source Object     |    C Type    |
++------------------+-----+-----+------------+-----------------------+--------------+
+|ap_clk            |   in|    1|  ap_ctrl_hs|  qgemv_Pipeline_header|  return value|
+|ap_rst            |   in|    1|  ap_ctrl_hs|  qgemv_Pipeline_header|  return value|
+|ap_start          |   in|    1|  ap_ctrl_hs|  qgemv_Pipeline_header|  return value|
+|ap_done           |  out|    1|  ap_ctrl_hs|  qgemv_Pipeline_header|  return value|
+|ap_idle           |  out|    1|  ap_ctrl_hs|  qgemv_Pipeline_header|  return value|
+|ap_ready          |  out|    1|  ap_ctrl_hs|  qgemv_Pipeline_header|  return value|
+|in_r_TVALID       |   in|    1|        axis|          in_r_V_data_V|       pointer|
+|in_r_TDATA        |   in|   64|        axis|          in_r_V_data_V|       pointer|
+|in_r_TREADY       |  out|    1|        axis|          in_r_V_last_V|       pointer|
+|in_r_TLAST        |   in|    1|        axis|          in_r_V_last_V|       pointer|
+|in_r_TKEEP        |   in|    8|        axis|          in_r_V_keep_V|       pointer|
+|in_r_TSTRB        |   in|    8|        axis|          in_r_V_strb_V|       pointer|
+|hdr               |  out|   32|      ap_vld|                    hdr|       pointer|
+|hdr_ap_vld        |  out|    1|      ap_vld|                    hdr|       pointer|
+|hdr_2             |  out|   32|      ap_vld|                  hdr_2|       pointer|
+|hdr_2_ap_vld      |  out|    1|      ap_vld|                  hdr_2|       pointer|
+|id_1_out          |  out|   32|      ap_vld|               id_1_out|       pointer|
+|id_1_out_ap_vld   |  out|    1|      ap_vld|               id_1_out|       pointer|
+|err_1_out         |  out|   32|      ap_vld|              err_1_out|       pointer|
+|err_1_out_ap_vld  |  out|    1|      ap_vld|              err_1_out|       pointer|
++------------------+-----+-----+------------+-----------------------+--------------+
+

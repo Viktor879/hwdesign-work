@@ -1,0 +1,43 @@
+INFO: [Common 17-3922] A valid Vivado Design Suite ENTERPRISE license has been detected. Your current license is active and will expire on 31-jul-2027.
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Wed Oct 28 14:53:18 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source export_wave.tcl
+# set v3 [expr {[info exists ::env(QGEMV_VERSION)] && $::env(QGEMV_VERSION) eq "v3"}]
+# set project [expr {$v3 ? "qgemv_hls_v3" : "qgemv_hls"}]
+# set evidence [expr {$v3 ? "evidence/v3" : "evidence"}]
+# open_wave_database qgemv_hls_v3/solution1/sim/verilog/qgemv.wdb
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/AESL_inst_qgemv_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_1_fu_569/grp_qgemv_Pipeline_1_fu_569_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_compute_fu_676/grp_qgemv_Pipeline_compute_fu_676_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_header_fu_575/grp_qgemv_Pipeline_header_fu_575_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_load_rows_fu_607/grp_qgemv_Pipeline_load_rows_fu_607_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_receive_fu_591/grp_qgemv_Pipeline_receive_fu_591_activity
+open_wave_config qgemv_hls_v3/solution1/sim/verilog/qgemv.wcfg
+# set base /apatb_qgemv_top/AESL_inst_qgemv
+# set f [open $evidence/rtl_cycles.csv w]
+# set columns "cycle,time_ps,in_valid,in_ready,in_data,in_last,out_valid,out_ready,out_data,out_last"
+# if {$v3} {append columns ",in_keep,in_strb,out_keep,out_strb"}
+# puts $f $columns
+# set signals {in_r_TVALID in_r_TREADY in_r_TDATA in_r_TLAST out_r_TVALID out_r_TREADY out_r_TDATA out_r_TLAST}
+# if {$v3} {lappend signals in_r_TKEEP in_r_TSTRB out_r_TKEEP out_r_TSTRB}
+# set cycles [expr {$v3 ? 15000 : 5000}]
+# for {set k 0} {$k < $cycles} {incr k} {
+#  set ps [expr {3999+8000*$k}]
+#  set row [list $k $ps]
+#  foreach signal $signals {
+#   lappend row [get_value_database -radix unsigned -time ${ps}ps $base/$signal]
+#  }
+#  puts $f [join $row ,]
+# }
+# close $f
+# puts "CLOCK_BEFORE [get_value_database -time 3999ps $base/ap_clk] CLOCK_AFTER [get_value_database -time 4001ps $base/ap_clk]"
+CLOCK_BEFORE 0 CLOCK_AFTER 1
+# exit
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 28 14:53:39 2026...
