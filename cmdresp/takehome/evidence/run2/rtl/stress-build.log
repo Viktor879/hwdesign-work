@@ -1,0 +1,71 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_buffer_RAM_AUTO_1R1W.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_buffer_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_control_s_axi.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_control_s_axi
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_flow_control_loop_pipe_sequential_init.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module qgemv_core_mac_muladd_8s_8s_16s_17_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module qgemv_core_mac_muladd_8s_8s_17s_17_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mul_8s_8s_16_1_1.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_mul_8s_8s_16_1_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_partselect_16ns_64ns_6ns_16_1_1.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_partselect_16ns_64ns_6ns_16_1_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_compute.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_qgemv_core_Pipeline_compute
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_header.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_qgemv_core_Pipeline_header
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_install_bias.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_qgemv_core_Pipeline_install_bias
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_install_rows.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_qgemv_core_Pipeline_install_rows
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_receive.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_qgemv_core_Pipeline_receive
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_regslice_both.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_regslice_both
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/qgemv.sv" into library work
+INFO: [VRFC 10-311] analyzing module qgemv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/rtl_suite.sv" into library work
+INFO: [VRFC 10-311] analyzing module rtl_suite
+Vivado Simulator v2026.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /eda/xilinx/2026.1/Vivado/bin/unwrapped/lnx64.o/xelab rtl_suite -L unisims_ver -s suite -debug typical 
+Multi-threading is on. Using 62 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.qgemv_core_buffer_RAM_AUTO_1R1W
+Compiling module work.qgemv_core_flow_control_loop_pip...
+Compiling module work.qgemv_core_qgemv_core_Pipeline_h...
+Compiling module work.qgemv_core_qgemv_core_Pipeline_r...
+Compiling module work.qgemv_core_qgemv_core_Pipeline_i...
+Compiling module work.qgemv_core_mul_8s_8s_16_1_1(NUM_...
+Compiling module work.qgemv_core_mac_muladd_8s_8s_16s_...
+Compiling module work.qgemv_core_mac_muladd_8s_8s_16s_...
+Compiling module work.qgemv_core_mac_muladd_8s_8s_17s_...
+Compiling module work.qgemv_core_mac_muladd_8s_8s_17s_...
+Compiling module work.qgemv_core_qgemv_core_Pipeline_c...
+Compiling module work.qgemv_core_partselect_16ns_64ns_...
+Compiling module work.qgemv_core_qgemv_core_Pipeline_i...
+Compiling module work.qgemv_core_control_s_axi
+Compiling module work.qgemv_core_regslice_both(DataWid...
+Compiling module work.qgemv_core_regslice_both
+Compiling module work.qgemv_core_regslice_both(DataWid...
+Compiling module work.qgemv_core
+Compiling module work.qgemv
+Compiling module work.rtl_suite
+Built simulation snapshot suite
+PASS RTL suite mode=4 activations=67 header_stalls=0 payload_stalls=0 tlast_stalls=0 after_valid_stalls=0
+PASS RTL suite mode=0 activations=67 header_stalls=575 payload_stalls=1600 tlast_stalls=935 after_valid_stalls=0
+PASS RTL suite mode=1 activations=67 header_stalls=690 payload_stalls=1920 tlast_stalls=1122 after_valid_stalls=435
+PASS RTL suite mode=2 activations=67 header_stalls=82 payload_stalls=280 tlast_stalls=118 after_valid_stalls=0
+PASS RTL suite mode=3 activations=67 header_stalls=130 payload_stalls=329 tlast_stalls=188 after_valid_stalls=0

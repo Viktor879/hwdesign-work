@@ -1,0 +1,941 @@
+
+****** vitis-run v2026.1 (64-bit)
+  **** SW Build 6497934 on 2026-06-16-10:22:25
+  **** Start of session at: Wed Oct 28 16:45:55 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2026.1 6493734
+Sourcing Tcl script '/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/scripts/run.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset build_hls 
+WARNING: [HLS 200-2182] The 'build_hls' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Opening and resetting solution '/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls'.
+INFO: [HLS 200-1510] Running: set_top qgemv 
+INFO: [HLS 200-1510] Running: add_files /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/kernel.cpp -cflags -Isrc 
+INFO: [HLS 200-10] Adding design file '/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/kernel.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/tb.cpp -cflags -Isrc 
+INFO: [HLS 200-10] Adding test bench file '/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Creating and opening solution '/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1'.
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1510] Running: create_clock -period 8 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1510] Running: csim_design -argv /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/fixtures/cases.txt 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../src/tb.cpp in debug mode
+   Compiling ../../../../src/kernel.cpp in debug mode
+   Generating csim.exe
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+PASS 67 activations
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 86
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:04; Allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1 seconds. CPU system time: 0.13 seconds. Elapsed time: 1.22 seconds; current allocated memory: 287.473 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'src/kernel.cpp' ... 
+WARNING: [HLS 207-7025] The register mode 'forward' is deprecated, using the register option instead. (src/kernel.cpp:8:51)
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 6.45 seconds. CPU system time: 0.8 seconds. Elapsed time: 7.79 seconds; current allocated memory: 290.047 MB.
+INFO: [HLS 200-1995] There were 2,788 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-131] Inlining function 'word(ap_uint<64>, bool)' into 'qgemv(hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, unsigned int&, unsigned int&, unsigned int&)' (src/kernel.cpp:69:12)
+INFO: [HLS 214-291] Loop 'rows' is marked as complete unroll implied by the pipeline pragma (src/kernel.cpp:56:8)
+INFO: [HLS 214-291] Loop 'cols' is marked as complete unroll implied by the pipeline pragma (src/kernel.cpp:59:8)
+INFO: [HLS 214-186] Unrolling loop 'rows' (src/kernel.cpp:56:8) in function 'qgemv' completely with a factor of 8 (src/kernel.cpp:6:0)
+INFO: [HLS 214-186] Unrolling loop 'cols' (src/kernel.cpp:59:8) in function 'qgemv' completely with a factor of 8 (src/kernel.cpp:6:0)
+INFO: [HLS 214-186] Unrolling loop 'install_cols' (src/kernel.cpp:44:16) in function 'qgemv' completely with a factor of 8 (src/kernel.cpp:6:0)
+INFO: [HLS 200-1995] There were 1,384 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,013 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 994 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 898 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-248] Applying array_partition to 'weights': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (src/kernel.cpp:13:12)
+INFO: [HLS 214-248] Applying array_partition to 'bias': Complete partitioning on dimension 1. (src/kernel.cpp:13:38)
+INFO: [HLS 200-1995] There were 1,026 instructions in the design after the 'Array/Struct' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,019 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,019 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,019 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,280 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,274 instructions in the design after the 'Performance' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-376] Pipelining loop< config_flush> at src/kernel.cpp:50:16 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< install_bias> at src/kernel.cpp:48:16 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< install_rows> at src/kernel.cpp:43:16 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< process_flush> at src/kernel.cpp:71:17 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< header> at src/kernel.cpp:20:10 due to pipeline_loops threshold
+INFO: [HLS 200-1995] There were 1,136 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-421] Partitioning small array 'hdr' due to array size. (src/kernel.cpp:19:11)
+INFO: [HLS 214-248] Applying array_partition to 'hdr': Complete partitioning on dimension 1. (src/kernel.cpp:19:11)
+INFO: [HLS 200-1995] There were 1,069 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,068 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,020 instructions in the design after the 'HW Transforms' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 974 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 4 seconds. CPU system time: 0.55 seconds. Elapsed time: 8.58 seconds; current allocated memory: 300.062 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 300.062 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.06 seconds; current allocated memory: 302.852 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] src/kernel.cpp:48: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 303.344 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (src/kernel.cpp:20:18) to (src/kernel.cpp:23:12) in function 'qgemv'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (src/kernel.cpp:54:1) to (src/kernel.cpp:53:11) in function 'qgemv'... converting 3 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (src/kernel.cpp:19:28) to (src/kernel.cpp:33:5) in function 'qgemv'... converting 9 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'qgemv' (src/kernel.cpp:6:16)...127 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.25 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.28 seconds; current allocated memory: 332.742 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.32 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.34 seconds; current allocated memory: 391.121 MB.
+INFO: [HLS 200-2255] Checking Wire Delay Status: Wire Delay Mode is ON
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'qgemv' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qgemv_Pipeline_header' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'header'.
+INFO: [HLS 200-2248] Failed to schedule the side effect node (axis read operation ('empty_26', src/kernel.cpp:21) on port 'in_r_V_data_V' (src/kernel.cpp:21)) after the loop exit node 'and' operation 1 bit ('or_cond804', src/kernel.cpp:20) in the pipeline's relaxed first 1 cycles with II = 2.
+WARNING: [HLS 200-878] Unable to schedule the loop exit test ('and' operation 1 bit ('or_cond804', src/kernel.cpp:20)) in the first pipeline iteration (II = 1 cycles).
+Resolution: For help on HLS 200-878 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-878.html
+INFO: [HLS 200-2198] Existing conflicting constraints include from 'and' operation 1 bit ('or_cond804', src/kernel.cpp:20) to for.body_ifconv with distance of -1 (conflict 1 of 2)
+INFO: [HLS 200-2198] Existing conflicting constraints include from for.body_ifconv to axis read operation ('empty_26', src/kernel.cpp:21) on port 'in_r_V_data_V' (src/kernel.cpp:21) with distance of 0 (conflict 2 of 2)
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 2, Depth = 2, loop 'header'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.06 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.12 seconds; current allocated memory: 391.121 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 391.121 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qgemv_Pipeline_receive' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'receive'.
+WARNING: [HLS 200-887] Cannot meet target clock period from basic block for.body75 to 'and' operation 1 bit ('or_cond805', src/kernel.cpp:36) (combination delay: 6.943 ns) to honor II or Latency constraint in region 'receive'.
+Resolution: For help on HLS 200-887 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-887.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'receive'
+WARNING: [HLS 200-871] Estimated clock period (6.943 ns) exceeds the target (target clock period: 8.000 ns, clock uncertainty: 2.160 ns, effective delay budget: 5.840 ns).
+Resolution: For help on HLS 200-871 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'qgemv_Pipeline_receive' consists of the following:
+	'store' operation ('k_write_ln36', src/kernel.cpp:36) of constant 0 6 bit on local variable 'k', src/kernel.cpp:36 [18]  (1.588 ns)
+	'load' operation 6 bit ('k', src/kernel.cpp:36) on local variable 'k', src/kernel.cpp:36 [23]  (0.000 ns)
+	'add' operation 6 bit ('add_ln36', src/kernel.cpp:36) [38]  (1.825 ns)
+	'icmp' operation 1 bit ('icmp_ln36', src/kernel.cpp:36) [40]  (2.552 ns)
+	'and' operation 1 bit ('or_cond805', src/kernel.cpp:36) [41]  (0.978 ns)
+
+Resolution: For help on HLS 200-1016 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 391.121 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 391.121 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qgemv_Pipeline_compute' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_61) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_60) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_59) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_57) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_56) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_53) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_52) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_51) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_49) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_48) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_45) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_44) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_43) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_41) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_40) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_37) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_36) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_35) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_33) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_32) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_29) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_28) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_27) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_24) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_21) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_20) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_12) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln61) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'compute'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 11, loop 'compute'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.24 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.26 seconds; current allocated memory: 393.031 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 393.031 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qgemv_Pipeline_process_flush' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'process_flush'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'process_flush'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 393.031 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 393.031 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qgemv_Pipeline_install_rows' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'install_rows'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'install_rows'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 393.031 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 393.031 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qgemv_Pipeline_install_bias' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'install_bias'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'install_bias'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 393.031 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 393.031 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qgemv_Pipeline_config_flush' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'config_flush'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'config_flush'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 393.031 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 393.031 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qgemv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.1 seconds; current allocated memory: 395.016 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 395.016 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'qgemv_Pipeline_header' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'qgemv_Pipeline_header'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 395.016 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'qgemv_Pipeline_receive' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'qgemv_Pipeline_receive' pipeline 'receive' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'qgemv_Pipeline_receive'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 396.746 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'qgemv_Pipeline_compute' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'qgemv_Pipeline_compute' pipeline 'compute' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_8s_16s_17_4_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_8s_17s_17_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8s_8s_16_1_1': 24 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'qgemv_Pipeline_compute'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.22 seconds; current allocated memory: 401.914 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'qgemv_Pipeline_process_flush' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'qgemv_Pipeline_process_flush/out_r_TDATA' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'qgemv_Pipeline_process_flush/out_r_TVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'qgemv_Pipeline_process_flush/out_r_TKEEP' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'qgemv_Pipeline_process_flush/out_r_TSTRB' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'qgemv_Pipeline_process_flush/out_r_TLAST' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'qgemv_Pipeline_process_flush'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.34 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.43 seconds; current allocated memory: 413.938 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'qgemv_Pipeline_install_rows' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'qgemv_Pipeline_install_rows' pipeline 'install_rows' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'qgemv_Pipeline_install_rows'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.09 seconds; current allocated memory: 413.938 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'qgemv_Pipeline_install_bias' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'qgemv_Pipeline_install_bias' pipeline 'install_bias' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'partselect_16ns_64ns_6ns_16_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'qgemv_Pipeline_install_bias'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.1 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 415.867 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'qgemv_Pipeline_config_flush' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'qgemv_Pipeline_config_flush/out_r_TDATA' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'qgemv_Pipeline_config_flush/out_r_TVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'qgemv_Pipeline_config_flush/out_r_TKEEP' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'qgemv_Pipeline_config_flush/out_r_TSTRB' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'qgemv_Pipeline_config_flush/out_r_TLAST' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'qgemv_Pipeline_config_flush'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.1 seconds; current allocated memory: 416.996 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'qgemv' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv/in_r_V_data_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv/in_r_V_keep_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv/in_r_V_strb_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv/in_r_V_last_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv/out_r_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv/out_r_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv/out_r_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv/out_r_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv/halted' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv/error' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv/tx_id' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'qgemv' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'halted', 'error', 'tx_id' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'sparsemux_11_4_32_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'qgemv'.
+INFO: [RTMG 210-278] Implementing memory 'qgemv_buffer_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.14 seconds; current allocated memory: 418.098 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.54 seconds. CPU system time: 0.06 seconds. Elapsed time: 0.86 seconds; current allocated memory: 426.582 MB.
+INFO: [HLS 200-2225] Wrote inferred directives to file /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.22 seconds. CPU system time: 0.11 seconds. Elapsed time: 1.43 seconds; current allocated memory: 435.648 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for qgemv.
+INFO: [VLOG 209-307] Generating Verilog RTL for qgemv.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 144.03 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:22; Allocated memory: 148.176 MB.
+INFO: [HLS 200-1510] Running: cosim_design -argv /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/fixtures/cases.txt -trace_level port -tool xsim 
+WARNING: [COSIM 212-384] This design has internal non-blocking FIFO/Stream accesses, which may result in mismatches or simulation hanging.
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using "/eda/xilinx/2026.1/Vitis/lnx64/tools/clang-16/bin/clang++"
+   Compiling apatb_qgemv.cpp
+   Compiling apatb_qgemv_util.cpp
+   Compiling kernel.cpp_pre.cpp
+   Compiling tb.cpp_pre.cpp
+   Compiling apatb_qgemv_ir.ll
+   Generating cosim.tv.exe
+INFO: [COSIM 212-302] Starting C TB testing ... 
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+PASS 67 activations
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 86
+INFO: [COSIM 212-333] Generating C post check test bench ...
+This_is_a_noneblocking_read_case
+INFO: [COSIM 212-12] Generating RTL test bench ...
+find not read role field
+find not read role field
+find not read role field
+INFO: [COSIM 212-1] *** C/RTL co-simulation file generation completed. ***
+INFO: [COSIM 212-323] Starting verilog simulation. 
+INFO: [COSIM 212-15] Starting XSIM ...
+Vivado Simulator v2026.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /eda/xilinx/2026.1/Vivado/bin/unwrapped/lnx64.o/xelab xil_defaultlib.apatb_qgemv_top xil_defaultlib.glbl -Oenable_linking_all_libraries -prj qgemv.prj -L smartconnect_v1_0 -L axi_protocol_checker_v1_1_12 -L axi_protocol_checker_v1_1_13 -L axis_protocol_checker_v1_1_11 -L axis_protocol_checker_v1_1_12 -L xil_defaultlib -L unisims_ver -L xpm -L floating_point_v7_1_22 -L floating_point_v7_0_27 --lib ieee_proposed=./ieee_proposed -L uvm -relax -i ./svr -i ./svtb -i ./file_agent -i ./qgemv_subsystem -s qgemv -debug all 
+Multi-threading is on. Using 62 slave threads.
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/qgemv_qgemv_Pipeline_process_flush.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qgemv_qgemv_Pipeline_process_flush
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/qgemv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qgemv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/AESL_deadlock_idx0_monitor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_idx0_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/qgemv_qgemv_Pipeline_install_bias.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qgemv_qgemv_Pipeline_install_bias
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/qgemv_qgemv_Pipeline_install_rows.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qgemv_qgemv_Pipeline_install_rows
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/qgemv_partselect_16ns_64ns_6ns_16_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qgemv_partselect_16ns_64ns_6ns_16_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/qgemv_sparsemux_11_4_32_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qgemv_sparsemux_11_4_32_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/AESL_deadlock_kernel_monitor_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module AESL_deadlock_kernel_monitor_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/qgemv_buffer_RAM_AUTO_1R1W.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qgemv_buffer_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/qgemv_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qgemv_regslice_both
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/qgemv_qgemv_Pipeline_compute.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qgemv_qgemv_Pipeline_compute
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/qgemv_control_s_axi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qgemv_control_s_axi
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/qgemv_qgemv_Pipeline_config_flush.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qgemv_qgemv_Pipeline_config_flush
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/qgemv_mac_muladd_8s_8s_16s_17_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qgemv_mac_muladd_8s_8s_16s_17_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module qgemv_mac_muladd_8s_8s_16s_17_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/qgemv.autotb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module apatb_qgemv_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/qgemv_mac_muladd_8s_8s_17s_17_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qgemv_mac_muladd_8s_8s_17s_17_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module qgemv_mac_muladd_8s_8s_17s_17_4_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/qgemv_mul_8s_8s_16_1_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qgemv_mul_8s_8s_16_1_1
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/qgemv_qgemv_Pipeline_header.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qgemv_qgemv_Pipeline_header
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/qgemv_qgemv_Pipeline_receive.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qgemv_qgemv_Pipeline_receive
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/qgemv_flow_control_loop_pipe_sequential_init.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module qgemv_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/dataflow_monitor.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dataflow_monitor
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/file_agent/file_agent_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/svr/svr_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/svr/svr_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/axivip/axi_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/axivip/axi_if.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/qgemv_subsystem/qgemv_subsystem_pkg.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/svtb/misc_interface.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_hls/solution1/sim/verilog/svtb/sv_module_top.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sv_module_top
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_sv_module_top_sv
+Compiling package uvm.uvm_pkg
+Compiling package std.std
+Compiling package xil_defaultlib.svr_pkg
+Compiling package xil_defaultlib.file_agent_pkg
+Compiling package xil_defaultlib.axi_pkg
+Compiling package xil_defaultlib.qgemv_subsystem_pkg
+Compiling package xil_defaultlib.$unit_dataflow_monitor_sv
+Compiling module xil_defaultlib.qgemv_buffer_RAM_AUTO_1R1W
+Compiling module xil_defaultlib.qgemv_flow_control_loop_pipe_seq...
+Compiling module xil_defaultlib.qgemv_qgemv_Pipeline_header
+Compiling module xil_defaultlib.qgemv_qgemv_Pipeline_receive
+Compiling module xil_defaultlib.qgemv_qgemv_Pipeline_install_row...
+Compiling module xil_defaultlib.qgemv_mul_8s_8s_16_1_1(NUM_STAGE...
+Compiling module xil_defaultlib.qgemv_mac_muladd_8s_8s_16s_17_4_...
+Compiling module xil_defaultlib.qgemv_mac_muladd_8s_8s_16s_17_4_...
+Compiling module xil_defaultlib.qgemv_mac_muladd_8s_8s_17s_17_4_...
+Compiling module xil_defaultlib.qgemv_mac_muladd_8s_8s_17s_17_4_...
+Compiling module xil_defaultlib.qgemv_qgemv_Pipeline_compute
+Compiling module xil_defaultlib.qgemv_qgemv_Pipeline_process_flu...
+Compiling module xil_defaultlib.qgemv_partselect_16ns_64ns_6ns_1...
+Compiling module xil_defaultlib.qgemv_qgemv_Pipeline_install_bia...
+Compiling module xil_defaultlib.qgemv_qgemv_Pipeline_config_flus...
+Compiling module xil_defaultlib.qgemv_control_s_axi
+Compiling module xil_defaultlib.qgemv_sparsemux_11_4_32_1_1(din0...
+Compiling module xil_defaultlib.qgemv_regslice_both(DataWidth=64...
+Compiling module xil_defaultlib.qgemv_regslice_both
+Compiling module xil_defaultlib.qgemv_regslice_both(DataWidth=1)
+Compiling module xil_defaultlib.qgemv
+Compiling module xil_defaultlib.misc_interface_default
+Compiling module xil_defaultlib.svr_if(DATA_WIDTH=81)
+Compiling module xil_defaultlib.axi_if(ADDR_WIDTH=6,STRB_WIDTH=4...
+Compiling module xil_defaultlib.sv_module_top
+Compiling module xil_defaultlib.AESL_deadlock_idx0_monitor
+Compiling module xil_defaultlib.AESL_deadlock_kernel_monitor_top...
+Compiling module xil_defaultlib.nodf_module_intf_default
+Compiling module xil_defaultlib.seq_loop_intf(FSM_WIDTH=30)
+Compiling module xil_defaultlib.upc_loop_intf_default
+Compiling module xil_defaultlib.upc_loop_intf(FSM_WIDTH=1)
+Compiling module xil_defaultlib.dataflow_monitor_1
+Compiling module xil_defaultlib.apatb_qgemv_top
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot qgemv
+
+****** xsim v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Wed Oct 28 16:47:05 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/qgemv/xsim_script.tcl
+# xsim {qgemv} -testplusarg UVM_VERBOSITY=UVM_NONE -testplusarg UVM_TESTNAME=qgemv_test_lib -testplusarg UVM_TIMEOUT=20000000000000 -view {{qgemv_dataflow_ana.wcfg}} -tclbatch {qgemv.tcl} -protoinst {qgemv.protoinst}
+INFO: [Wavedata 42-565] Reading protoinst file qgemv.protoinst
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv//AESL_inst_qgemv_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_compute_fu_637/grp_qgemv_Pipeline_compute_fu_637_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_config_flush_fu_752/grp_qgemv_Pipeline_config_flush_fu_752_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_header_fu_536/grp_qgemv_Pipeline_header_fu_536_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_install_bias_fu_739/grp_qgemv_Pipeline_install_bias_fu_739_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_install_rows_fu_568/grp_qgemv_Pipeline_install_rows_fu_568_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_process_flush_fu_727/grp_qgemv_Pipeline_process_flush_fu_727_activity
+INFO: [Wavedata 42-564]   Found protocol instance at /apatb_qgemv_top/AESL_inst_qgemv/grp_qgemv_Pipeline_receive_fu_552/grp_qgemv_Pipeline_receive_fu_552_activity
+Time resolution is 1 ps
+open_wave_config qgemv_dataflow_ana.wcfg
+source qgemv.tcl
+## open_vcd external.vcd
+## log_vcd [get_objects -filter {type == in_port || type == out_port || type == inout_port || type == port} /apatb_qgemv_top/AESL_inst_qgemv/*]
+## log_wave [get_objects -filter {type == in_port || type == out_port || type == inout_port || type == port} /apatb_qgemv_top/AESL_inst_qgemv/*]
+## set designtopgroup [add_wave_group "Design Top Signals"]
+## set coutputgroup [add_wave_group "C Outputs" -into $designtopgroup]
+## set return_group [add_wave_group return(axis) -into $coutputgroup]
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/out_r_TLAST -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/out_r_TSTRB -into $return_group -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/out_r_TKEEP -into $return_group -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/out_r_TREADY -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/out_r_TVALID -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/out_r_TDATA -into $return_group -radix hex
+## set halted__error__tx_id__return_group [add_wave_group halted__error__tx_id__return(axi_slave) -into $coutputgroup]
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/interrupt -into $halted__error__tx_id__return_group -color #ffff00 -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/s_axi_control_BRESP -into $halted__error__tx_id__return_group -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/s_axi_control_BREADY -into $halted__error__tx_id__return_group -color #ffff00 -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/s_axi_control_BVALID -into $halted__error__tx_id__return_group -color #ffff00 -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/s_axi_control_RRESP -into $halted__error__tx_id__return_group -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/s_axi_control_RDATA -into $halted__error__tx_id__return_group -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/s_axi_control_RREADY -into $halted__error__tx_id__return_group -color #ffff00 -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/s_axi_control_RVALID -into $halted__error__tx_id__return_group -color #ffff00 -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/s_axi_control_ARREADY -into $halted__error__tx_id__return_group -color #ffff00 -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/s_axi_control_ARVALID -into $halted__error__tx_id__return_group -color #ffff00 -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/s_axi_control_ARADDR -into $halted__error__tx_id__return_group -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/s_axi_control_WSTRB -into $halted__error__tx_id__return_group -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/s_axi_control_WDATA -into $halted__error__tx_id__return_group -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/s_axi_control_WREADY -into $halted__error__tx_id__return_group -color #ffff00 -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/s_axi_control_WVALID -into $halted__error__tx_id__return_group -color #ffff00 -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/s_axi_control_AWREADY -into $halted__error__tx_id__return_group -color #ffff00 -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/s_axi_control_AWVALID -into $halted__error__tx_id__return_group -color #ffff00 -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/s_axi_control_AWADDR -into $halted__error__tx_id__return_group -radix hex
+## set cinputgroup [add_wave_group "C Inputs" -into $designtopgroup]
+## set return_group [add_wave_group return(axis) -into $cinputgroup]
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/in_r_TLAST -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/in_r_TSTRB -into $return_group -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/in_r_TKEEP -into $return_group -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/in_r_TREADY -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/in_r_TVALID -into $return_group -color #ffff00 -radix hex
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/in_r_TDATA -into $return_group -radix hex
+## set resetgroup [add_wave_group "Reset" -into $designtopgroup]
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/ap_rst_n -into $resetgroup
+## set clockgroup [add_wave_group "Clock" -into $designtopgroup]
+## add_wave /apatb_qgemv_top/AESL_inst_qgemv/ap_clk -into $clockgroup
+## save_wave_config qgemv.wcfg
+## run all
+UVM_INFO /eda/xilinx/2026.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+UVM_INFO /eda/xilinx/2026.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO /eda/xilinx/2026.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18752) @ 0: reporter [UVMTOP] UVM testbench topology:
+----------------------------------------------------------------------------------------------------------
+Name                                               Type                              Size  Value          
+----------------------------------------------------------------------------------------------------------
+uvm_test_top                                       qgemv_test_lib                    -     @370           
+  top_env                                          qgemv_env                         -     @381           
+    axi_lite_control                               uvm_env                           -     @428           
+      item_rtr_port                                uvm_analysis_port                 -     @447           
+      item_wtr_port                                uvm_analysis_port                 -     @437           
+      master                                       uvm_agent                         -     @840           
+        ardrv                                      uvm_driver #(REQ,RSP)             -     @1515          
+          item_read_imp                            uvm_analysis_port                 -     @1544          
+          rsp_port                                 uvm_analysis_port                 -     @1534          
+          seq_item_port                            uvm_seq_item_pull_port            -     @1524          
+          m_num_sent                               integral                          32    'h0            
+        arsqr                                      axi_sequencer                     -     @1554          
+          rsp_export                               uvm_analysis_export               -     @1563          
+          seq_item_export                          uvm_seq_item_pull_imp             -     @1681          
+          arbitration_queue                        array                             0     -              
+          lock_queue                               array                             0     -              
+          num_last_reqs                            integral                          32    'd1            
+          num_last_rsps                            integral                          32    'd1            
+        awdrv                                      uvm_driver #(REQ,RSP)             -     @987           
+          item_read_imp                            uvm_analysis_port                 -     @1016          
+          rsp_port                                 uvm_analysis_port                 -     @1006          
+          seq_item_port                            uvm_seq_item_pull_port            -     @996           
+          m_num_sent                               integral                          32    'h0            
+        awsqr                                      axi_sequencer                     -     @1026          
+          rsp_export                               uvm_analysis_export               -     @1035          
+          seq_item_export                          uvm_seq_item_pull_imp             -     @1153          
+          arbitration_queue                        array                             0     -              
+          lock_queue                               array                             0     -              
+          num_last_reqs                            integral                          32    'd1            
+          num_last_rsps                            integral                          32    'd1            
+        bdrv                                       uvm_driver #(REQ,RSP)             -     @1339          
+          item_read_imp                            uvm_analysis_port                 -     @1368          
+          rsp_port                                 uvm_analysis_port                 -     @1358          
+          seq_item_port                            uvm_seq_item_pull_port            -     @1348          
+          m_num_sent                               integral                          32    'h0            
+        bsqr                                       axi_sequencer                     -     @1378          
+          rsp_export                               uvm_analysis_export               -     @1387          
+          seq_item_export                          uvm_seq_item_pull_imp             -     @1505          
+          arbitration_queue                        array                             0     -              
+          lock_queue                               array                             0     -              
+          num_last_reqs                            integral                          32    'd1            
+          num_last_rsps                            integral                          32    'd1            
+        rdrv                                       uvm_driver #(REQ,RSP)             -     @1691          
+          item_read_imp                            uvm_analysis_port                 -     @1720          
+          rsp_port                                 uvm_analysis_port                 -     @1710          
+          seq_item_port                            uvm_seq_item_pull_port            -     @1700          
+          m_num_sent                               integral                          32    'h0            
+        rsqr                                       axi_sequencer                     -     @1730          
+          rsp_export                               uvm_analysis_export               -     @1739          
+          seq_item_export                          uvm_seq_item_pull_imp             -     @1857          
+          arbitration_queue                        array                             0     -              
+          lock_queue                               array                             0     -              
+          num_last_reqs                            integral                          32    'd1            
+          num_last_rsps                            integral                          32    'd1            
+        wdrv                                       uvm_driver #(REQ,RSP)             -     @1163          
+          item_read_imp                            uvm_analysis_port                 -     @1192          
+          rsp_port                                 uvm_analysis_port                 -     @1182          
+          seq_item_port                            uvm_seq_item_pull_port            -     @1172          
+          m_num_sent                               integral                          32    'h0            
+        wsqr                                       axi_sequencer                     -     @1202          
+          rsp_export                               uvm_analysis_export               -     @1211          
+          seq_item_export                          uvm_seq_item_pull_imp             -     @1329          
+          arbitration_queue                        array                             0     -              
+          lock_queue                               array                             0     -              
+          num_last_reqs                            integral                          32    'd1            
+          num_last_rsps                            integral                          32    'd1            
+      monitor                                      uvm_monitor                       -     @662           
+        item_ar2r_port                             uvm_analysis_port                 -     @731           
+        item_ar_port                               uvm_analysis_port                 -     @701           
+        item_aw2b_port                             uvm_analysis_port                 -     @721           
+        item_aw_port                               uvm_analysis_port                 -     @671           
+        item_b_port                                uvm_analysis_port                 -     @691           
+        item_r_port                                uvm_analysis_port                 -     @711           
+        item_w_port                                uvm_analysis_port                 -     @681           
+        checks_enable                              integral                          1     'h1            
+        coverage_enable                            integral                          1     'h1            
+      state                                        axi_state                         -     @741           
+        ar2r_imp                                   uvm_analysis_imp_ar2r             -     @810           
+        ar_imp                                     uvm_analysis_imp_ar               -     @780           
+        aw2b_imp                                   uvm_analysis_imp_aw2b             -     @800           
+        aw_imp                                     uvm_analysis_imp_aw               -     @750           
+        b_imp                                      uvm_analysis_imp_b                -     @770           
+        item_rtr_port                              uvm_analysis_port                 -     @830           
+        item_wtr_port                              uvm_analysis_port                 -     @820           
+        r_imp                                      uvm_analysis_imp_r                -     @790           
+        w_imp                                      uvm_analysis_imp_w                -     @760           
+        avg_rate                                   integral                          32    'h0            
+        exp_rate                                   integral                          32    'h0            
+        win_size                                   integral                          32    'h0            
+        bqnum_for_slaseq                           integral                          32    'h0            
+        rq_from_model_num                          integral                          32    'h0            
+      vsqr                                         axi_virtual_sequencer             -     @849           
+        rsp_export                                 uvm_analysis_export               -     @858           
+        seq_item_export                            uvm_seq_item_pull_imp             -     @976           
+        arbitration_queue                          array                             0     -              
+        lock_queue                                 array                             0     -              
+        num_last_reqs                              integral                          32    'd1            
+        num_last_rsps                              integral                          32    'd1            
+      cfg                                          axi_cfg                           -     @400           
+        has_checker                                integral                          1     'h1            
+        has_coverage                               integral                          1     'h1            
+        id_num                                     integral                          32    'h1            
+        reset_level                                reset_level_enum                  32    RESET_LEVEL_LOW
+        drv_type                                   drv_type_enum                     32    MASTER         
+        write_latency_mode                         latency_mode_enum                 32    CHANNEL_FIRST  
+        read_latency_mode                          latency_mode_enum                 32    CHANNEL_FIRST  
+        clatency                                   axi_latency                       -     @424           
+          wr_latency                               integral                          32    'h0            
+          rd_latency                               integral                          32    'h0            
+    env_master_svr_in_r                            uvm_env                           -     @401           
+      m_agt                                        uvm_agent                         -     @1935          
+        drv                                        uvm_driver #(REQ,RSP)             -     @2083          
+          rsp_port                                 uvm_analysis_port                 -     @2102          
+          seq_item_port                            uvm_seq_item_pull_port            -     @2092          
+        mon                                        uvm_monitor                       -     @2112          
+          item_collect_port                        uvm_analysis_port                 -     @2123          
+        sqr                                        uvm_sequencer                     -     @1946          
+          rsp_export                               uvm_analysis_export               -     @1955          
+          seq_item_export                          uvm_seq_item_pull_imp             -     @2073          
+          arbitration_queue                        array                             0     -              
+          lock_queue                               array                             0     -              
+          num_last_reqs                            integral                          32    'd1            
+          num_last_rsps                            integral                          32    'd1            
+    env_slave_svr_out_r                            uvm_env                           -     @414           
+      s_agt                                        uvm_agent                         -     @2141          
+        drv                                        uvm_driver #(REQ,RSP)             -     @2289          
+          rsp_port                                 uvm_analysis_port                 -     @2308          
+          seq_item_port                            uvm_seq_item_pull_port            -     @2298          
+        mon                                        uvm_monitor                       -     @2318          
+          item_collect_port                        uvm_analysis_port                 -     @2329          
+        sqr                                        uvm_sequencer                     -     @2152          
+          rsp_export                               uvm_analysis_export               -     @2161          
+          seq_item_export                          uvm_seq_item_pull_imp             -     @2279          
+          arbitration_queue                        array                             0     -              
+          lock_queue                               array                             0     -              
+          num_last_reqs                            integral                          32    'd1            
+          num_last_rsps                            integral                          32    'd1            
+    qgemv_virtual_sqr                              qgemv_virtual_sequencer           -     @519           
+      rsp_export                                   uvm_analysis_export               -     @528           
+      seq_item_export                              uvm_seq_item_pull_imp             -     @646           
+      arbitration_queue                            array                             0     -              
+      lock_queue                                   array                             0     -              
+      num_last_reqs                                integral                          32    'd1            
+      num_last_rsps                                integral                          32    'd1            
+    refm                                           qgemv_reference_model             -     @457           
+      trans_num_idx                                integral                          32    'h0            
+    subsys_mon                                     qgemv_subsystem_monitor           -     @470           
+      control_rtr_imp                              uvm_analysis_imp_axi_rtr_control  -     @509           
+      control_wtr_imp                              uvm_analysis_imp_axi_wtr_control  -     @499           
+      scbd                                         qgemv_scoreboard                  -     @2356          
+        refm                                       qgemv_reference_model             -     @457           
+          trans_num_idx                            integral                          32    'h0            
+        file_rd_TVOUT_transaction_size             <unknown>                         -     @2366          
+          TV_FILE                                  string                            0     ""             
+          fp                                       integral                          32    'hxxxxxxxx     
+          TV_FILE_num                              integral                          32    'h0            
+          HEX_read                                 integral                          32    'h0            
+          DEC_read                                 integral                          32    'h0            
+          is_binary                                integral                          32    'h0            
+          TV_FILE_COMPARE                          string                            0     ""             
+          fp_compare                               integral                          32    'hxxxxxxxx     
+        TVOUT_transaction_size_queue               da(integral)                      0     -              
+        file_wr_port_out_r_out_r_TDATA             <unknown>                         -     @2367          
+          TV_FILE                                  string                            0     ""             
+          fp                                       integral                          32    'hxxxxxxxx     
+          file_open                                integral                          32    'h0            
+          write_file_done                          integral                          32    'h0            
+          write_section_done                       integral                          32    'h0            
+          TRANSACTION_NUM                          integral                          32    'h0            
+          transaction_num_idx                      integral                          32    'h0            
+          TRANSACTION_DEPTH                        integral                          32    'h0            
+          TRANSACTION_DEPTH_queue                  da(integral)                      0     -              
+          TRANSACTION_DEPTH_queue_for_depth_check  da(integral)                      0     -              
+          transaction_depth_idx                    integral                          32    'h0            
+          ap_done_num_idx                          integral                          32    'h0            
+          is_binary                                integral                          32    'h0            
+        write_file_done_out_r_out_r_TDATA          integral                          32    'h0            
+        write_section_done_out_r_out_r_TDATA       integral                          32    'h0            
+        file_wr_port_out_r_out_r_TKEEP             <unknown>                         -     @2368          
+          TV_FILE                                  string                            0     ""             
+          fp                                       integral                          32    'hxxxxxxxx     
+          file_open                                integral                          32    'h0            
+          write_file_done                          integral                          32    'h0            
+          write_section_done                       integral                          32    'h0            
+          TRANSACTION_NUM                          integral                          32    'h0            
+          transaction_num_idx                      integral                          32    'h0            
+          TRANSACTION_DEPTH                        integral                          32    'h0            
+          TRANSACTION_DEPTH_queue                  da(integral)                      0     -              
+          TRANSACTION_DEPTH_queue_for_depth_check  da(integral)                      0     -              
+          transaction_depth_idx                    integral                          32    'h0            
+          ap_done_num_idx                          integral                          32    'h0            
+          is_binary                                integral                          32    'h0            
+        write_file_done_out_r_out_r_TKEEP          integral                          32    'h0            
+        write_section_done_out_r_out_r_TKEEP       integral                          32    'h0            
+        file_wr_port_out_r_out_r_TSTRB             <unknown>                         -     @2369          
+          TV_FILE                                  string                            0     ""             
+          fp                                       integral                          32    'hxxxxxxxx     
+          file_open                                integral                          32    'h0            
+          write_file_done                          integral                          32    'h0            
+          write_section_done                       integral                          32    'h0            
+          TRANSACTION_NUM                          integral                          32    'h0            
+          transaction_num_idx                      integral                          32    'h0            
+          TRANSACTION_DEPTH                        integral                          32    'h0            
+          TRANSACTION_DEPTH_queue                  da(integral)                      0     -              
+          TRANSACTION_DEPTH_queue_for_depth_check  da(integral)                      0     -              
+          transaction_depth_idx                    integral                          32    'h0            
+          ap_done_num_idx                          integral                          32    'h0            
+          is_binary                                integral                          32    'h0            
+        write_file_done_out_r_out_r_TSTRB          integral                          32    'h0            
+        write_section_done_out_r_out_r_TSTRB       integral                          32    'h0            
+        file_wr_port_out_r_out_r_TLAST             <unknown>                         -     @2370          
+          TV_FILE                                  string                            0     ""             
+          fp                                       integral                          32    'hxxxxxxxx     
+          file_open                                integral                          32    'h0            
+          write_file_done                          integral                          32    'h0            
+          write_section_done                       integral                          32    'h0            
+          TRANSACTION_NUM                          integral                          32    'h0            
+          transaction_num_idx                      integral                          32    'h0            
+          TRANSACTION_DEPTH                        integral                          32    'h0            
+          TRANSACTION_DEPTH_queue                  da(integral)                      0     -              
+          TRANSACTION_DEPTH_queue_for_depth_check  da(integral)                      0     -              
+          transaction_depth_idx                    integral                          32    'h0            
+          ap_done_num_idx                          integral                          32    'h0            
+          is_binary                                integral                          32    'h0            
+        write_file_done_out_r_out_r_TLAST          integral                          32    'h0            
+        write_section_done_out_r_out_r_TLAST       integral                          32    'h0            
+      svr_master_in_r_imp                          uvm_analysis_imp_svr_master_in_r  -     @479           
+      svr_slave_out_r_imp                          uvm_analysis_imp_svr_slave_out_r  -     @489           
+    env_master_svr_in_r                            uvm_env                           -     @401           
+    env_slave_svr_out_r                            uvm_env                           -     @414           
+    refm                                           qgemv_reference_model             -     @457           
+    qgemv_virtual_sqr                              qgemv_virtual_sequencer           -     @519           
+    qgemv_cfg                                      qgemv_config                      -     @395           
+      port_in_r_cfg                                svr_config                        -     @396           
+        svr_type                                   svr_inst_type                     32    SVR_MASTER     
+        prt_type                                   svr_protocol_type                 32    AXIS           
+        is_active                                  svr_active_passive_enum           1     SVR_ACTIVE     
+        reset_level                                svr_reset_level_enum              1     RESET_LEVEL_LOW
+        spec_cfg                                   svr_spec_cfg_enum                 32    NORMAL         
+        clatency                                   svr_latency                       -     @397           
+          transfer_latency                         integral                          32    'h0            
+      port_out_r_cfg                               svr_config                        -     @398           
+        svr_type                                   svr_inst_type                     32    SVR_SLAVE      
+        prt_type                                   svr_protocol_type                 32    AXIS           
+        is_active                                  svr_active_passive_enum           1     SVR_ACTIVE     
+        reset_level                                svr_reset_level_enum              1     RESET_LEVEL_LOW
+        spec_cfg                                   svr_spec_cfg_enum                 32    NORMAL         
+        clatency                                   svr_latency                       -     @399           
+          transfer_latency                         integral                          32    'h0            
+      control_cfg                                  axi_cfg                           -     @400           
+        has_checker                                integral                          1     'h1            
+        has_coverage                               integral                          1     'h1            
+        id_num                                     integral                          32    'h1            
+        reset_level                                reset_level_enum                  32    RESET_LEVEL_LOW
+        drv_type                                   drv_type_enum                     32    MASTER         
+        write_latency_mode                         latency_mode_enum                 32    CHANNEL_FIRST  
+        read_latency_mode                          latency_mode_enum                 32    CHANNEL_FIRST  
+        clatency                                   axi_latency                       -     @424           
+          wr_latency                               integral                          32    'h0            
+          rd_latency                               integral                          32    'h0            
+      check_ena                                    integral                          32    'h0            
+      cover_ena                                    integral                          32    'h0            
+----------------------------------------------------------------------------------------------------------
+
+UVM_INFO /eda/xilinx/2026.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+////////////////////////////////////////////////////////////////////////////////////
+// Inter-Transaction Progress: Completed Transaction / Total Transaction
+// Intra-Transaction Progress: Measured Latency / Latency Estimation * 100%
+//
+// RTL Simulation : "Inter-Transaction Progress" ["Intra-Transaction Progress"] @ "Simulation Time"
+////////////////////////////////////////////////////////////////////////////////////
+// RTL Simulation : 0 / 67 [n/a] @ "116000"
+// RTL Simulation : 1 / 67 [n/a] @ "2172000"
+// RTL Simulation : 2 / 67 [n/a] @ "4300000"
+// RTL Simulation : 3 / 67 [n/a] @ "6428000"
+// RTL Simulation : 4 / 67 [n/a] @ "8556000"
+// RTL Simulation : 5 / 67 [n/a] @ "9444000"
+// RTL Simulation : 6 / 67 [n/a] @ "10332000"
+// RTL Simulation : 7 / 67 [n/a] @ "11220000"
+// RTL Simulation : 8 / 67 [n/a] @ "12108000"
+// RTL Simulation : 9 / 67 [n/a] @ "12996000"
+// RTL Simulation : 10 / 67 [n/a] @ "13884000"
+// RTL Simulation : 11 / 67 [n/a] @ "14772000"
+// RTL Simulation : 12 / 67 [n/a] @ "16276000"
+// RTL Simulation : 13 / 67 [n/a] @ "16516000"
+// RTL Simulation : 14 / 67 [n/a] @ "17652000"
+// RTL Simulation : 15 / 67 [n/a] @ "17892000"
+// RTL Simulation : 16 / 67 [n/a] @ "19028000"
+// RTL Simulation : 17 / 67 [n/a] @ "19268000"
+// RTL Simulation : 18 / 67 [n/a] @ "20404000"
+// RTL Simulation : 19 / 67 [n/a] @ "20644000"
+// RTL Simulation : 20 / 67 [n/a] @ "21780000"
+// RTL Simulation : 21 / 67 [n/a] @ "22036000"
+// RTL Simulation : 22 / 67 [n/a] @ "23172000"
+// RTL Simulation : 23 / 67 [n/a] @ "23428000"
+// RTL Simulation : 24 / 67 [n/a] @ "24564000"
+// RTL Simulation : 25 / 67 [n/a] @ "24820000"
+// RTL Simulation : 26 / 67 [n/a] @ "25956000"
+// RTL Simulation : 27 / 67 [n/a] @ "26212000"
+// RTL Simulation : 28 / 67 [n/a] @ "27348000"
+// RTL Simulation : 29 / 67 [n/a] @ "27620000"
+// RTL Simulation : 30 / 67 [n/a] @ "28756000"
+// RTL Simulation : 31 / 67 [n/a] @ "29028000"
+// RTL Simulation : 32 / 67 [n/a] @ "30164000"
+// RTL Simulation : 33 / 67 [n/a] @ "30436000"
+// RTL Simulation : 34 / 67 [n/a] @ "31572000"
+// RTL Simulation : 35 / 67 [n/a] @ "31844000"
+// RTL Simulation : 36 / 67 [n/a] @ "32980000"
+// RTL Simulation : 37 / 67 [n/a] @ "33252000"
+// RTL Simulation : 38 / 67 [n/a] @ "34388000"
+// RTL Simulation : 39 / 67 [n/a] @ "34660000"
+// RTL Simulation : 40 / 67 [n/a] @ "35796000"
+// RTL Simulation : 41 / 67 [n/a] @ "36068000"
+// RTL Simulation : 42 / 67 [n/a] @ "37204000"
+// RTL Simulation : 43 / 67 [n/a] @ "37476000"
+// RTL Simulation : 44 / 67 [n/a] @ "38612000"
+// RTL Simulation : 45 / 67 [n/a] @ "38884000"
+// RTL Simulation : 46 / 67 [n/a] @ "40020000"
+// RTL Simulation : 47 / 67 [n/a] @ "40292000"
+// RTL Simulation : 48 / 67 [n/a] @ "41428000"
+// RTL Simulation : 49 / 67 [n/a] @ "41700000"
+// RTL Simulation : 50 / 67 [n/a] @ "42836000"
+// RTL Simulation : 51 / 67 [n/a] @ "43108000"
+// RTL Simulation : 52 / 67 [n/a] @ "44244000"
+// RTL Simulation : 53 / 67 [n/a] @ "44516000"
+// RTL Simulation : 54 / 67 [n/a] @ "45652000"
+// RTL Simulation : 55 / 67 [n/a] @ "45924000"
+// RTL Simulation : 56 / 67 [n/a] @ "47060000"
+// RTL Simulation : 57 / 67 [n/a] @ "47332000"
+// RTL Simulation : 58 / 67 [n/a] @ "48468000"
+// RTL Simulation : 59 / 67 [n/a] @ "48772000"
+// RTL Simulation : 60 / 67 [n/a] @ "49908000"
+// RTL Simulation : 61 / 67 [n/a] @ "50284000"
+// RTL Simulation : 62 / 67 [n/a] @ "51420000"
+// RTL Simulation : 63 / 67 [n/a] @ "52092000"
+// RTL Simulation : 64 / 67 [n/a] @ "53228000"
+// RTL Simulation : 65 / 67 [n/a] @ "53908000"
+// RTL Simulation : 66 / 67 [n/a] @ "55044000"
+// RTL Simulation : 67 / 67 [n/a] @ "55932000"
+////////////////////////////////////////////////////////////////////////////////////
+$finish called at time : 56068 ns : File "/eda/xilinx/2026.1/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+## close_vcd
+## quit
+INFO: xsimkernel Simulation Memory Usage: 569748 KB (Peak: 603112 KB), Simulation CPU Usage: 3340 ms
+INFO: [Common 17-206] Exiting xsim at Wed Oct 28 16:47:13 2026...
+INFO: [COSIM 212-316] Starting C post checking ...
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+PASS 67 activations
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 86
+INFO: [COSIM 212-1000] *** C/RTL co-simulation finished: PASS ***
+INFO: [HLS 200-2161] Finished Command cosim_design Elapsed time: 00:00:45; Allocated memory: 11.711 MB.
+INFO: [HLS 200-112] Total CPU user time: 190.4 seconds. Total CPU system time: 8.17 seconds. Total elapsed time: 76.33 seconds; peak allocated memory: 447.359 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 1m 18s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

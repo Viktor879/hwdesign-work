@@ -1,0 +1,51 @@
+
+****** vitis-run v2026.1 (64-bit)
+  **** SW Build 6497934 on 2026-06-16-10:22:25
+  **** Start of session at: Wed Oct 28 16:37:44 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2026.1 6493734
+Sourcing Tcl script '/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/scripts/run.tcl'
+INFO: [HLS 200-1510] Running: open_component -reset build/qgemv -flow_target vivado 
+INFO: [HLS 200-10] Creating and opening component '/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build/qgemv'.
+INFO: [HLS 200-10] Cleaning up the component database.
+INFO: [HLS 200-1505] Using flow_target 'vivado'
+Resolution: For help on HLS 200-1505 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+WARNING: [HLS 200-2149] The 'flow_target' option is deprecated and will be removed in a future release. For 'vivado' value you may simply remove the option for equivalent behavior.
+INFO: [HLS 200-2176] Writing Vitis IDE component file /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build/qgemv/vitis-comp.json
+INFO: [HLS 200-1915] Writing HLS config ini file /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build/qgemv/hls_config.cfg
+WARNING: [HLS 200-484] The 'open_component -flow_target' command is deprecated and will be removed in a future release.
+INFO: [HLS 200-1510] Running: set_top qgemv 
+INFO: [HLS 200-1510] Running: add_files /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/kernel.cpp -cflags -Isrc 
+INFO: [HLS 200-10] Adding design file '/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/kernel.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/tb.cpp -cflags -Isrc 
+INFO: [HLS 200-10] Adding test bench file '/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/tb.cpp' to the project
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1510] Running: create_clock -period 8 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1510] Running: csim_design -argv /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/fixtures/cases.txt 
+INFO: [HLS 200-1915] Writing HLS config ini file /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build/qgemv/hls_config.cfg
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../../src/tb.cpp in debug mode
+   Generating csim.exe
+ld.lld: error: undefined symbol: qgemv(hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, unsigned int&, unsigned int&, unsigned int&)
+>>> referenced by tb.cpp:14 (../../../../../src/tb.cpp:14)
+>>>               obj/tb.o:(main)
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [Makefile.rules:347: csim.exe] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:05; Allocated memory: 17.039 MB.
+CSIM Failed
+    while executing
+"source /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/scripts/run.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $tclfile] "
+
+INFO: [HLS 200-112] Total CPU user time: 4.34 seconds. Total CPU system time: 0.74 seconds. Total elapsed time: 7.63 seconds; peak allocated memory: 304.730 MB.
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

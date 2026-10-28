@@ -1,0 +1,47 @@
+
+****** vitis-run v2026.1 (64-bit)
+  **** SW Build 6497934 on 2026-06-16-10:22:25
+  **** Start of session at: Wed Oct 28 17:10:06 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2026.1 6493734
+Sourcing Tcl script '/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/scripts/probe_manual.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset build_probe 
+WARNING: [HLS 200-2182] The 'build_probe' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Opening and resetting solution '/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_probe'.
+INFO: [HLS 200-1510] Running: set_top manual 
+INFO: [HLS 200-1510] Running: add_files /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build/probes/manual.cpp 
+INFO: [HLS 200-10] Adding design file '/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build/probes/manual.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build/probes/manual_tb.cpp 
+INFO: [HLS 200-10] Adding test bench file '/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build/probes/manual_tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Creating and opening solution '/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_probe/solution1'.
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1510] Running: create_clock -period 8 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1510] Running: csim_design 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../build/probes/manual_tb.cpp in debug mode
+   Compiling ../../../../build/probes/manual.cpp in debug mode
+../../../../build/probes/manual.cpp:3:10: fatal error: 'ap_utils.h' file not found
+#include <ap_utils.h>
+         ^~~~~~~~~~~~
+1 error generated.
+make: *** [csim.mk:96: obj/manual.o] Error 1
+ERROR: [SIM 211-100] 'csim_design' failed: compilation error(s).
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:04; Allocated memory: 0.000 MB.
+CSIM Failed
+    while executing
+"source /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/scripts/probe_manual.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel \#0 [list source $tclfile] "
+
+INFO: [HLS 200-112] Total CPU user time: 5.51 seconds. Total CPU system time: 0.75 seconds. Total elapsed time: 7.43 seconds; peak allocated memory: 286.434 MB.
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

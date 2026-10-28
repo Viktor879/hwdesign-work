@@ -1,0 +1,16 @@
+INFO: [SIM 2] *************** CSIM start ***************
+   Compiling ../../../../src/tb.cpp in debug mode
+   Compiling ../../../../src/kernel.cpp in debug mode
+   Generating csim.exe
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+PASS 67 activations
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 86
+INFO: [SIM 1] CSim done with 0 errors.
+INFO: [SIM 3] *************** CSIM finish ***************

@@ -1,0 +1,296 @@
+
+****** vitis-run v2026.1 (64-bit)
+  **** SW Build 6497934 on 2026-06-16-10:22:25
+  **** Start of session at: Wed Oct 28 17:32:02 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+  **** HLS Build v2026.1 6493734
+Sourcing Tcl script '/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/scripts/run2_synth.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset build_run2 
+WARNING: [HLS 200-2182] The 'build_run2' project will not automatically appear within Vitis IDE workspaces and is meant only for TCL batch use.  Please use open_component instead of open_project/open_solution to generate Vitis IDE compatible component files and directory structure.
+Resolution: For help on HLS 200-2182 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-2182.html
+INFO: [HLS 200-10] Opening and resetting solution '/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2'.
+INFO: [HLS 200-1510] Running: set_top qgemv_core 
+INFO: [HLS 200-1510] Running: add_files /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/kernel.cpp -cflags -Isrc 
+INFO: [HLS 200-10] Adding design file '/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/kernel.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files -tb /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/tb.cpp -cflags -Isrc 
+INFO: [HLS 200-10] Adding test bench file '/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/tb.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution solution1 
+INFO: [HLS 200-10] Creating and opening solution '/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1'.
+INFO: [HLS 200-1510] Running: set_part xc7z020clg484-1 
+INFO: [HLS 200-1611] Setting target device to 'xc7z020-clg484-1'
+INFO: [HLS 200-1510] Running: create_clock -period 8 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 8ns.
+INFO: [HLS 200-1510] Running: csim_design -argv /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/fixtures/cases.txt 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [HLS 200-2191] C-Simulation will use clang-16 as the compiler
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../src/tb.cpp in debug mode
+   Compiling ../../../../src/kernel.cpp in debug mode
+   Generating csim.exe
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+WARNING [HLS SIM]: hls::stream 'in' contains leftover data, which may result in RTL simulation hanging.
+PASS 67 activations
+INFO [HLS SIM]: The maximum depth reached by any hls::stream() instance in the design is 86
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-2161] Finished Command csim_design Elapsed time: 00:00:04; Allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 1.02 seconds. CPU system time: 0.14 seconds. Elapsed time: 1.19 seconds; current allocated memory: 287.484 MB.
+INFO: [HLS 200-2191] C-Synthesis will use clang-16 as the compiler
+INFO: [HLS 200-10] Analyzing design file 'src/kernel.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 6.4 seconds. CPU system time: 0.8 seconds. Elapsed time: 7.56 seconds; current allocated memory: 290.023 MB.
+INFO: [HLS 200-1995] There were 2,827 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-131] Inlining function 'word(ap_uint<64>, bool)' into 'qgemv_core(hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<ap_uint<64>, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, unsigned int&, unsigned int&, unsigned int&, hls::directio<ap_uint<32>, 3>&)' (src/kernel.cpp:79:12)
+INFO: [HLS 214-291] Loop 'header' is marked as complete unroll implied by the pipeline pragma (src/kernel.cpp:26:10)
+INFO: [HLS 214-291] Loop 'rows' is marked as complete unroll implied by the pipeline pragma (src/kernel.cpp:66:8)
+INFO: [HLS 214-291] Loop 'cols' is marked as complete unroll implied by the pipeline pragma (src/kernel.cpp:69:8)
+INFO: [HLS 214-186] Unrolling loop 'rows' (src/kernel.cpp:66:8) in function 'qgemv_core' completely with a factor of 8 (src/kernel.cpp:6:0)
+INFO: [HLS 214-186] Unrolling loop 'cols' (src/kernel.cpp:69:8) in function 'qgemv_core' completely with a factor of 8 (src/kernel.cpp:6:0)
+INFO: [HLS 214-186] Unrolling loop 'install_cols' (src/kernel.cpp:53:16) in function 'qgemv_core' completely with a factor of 8 (src/kernel.cpp:6:0)
+INFO: [HLS 200-1995] There were 1,395 instructions in the design after the 'Unroll/Inline' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,028 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,008 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 912 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-248] Applying array_partition to 'weights': Complete partitioning on dimension 1. Complete partitioning on dimension 2. (src/kernel.cpp:14:12)
+INFO: [HLS 214-248] Applying array_partition to 'bias': Complete partitioning on dimension 1. (src/kernel.cpp:14:38)
+INFO: [HLS 200-1995] There were 1,035 instructions in the design after the 'Array/Struct' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,028 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-241] Aggregating scalar variable 'completed' with compact=bit mode in 32-bits (src/kernel.cpp:6:0)
+INFO: [HLS 200-1995] There were 1,030 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,037 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,300 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,292 instructions in the design after the 'Performance' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-376] Pipelining loop< install_bias> at src/kernel.cpp:57:16 due to pipeline_loops threshold
+INFO: [HLS 214-376] Pipelining loop< install_rows> at src/kernel.cpp:52:16 due to pipeline_loops threshold
+INFO: [HLS 200-1995] There were 1,151 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 214-421] Partitioning small array 'hdr' due to array size. (src/kernel.cpp:23:11)
+INFO: [HLS 214-248] Applying array_partition to 'hdr': Complete partitioning on dimension 1. (src/kernel.cpp:23:11)
+INFO: [HLS 200-1995] There were 1,073 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,071 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-1995] There were 1,023 instructions in the design after the 'HW Transforms' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/report/csynth_design_size.rpt:2)
+WARNING: [HLS 214-187] Cannot unroll loop 'header' (src/kernel.cpp:26:10) in function 'qgemv_core' as it has a variable trip count (src/kernel.cpp:26:10)
+INFO: [HLS 200-1995] There were 974 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details (/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/report/csynth_design_size.rpt:2)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 3.99 seconds. CPU system time: 0.59 seconds. Elapsed time: 8.47 seconds; current allocated memory: 300.070 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 300.070 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 302.914 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] src/kernel.cpp:57: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.05 seconds; current allocated memory: 303.445 MB.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (src/kernel.cpp:64:1) to (src/kernel.cpp:63:11) in function 'qgemv_core'... converting 3 basic blocks.
+INFO: [XFORM 203-11] Balancing expressions in function 'qgemv_core' (src/kernel.cpp:6:16)...120 expression(s) balanced.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.25 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.28 seconds; current allocated memory: 332.582 MB.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.32 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.34 seconds; current allocated memory: 372.102 MB.
+INFO: [HLS 200-2255] Checking Wire Delay Status: Wire Delay Mode is ON
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'qgemv_core' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qgemv_core_Pipeline_header' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for function 'qgemv_core_Pipeline_header': contains subloop(s) that are not unrolled.
+INFO: [SCHED 204-61] Pipelining loop 'header'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 1, loop 'header'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.05 seconds. CPU system time: 0.02 seconds. Elapsed time: 0.08 seconds; current allocated memory: 372.102 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 372.102 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qgemv_core_Pipeline_receive' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'receive'.
+WARNING: [HLS 200-887] Cannot meet target clock period from basic block for.body82 to 'and' operation 1 bit ('or_cond804', src/kernel.cpp:45) (combination delay: 6.943 ns) to honor II or Latency constraint in region 'receive'.
+Resolution: For help on HLS 200-887 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-887.html
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'receive'
+WARNING: [HLS 200-871] Estimated clock period (6.943 ns) exceeds the target (target clock period: 8.000 ns, clock uncertainty: 2.160 ns, effective delay budget: 5.840 ns).
+Resolution: For help on HLS 200-871 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-871.html
+WARNING: [HLS 200-1016] The critical path in module 'qgemv_core_Pipeline_receive' consists of the following:
+	'store' operation ('k_write_ln45', src/kernel.cpp:45) of constant 0 6 bit on local variable 'k', src/kernel.cpp:45 [15]  (1.588 ns)
+	'load' operation 6 bit ('k', src/kernel.cpp:45) on local variable 'k', src/kernel.cpp:45 [20]  (0.000 ns)
+	'add' operation 6 bit ('add_ln45', src/kernel.cpp:45) [35]  (1.825 ns)
+	'icmp' operation 1 bit ('icmp_ln45', src/kernel.cpp:45) [37]  (2.552 ns)
+	'and' operation 1 bit ('or_cond804', src/kernel.cpp:45) [38]  (0.978 ns)
+
+Resolution: For help on HLS 200-1016 see docs.amd.com/access/sources/dita/topic?Doc_Version=2026.1%20English&url=ug1448-hls-guidance&resourceid=200-1016.html
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.03 seconds; current allocated memory: 372.102 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 372.102 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qgemv_core_Pipeline_compute' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_61) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_60) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_59) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_57) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_56) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_53) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_52) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_51) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_49) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_48) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_45) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_44) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_43) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_41) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_40) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_37) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_36) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_35) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_33) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_32) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_29) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_28) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_27) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_25) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_24) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_21) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_20) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_19) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_17) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_16) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_13) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_12) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_11) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_9) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_8) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_5) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_4) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_3) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71_1) to 3 in order to utilize available DSP registers.
+INFO: [HLS 200-486] Changing DSP latency (root=add_ln71) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'compute'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 11, loop 'compute'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.24 seconds. CPU system time: 0 seconds. Elapsed time: 0.25 seconds; current allocated memory: 373.480 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.11 seconds; current allocated memory: 373.480 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qgemv_core_Pipeline_install_rows' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'install_rows'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'install_rows'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.12 seconds; current allocated memory: 373.480 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.04 seconds; current allocated memory: 373.480 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qgemv_core_Pipeline_install_bias' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'install_bias'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'install_bias'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 373.480 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 373.480 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'qgemv_core' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-67] Unable to satisfy pipeline directive for loop 'header': contains subfunction 'qgemv_core_Pipeline_header' which is not pipelined.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 376.488 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 376.488 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'qgemv_core_Pipeline_header' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'qgemv_core_Pipeline_header'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.07 seconds; current allocated memory: 376.488 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'qgemv_core_Pipeline_receive' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'qgemv_core_Pipeline_receive' pipeline 'receive' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'qgemv_core_Pipeline_receive'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 376.488 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'qgemv_core_Pipeline_compute' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'qgemv_core_Pipeline_compute' pipeline 'compute' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_8s_16s_17_4_1': 32 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_8s_8s_17s_17_4_1': 8 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8s_8s_16_1_1': 24 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'qgemv_core_Pipeline_compute'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 381.102 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'qgemv_core_Pipeline_install_rows' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'qgemv_core_Pipeline_install_rows' pipeline 'install_rows' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'qgemv_core_Pipeline_install_rows'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.36 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.42 seconds; current allocated memory: 393.133 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'qgemv_core_Pipeline_install_bias' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'qgemv_core_Pipeline_install_bias' pipeline 'install_bias' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'partselect_16ns_64ns_6ns_16_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'qgemv_core_Pipeline_install_bias'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.09 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.15 seconds; current allocated memory: 394.574 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'qgemv_core' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv_core/in_r_V_data_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv_core/in_r_V_keep_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv_core/in_r_V_strb_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv_core/in_r_V_last_V' to 'axis'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv_core/out_r_V_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv_core/out_r_V_keep_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv_core/out_r_V_strb_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv_core/out_r_V_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv_core/halted' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv_core/error' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv_core/tx_id' to 's_axilite & ap_vld'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'qgemv_core/completed' to 'ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'qgemv_core' to 's_axilite & ap_ctrl_hs'.
+INFO: [RTGEN 206-100] Bundling port 'halted', 'error', 'tx_id' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'qgemv_core'.
+INFO: [RTMG 210-278] Implementing memory 'qgemv_core_buffer_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.14 seconds; current allocated memory: 396.504 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.56 seconds. CPU system time: 0.05 seconds. Elapsed time: 0.85 seconds; current allocated memory: 405.707 MB.
+INFO: [HLS 200-2225] Wrote inferred directives to file /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/inferred_directives.ini
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 1.18 seconds. CPU system time: 0.12 seconds. Elapsed time: 1.39 seconds; current allocated memory: 414.402 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for qgemv_core.
+INFO: [VLOG 209-307] Generating Verilog RTL for qgemv_core.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 144.03 MHz
+INFO: [HLS 200-2161] Finished Command csynth_design Elapsed time: 00:00:22; Allocated memory: 126.918 MB.
+INFO: [HLS 200-112] Total CPU user time: 21.69 seconds. Total CPU system time: 2.75 seconds. Total elapsed time: 29.56 seconds; peak allocated memory: 414.402 MB.
+INFO: [vitis-run 60-791] Total elapsed time: 0h 0m 31s
+INFO: [vitis-run 60-1662] Stopping dispatch session having empty uuid.

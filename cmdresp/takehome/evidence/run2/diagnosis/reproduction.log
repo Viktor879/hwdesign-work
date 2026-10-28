@@ -1,0 +1,27 @@
+
+****** xsim v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Wed Oct 28 17:02:46 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/stress/xsim_script.tcl
+# xsim {stress} -autoloadwcfg -tclbatch {/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/scripts/reproduce_run1.tcl}
+Time resolution is 1 ps
+source /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/scripts/reproduce_run1.tcl
+## open_vcd run1-reproduction.vcd
+## log_vcd [get_objects -filter {type == in_port || type == out_port || type == inout_port || type == port} /rtl_stress/dut/*]
+## log_vcd [get_objects /rtl_stress/dut/grp_qgemv_Pipeline_compute_fu_631/ap_enable_reg_pp0_iter10]
+## log_vcd [get_objects /rtl_stress/dut/grp_qgemv_Pipeline_compute_fu_631/ap_block_pp0_stage0_11001_grp1]
+## run all
+PASS malformed header leaves offered later word unaccepted
+PASS fresh activation rejects PROCESS before CONFIG
+Fatal: AXI compliance: TVALID waits for TREADY
+Time: 1744 ns  Iteration: 0  Process: /rtl_stress/Initial75_435/Block98_436  Scope: rtl_stress  File: /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/rtl_stress.sv Line: 102
+$finish called at time : 1744 ns
+## close_vcd
+## quit
+INFO: xsimkernel Simulation Memory Usage: 518568 KB (Peak: 575628 KB), Simulation CPU Usage: 1920 ms
+INFO: [Common 17-206] Exiting xsim at Wed Oct 28 17:02:50 2026...

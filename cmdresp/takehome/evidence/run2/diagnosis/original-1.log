@@ -1,0 +1,24 @@
+
+****** xsim v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Wed Oct 28 17:36:34 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/reproduction/xsim_script.tcl
+# xsim {reproduction} -testplusarg MODE=1 -testplusarg FIXTURES=/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/fixtures/stress.txt -testplusarg CSV=/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/evidence/run2/diagnosis/original-1.csv -autoloadwcfg -tclbatch {/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/scripts/reproduce_run1_suite.tcl}
+Time resolution is 1 ps
+source /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/scripts/reproduce_run1_suite.tcl
+## open_vcd reproduction.vcd
+## log_vcd [get_objects -filter {type == in_port || type == out_port || type == inout_port || type == port} /rtl_suite/dut/*]
+## log_vcd [get_objects /rtl_suite/dut/ap_CS_fsm]
+## run all
+Fatal: STABILITY_WITHDRAW scenario=batch32_0 mode=1 cycle=36 time=284000: VALID observed before READY withdrawal; valid=0 ready=0 expected=1ffff0000000000000000 actual=xxxxxxxxxxxxxxxxxxxxx
+Time: 284 ns  Iteration: 0  Process: /rtl_suite/Always56_434  Scope: rtl_suite  File: /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/rtl_suite.sv Line: 61
+$finish called at time : 284 ns
+## close_vcd
+## quit
+INFO: xsimkernel Simulation Memory Usage: 527340 KB (Peak: 575680 KB), Simulation CPU Usage: 1920 ms
+INFO: [Common 17-206] Exiting xsim at Wed Oct 28 17:36:37 2026...

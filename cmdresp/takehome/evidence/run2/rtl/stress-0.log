@@ -1,0 +1,89 @@
+
+****** xsim v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Wed Oct 28 17:36:27 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/suite/xsim_script.tcl
+# xsim {suite} -testplusarg MODE=0 -testplusarg FIXTURES=/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/fixtures/stress.txt -testplusarg CSV=/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/evidence/run2/rtl/stress-0.csv -autoloadwcfg -tclbatch {/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/scripts/run2_stress_capture.tcl}
+Time resolution is 1 ps
+source /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/scripts/run2_stress_capture.tcl
+## open_vcd suite.vcd
+## log_vcd [get_objects -filter {type == in_port || type == out_port || type == inout_port || type == port} /rtl_suite/dut/*]
+## run all
+PASS mode=0 scenario=batch32_0 cycle=622 words=67 stalls=335
+PASS mode=0 scenario=batch32_1 cycle=1236 words=67 stalls=335
+PASS mode=0 scenario=batch32_2 cycle=1850 words=67 stalls=335
+PASS mode=0 scenario=batch32_3 cycle=2464 words=67 stalls=335
+PASS mode=0 scenario=hand_0 cycle=2604 words=3 stalls=15
+PASS mode=0 scenario=hand_1 cycle=2744 words=3 stalls=15
+PASS mode=0 scenario=hand_2 cycle=2884 words=3 stalls=15
+PASS mode=0 scenario=hand_3 cycle=3024 words=3 stalls=15
+PASS mode=0 scenario=hand_4 cycle=3164 words=3 stalls=15
+PASS mode=0 scenario=hand_5 cycle=3304 words=3 stalls=15
+PASS mode=0 scenario=hand_6 cycle=3444 words=3 stalls=15
+PASS mode=0 scenario=replacement cycle=3677 words=6 stalls=30
+PASS mode=0 scenario=header_0_0 cycle=3709 words=0 stalls=0
+PASS mode=0 scenario=recovery_header_0_0 cycle=3888 words=5 stalls=25
+PASS mode=0 scenario=header_0_1 cycle=3920 words=0 stalls=0
+PASS mode=0 scenario=recovery_header_0_1 cycle=4099 words=5 stalls=25
+PASS mode=0 scenario=header_0_2 cycle=4131 words=0 stalls=0
+PASS mode=0 scenario=recovery_header_0_2 cycle=4310 words=5 stalls=25
+PASS mode=0 scenario=header_0_3 cycle=4342 words=0 stalls=0
+PASS mode=0 scenario=recovery_header_0_3 cycle=4521 words=5 stalls=25
+PASS mode=0 scenario=header_1_0 cycle=4556 words=0 stalls=0
+PASS mode=0 scenario=recovery_header_1_0 cycle=4735 words=5 stalls=25
+PASS mode=0 scenario=header_1_1 cycle=4770 words=0 stalls=0
+PASS mode=0 scenario=recovery_header_1_1 cycle=4949 words=5 stalls=25
+PASS mode=0 scenario=header_1_2 cycle=4984 words=0 stalls=0
+PASS mode=0 scenario=recovery_header_1_2 cycle=5163 words=5 stalls=25
+PASS mode=0 scenario=header_1_3 cycle=5198 words=0 stalls=0
+PASS mode=0 scenario=recovery_header_1_3 cycle=5377 words=5 stalls=25
+PASS mode=0 scenario=header_2_0 cycle=5418 words=0 stalls=0
+PASS mode=0 scenario=recovery_header_2_0 cycle=5597 words=5 stalls=25
+PASS mode=0 scenario=header_2_1 cycle=5638 words=0 stalls=0
+PASS mode=0 scenario=recovery_header_2_1 cycle=5817 words=5 stalls=25
+PASS mode=0 scenario=header_2_2 cycle=5858 words=0 stalls=0
+PASS mode=0 scenario=recovery_header_2_2 cycle=6037 words=5 stalls=25
+PASS mode=0 scenario=header_2_3 cycle=6078 words=0 stalls=0
+PASS mode=0 scenario=recovery_header_2_3 cycle=6257 words=5 stalls=25
+PASS mode=0 scenario=unknown cycle=6301 words=0 stalls=0
+PASS mode=0 scenario=recovery_unknown cycle=6480 words=5 stalls=25
+PASS mode=0 scenario=unknown_reserved cycle=6524 words=0 stalls=0
+PASS mode=0 scenario=recovery_unknown_reserved cycle=6703 words=5 stalls=25
+PASS mode=0 scenario=reserved_count cycle=6747 words=0 stalls=0
+PASS mode=0 scenario=recovery_reserved_count cycle=6926 words=5 stalls=25
+PASS mode=0 scenario=reserved cycle=6970 words=0 stalls=0
+PASS mode=0 scenario=recovery_reserved cycle=7149 words=5 stalls=25
+PASS mode=0 scenario=shift16 cycle=7193 words=0 stalls=0
+PASS mode=0 scenario=recovery_shift16 cycle=7372 words=5 stalls=25
+PASS mode=0 scenario=shift_negative cycle=7416 words=0 stalls=0
+PASS mode=0 scenario=recovery_shift_negative cycle=7595 words=5 stalls=25
+PASS mode=0 scenario=end_parameter cycle=7639 words=0 stalls=0
+PASS mode=0 scenario=recovery_end_parameter cycle=7818 words=5 stalls=25
+PASS mode=0 scenario=count0 cycle=7862 words=0 stalls=0
+PASS mode=0 scenario=recovery_count0 cycle=8041 words=5 stalls=25
+PASS mode=0 scenario=count33 cycle=8085 words=0 stalls=0
+PASS mode=0 scenario=recovery_count33 cycle=8264 words=5 stalls=25
+PASS mode=0 scenario=count_negative cycle=8308 words=0 stalls=0
+PASS mode=0 scenario=recovery_count_negative cycle=8487 words=5 stalls=25
+PASS mode=0 scenario=unconfigured cycle=8531 words=0 stalls=0
+PASS mode=0 scenario=recovery_unconfigured cycle=8710 words=5 stalls=25
+PASS mode=0 scenario=payload_1_True cycle=8760 words=0 stalls=0
+PASS mode=0 scenario=recovery_payload_1_True cycle=8939 words=5 stalls=25
+PASS mode=0 scenario=payload_1_False cycle=8998 words=0 stalls=0
+PASS mode=0 scenario=recovery_payload_1_False cycle=9177 words=5 stalls=25
+PASS mode=0 scenario=payload_2_True cycle=9281 words=1 stalls=5
+PASS mode=0 scenario=recovery_payload_2_True cycle=9460 words=5 stalls=25
+PASS mode=0 scenario=payload_2_False cycle=9564 words=1 stalls=5
+PASS mode=0 scenario=recovery_payload_2_False cycle=9743 words=5 stalls=25
+PASS mode=0 scenario=payload_sidebands cycle=9883 words=3 stalls=15
+PASS RTL suite mode=0 activations=67 header_stalls=575 payload_stalls=1600 tlast_stalls=935 after_valid_stalls=0
+$finish called at time : 79064 ns : File "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/rtl_suite.sv" Line 164
+## close_vcd
+## quit
+INFO: xsimkernel Simulation Memory Usage: 527388 KB (Peak: 575716 KB), Simulation CPU Usage: 2120 ms
+INFO: [Common 17-206] Exiting xsim at Wed Oct 28 17:36:31 2026...

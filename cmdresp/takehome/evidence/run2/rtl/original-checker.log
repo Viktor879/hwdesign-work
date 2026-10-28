@@ -1,0 +1,92 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_buffer_RAM_AUTO_1R1W.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_buffer_RAM_AUTO_1R1W
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_control_s_axi.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_control_s_axi
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_flow_control_loop_pipe_sequential_init.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_flow_control_loop_pipe_sequential_init
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module qgemv_core_mac_muladd_8s_8s_16s_17_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module qgemv_core_mac_muladd_8s_8s_17s_17_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mul_8s_8s_16_1_1.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_mul_8s_8s_16_1_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_partselect_16ns_64ns_6ns_16_1_1.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_partselect_16ns_64ns_6ns_16_1_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_compute.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_qgemv_core_Pipeline_compute
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_header.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_qgemv_core_Pipeline_header
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_install_bias.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_qgemv_core_Pipeline_install_bias
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_install_rows.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_qgemv_core_Pipeline_install_rows
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_receive.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_qgemv_core_Pipeline_receive
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_regslice_both.v" into library work
+INFO: [VRFC 10-311] analyzing module qgemv_core_regslice_both
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/qgemv.sv" into library work
+INFO: [VRFC 10-311] analyzing module qgemv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/rtl_stress.sv" into library work
+INFO: [VRFC 10-311] analyzing module rtl_stress
+Vivado Simulator v2026.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /eda/xilinx/2026.1/Vivado/bin/unwrapped/lnx64.o/xelab rtl_stress -L unisims_ver -s original_checker -debug typical 
+Multi-threading is on. Using 62 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.qgemv_core_buffer_RAM_AUTO_1R1W
+Compiling module work.qgemv_core_flow_control_loop_pip...
+Compiling module work.qgemv_core_qgemv_core_Pipeline_h...
+Compiling module work.qgemv_core_qgemv_core_Pipeline_r...
+Compiling module work.qgemv_core_qgemv_core_Pipeline_i...
+Compiling module work.qgemv_core_mul_8s_8s_16_1_1(NUM_...
+Compiling module work.qgemv_core_mac_muladd_8s_8s_16s_...
+Compiling module work.qgemv_core_mac_muladd_8s_8s_16s_...
+Compiling module work.qgemv_core_mac_muladd_8s_8s_17s_...
+Compiling module work.qgemv_core_mac_muladd_8s_8s_17s_...
+Compiling module work.qgemv_core_qgemv_core_Pipeline_c...
+Compiling module work.qgemv_core_partselect_16ns_64ns_...
+Compiling module work.qgemv_core_qgemv_core_Pipeline_i...
+Compiling module work.qgemv_core_control_s_axi
+Compiling module work.qgemv_core_regslice_both(DataWid...
+Compiling module work.qgemv_core_regslice_both
+Compiling module work.qgemv_core_regslice_both(DataWid...
+Compiling module work.qgemv_core
+Compiling module work.qgemv
+Compiling module work.rtl_stress
+Built simulation snapshot original_checker
+
+****** xsim v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Wed Oct 28 17:51:39 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/original_checker/xsim_script.tcl
+# xsim {original_checker} -autoloadwcfg -tclbatch {/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/scripts/stress_capture.tcl}
+Time resolution is 1 ps
+source /home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/scripts/stress_capture.tcl
+## open_vcd stress.vcd
+## log_vcd [get_objects -filter {type == in_port || type == out_port || type == inout_port || type == port} /rtl_stress/dut/*]
+## run all
+PASS malformed header leaves offered later word unaccepted
+PASS fresh activation rejects PROCESS before CONFIG
+PASS input blocking, stable output backpressure, no prefetch, successful END, blocked_cycles=40
+PASS RTL stress completed
+$finish called at time : 2272 ns : File "/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/rtl_stress.sv" Line 112
+## close_vcd
+## quit
+INFO: xsimkernel Simulation Memory Usage: 518624 KB (Peak: 575668 KB), Simulation CPU Usage: 1960 ms
+INFO: [Common 17-206] Exiting xsim at Wed Oct 28 17:51:43 2026...
+PASS RTL stress completed

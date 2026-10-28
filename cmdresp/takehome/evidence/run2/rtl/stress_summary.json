@@ -1,0 +1,57 @@
+[
+  {
+    "mode": 0,
+    "activations": 67,
+    "output_transfers": 435,
+    "stalled_cycles": 2175,
+    "header_stalls": 575,
+    "payload_stalls": 1600,
+    "tlast_stalls": 935,
+    "after_valid_stalls": 0,
+    "result": "PASS"
+  },
+  {
+    "mode": 1,
+    "activations": 67,
+    "output_transfers": 435,
+    "stalled_cycles": 2610,
+    "header_stalls": 690,
+    "payload_stalls": 1920,
+    "tlast_stalls": 1122,
+    "after_valid_stalls": 435,
+    "result": "PASS"
+  },
+  {
+    "mode": 2,
+    "activations": 67,
+    "output_transfers": 435,
+    "stalled_cycles": 362,
+    "header_stalls": 82,
+    "payload_stalls": 280,
+    "tlast_stalls": 118,
+    "after_valid_stalls": 0,
+    "result": "PASS"
+  },
+  {
+    "mode": 3,
+    "activations": 67,
+    "output_transfers": 435,
+    "stalled_cycles": 459,
+    "header_stalls": 130,
+    "payload_stalls": 329,
+    "tlast_stalls": 188,
+    "after_valid_stalls": 0,
+    "result": "PASS"
+  },
+  {
+    "mode": 4,
+    "activations": 67,
+    "output_transfers": 435,
+    "stalled_cycles": 0,
+    "header_stalls": 0,
+    "payload_stalls": 0,
+    "tlast_stalls": 0,
+    "after_valid_stalls": 0,
+    "result": "PASS"
+  }
+]

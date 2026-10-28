@@ -1,0 +1,11 @@
+# Preserve authentic tool outputs and hash-verified provenance byte for byte.
+evidence/**/*.log -text -whitespace
+evidence/**/*.rpt -text -whitespace
+evidence/**/*.xml -text -whitespace
+evidence/**/*.v -text -whitespace
+evidence/**/*.vcd -text -whitespace -diff
+evidence/**/*.csv -text -whitespace
+evidence/run1-source/** -text -whitespace
+evidence/run2/submission-baseline/** -text -whitespace
+# Native Vitis stall configuration intentionally retains its original spacing.
+evidence/rtl/qgemv_cosim_random_stall.json -text -whitespace

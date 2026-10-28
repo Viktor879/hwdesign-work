@@ -1,0 +1,733 @@
+{
+  "policy": "Explicit reviewed files only; never git add .",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "purpose": "Preserve native output/provenance bytes; exempt only immutable evidence from formatting checks"
+    },
+    {
+      "path": ".gitignore",
+      "purpose": "Exclude disposable projects, simulators, caches and credentials"
+    },
+    {
+      "path": "README.md",
+      "purpose": "Current production-top integration and reproducible verification instructions"
+    },
+    {
+      "path": "evidence/.gitignore",
+      "purpose": "Exact reviewed evidence allowlist; prevent incidental generated files entering Git"
+    },
+    {
+      "path": "evidence/artifact-sha256.json",
+      "purpose": "Historical Run 1 source/fixture/native-report/waveform integrity record"
+    },
+    {
+      "path": "evidence/audit.json",
+      "purpose": "Individually cited Run 1 evidence: audit"
+    },
+    {
+      "path": "evidence/csim/comparison.csv",
+      "purpose": "Individually cited Run 1 evidence: C comparisons"
+    },
+    {
+      "path": "evidence/csim/compile-width-failure.log",
+      "purpose": "Individually cited Run 1 evidence: width failure"
+    },
+    {
+      "path": "evidence/csim/component-link-failure.log",
+      "purpose": "Individually cited Run 1 evidence: component flow"
+    },
+    {
+      "path": "evidence/csim/fixture-format-failure.log",
+      "purpose": "Individually cited Run 1 evidence: fixture failure"
+    },
+    {
+      "path": "evidence/csim/initial-comparison.csv",
+      "purpose": "Individually cited Run 1 evidence: C checkpoint"
+    },
+    {
+      "path": "evidence/csim/initial-link-failure.log",
+      "purpose": "Individually cited Run 1 evidence: initial link"
+    },
+    {
+      "path": "evidence/csim/qgemv_csim.log",
+      "purpose": "Individually cited Run 1 evidence: C log"
+    },
+    {
+      "path": "evidence/csim/retry-link-failure.log",
+      "purpose": "Individually cited Run 1 evidence: retry link"
+    },
+    {
+      "path": "evidence/csim/source-registration-failure.log",
+      "purpose": "Individually cited Run 1 evidence: renamed source"
+    },
+    {
+      "path": "evidence/python/checks.json",
+      "purpose": "Individually cited Run 1 evidence: Python evidence"
+    },
+    {
+      "path": "evidence/rtl/command_order.csv",
+      "purpose": "Individually cited Run 1 evidence: external ordering trace"
+    },
+    {
+      "path": "evidence/rtl/comparison.csv",
+      "purpose": "Individually cited Run 1 evidence: RTL comparisons"
+    },
+    {
+      "path": "evidence/rtl/external.vcd",
+      "purpose": "Individually cited Run 1 evidence: port waveform"
+    },
+    {
+      "path": "evidence/rtl/initial/comparison.csv",
+      "purpose": "Individually cited Run 1 evidence: initial comparisons"
+    },
+    {
+      "path": "evidence/rtl/initial/cosim.log",
+      "purpose": "Individually cited Run 1 evidence: initial completion"
+    },
+    {
+      "path": "evidence/rtl/initial/external.vcd",
+      "purpose": "Essential waveform backing cited first full Run 1 checkpoint timing"
+    },
+    {
+      "path": "evidence/rtl/initial/stress-testbench-failure.log",
+      "purpose": "Individually cited Run 1 evidence: first testbench coverage failure"
+    },
+    {
+      "path": "evidence/rtl/initial/stress.log",
+      "purpose": "Individually cited Run 1 evidence: diagnostic result"
+    },
+    {
+      "path": "evidence/rtl/initial/timing.csv",
+      "purpose": "Individually cited Run 1 evidence: initial timing"
+    },
+    {
+      "path": "evidence/rtl/measurement.json",
+      "purpose": "Individually cited Run 1 evidence: measurement metadata"
+    },
+    {
+      "path": "evidence/rtl/qgemv_cosim.rpt",
+      "purpose": "Individually cited Run 1 evidence: native cosim report"
+    },
+    {
+      "path": "evidence/rtl/qgemv_cosim_random_stall.json",
+      "purpose": "Individually cited Run 1 evidence: native stall configuration"
+    },
+    {
+      "path": "evidence/rtl/registered_trial/external.vcd",
+      "purpose": "Essential waveform backing cited registered-output trial timing"
+    },
+    {
+      "path": "evidence/rtl/registered_trial/stress.log",
+      "purpose": "Individually cited Run 1 evidence: registered stress log"
+    },
+    {
+      "path": "evidence/rtl/registered_trial/timing.csv",
+      "purpose": "Individually cited Run 1 evidence: trial timing"
+    },
+    {
+      "path": "evidence/rtl/stress.log",
+      "purpose": "Individually cited Run 1 evidence: direct RTL stress log"
+    },
+    {
+      "path": "evidence/rtl/stress.vcd",
+      "purpose": "Individually cited Run 1 evidence: stress waveform"
+    },
+    {
+      "path": "evidence/rtl/timing.csv",
+      "purpose": "Individually cited Run 1 evidence: RTL timing CSV"
+    },
+    {
+      "path": "evidence/rtl/word_comparison.csv",
+      "purpose": "Individually cited Run 1 evidence: word-by-word expected/observed CSV"
+    },
+    {
+      "path": "evidence/run1-final-tool.log",
+      "purpose": "Individually cited Run 1 evidence: registered trial"
+    },
+    {
+      "path": "evidence/run1-final.log",
+      "purpose": "Individually cited Run 1 evidence: synthesis log"
+    },
+    {
+      "path": "evidence/run1-nb-synth.log",
+      "purpose": "Individually cited Run 1 evidence: rejected synthesis log"
+    },
+    {
+      "path": "evidence/run1-source/kernel.cpp",
+      "purpose": "Original Run 1 HLS source required for isolated failure reproduction and hash verification"
+    },
+    {
+      "path": "evidence/run1-source/results.md",
+      "purpose": "Exact historical Run 1 report template required by current report generator"
+    },
+    {
+      "path": "evidence/run1-source/rtl_stress.sv",
+      "purpose": "Original unchanged stress source snapshot for reproducible equality audit"
+    },
+    {
+      "path": "evidence/run1-tool.log",
+      "purpose": "Individually cited Run 1 evidence: capture abort"
+    },
+    {
+      "path": "evidence/run1.log",
+      "purpose": "Individually cited Run 1 evidence: license failure"
+    },
+    {
+      "path": "evidence/run2/artifact-sha256.json",
+      "purpose": "Historical Run 2 frozen source and evidence integrity record; packaging documents subsequently updated"
+    },
+    {
+      "path": "evidence/run2/audit.json",
+      "purpose": "Individually cited Run 2 evidence: Run 2 audit"
+    },
+    {
+      "path": "evidence/run2/csim/comparison.csv",
+      "purpose": "Individually cited Run 2 evidence: final C"
+    },
+    {
+      "path": "evidence/run2/csim/qgemv_core_csim.log",
+      "purpose": "Individually cited Run 2 evidence: C log"
+    },
+    {
+      "path": "evidence/run2/diagnosis/diagnosis.md",
+      "purpose": "Individually cited Run 2 evidence: diagnosis"
+    },
+    {
+      "path": "evidence/run2/diagnosis/direct.cpp",
+      "purpose": "Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: direct.cpp"
+    },
+    {
+      "path": "evidence/run2/diagnosis/empty-probe.cpp",
+      "purpose": "Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: empty-probe.cpp"
+    },
+    {
+      "path": "evidence/run2/diagnosis/final-source-before-clean-run.cpp",
+      "purpose": "Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: final-source-before-clean-run.cpp"
+    },
+    {
+      "path": "evidence/run2/diagnosis/forward-probe.cpp",
+      "purpose": "Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: forward-probe.cpp"
+    },
+    {
+      "path": "evidence/run2/diagnosis/manual-include-failure.log",
+      "purpose": "Individually cited Run 2 evidence: include correction"
+    },
+    {
+      "path": "evidence/run2/diagnosis/manual.cpp",
+      "purpose": "Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: manual.cpp"
+    },
+    {
+      "path": "evidence/run2/diagnosis/manual_tb.cpp",
+      "purpose": "Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: manual_tb.cpp"
+    },
+    {
+      "path": "evidence/run2/diagnosis/original-0.log",
+      "purpose": "Individually cited Run 2 evidence: initial FAIL log"
+    },
+    {
+      "path": "evidence/run2/diagnosis/original-0.vcd",
+      "purpose": "Individually cited Run 2 evidence: initial waveform"
+    },
+    {
+      "path": "evidence/run2/diagnosis/original-1.log",
+      "purpose": "Individually cited Run 2 evidence: post-VALID FAIL log"
+    },
+    {
+      "path": "evidence/run2/diagnosis/original-1.vcd",
+      "purpose": "Individually cited Run 2 evidence: post-VALID waveform"
+    },
+    {
+      "path": "evidence/run2/diagnosis/original-synthesis.log",
+      "purpose": "Individually cited Run 2 evidence: original synthesis"
+    },
+    {
+      "path": "evidence/run2/diagnosis/original-transitions.csv",
+      "purpose": "Individually cited Run 2 evidence: exact transition CSV"
+    },
+    {
+      "path": "evidence/run2/diagnosis/outer-fsm-probe.cpp",
+      "purpose": "Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: outer-fsm-probe.cpp"
+    },
+    {
+      "path": "evidence/run2/diagnosis/outlined-poll-probe.cpp",
+      "purpose": "Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: outlined-poll-probe.cpp"
+    },
+    {
+      "path": "evidence/run2/diagnosis/outlined-poll-synthesis.log",
+      "purpose": "Individually cited Run 2 evidence: outlined polling"
+    },
+    {
+      "path": "evidence/run2/diagnosis/pre-barrier-synthesis.log",
+      "purpose": "Individually cited Run 2 evidence: pre-barrier synthesis"
+    },
+    {
+      "path": "evidence/run2/diagnosis/pre-barrier.cpp",
+      "purpose": "Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: pre-barrier.cpp"
+    },
+    {
+      "path": "evidence/run2/diagnosis/protocol-probe-synthesis.log",
+      "purpose": "Individually cited Run 2 evidence: invalid protocol warnings"
+    },
+    {
+      "path": "evidence/run2/diagnosis/protocol-probe.cpp",
+      "purpose": "Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: protocol-probe.cpp"
+    },
+    {
+      "path": "evidence/run2/diagnosis/qgemv.v",
+      "purpose": "Individually cited Run 2 evidence: original native RTL"
+    },
+    {
+      "path": "evidence/run2/diagnosis/qgemv_qgemv_Pipeline_compute.v",
+      "purpose": "Individually cited Run 2 evidence: compute RTL"
+    },
+    {
+      "path": "evidence/run2/diagnosis/reproduction.log",
+      "purpose": "Individually cited Run 2 evidence: reproduction log"
+    },
+    {
+      "path": "evidence/run2/diagnosis/run1-cycles.csv",
+      "purpose": "Individually cited Run 2 evidence: pre-edge cycle CSV"
+    },
+    {
+      "path": "evidence/run2/diagnosis/run1-reproduction.vcd",
+      "purpose": "Individually cited Run 2 evidence: original snapshot trace"
+    },
+    {
+      "path": "evidence/run2/diagnosis/wait-probe-synthesis.log",
+      "purpose": "Individually cited Run 2 evidence: wait probe"
+    },
+    {
+      "path": "evidence/run2/diagnosis/wait-probe.cpp",
+      "purpose": "Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: wait-probe.cpp"
+    },
+    {
+      "path": "evidence/run2/diagnosis/write-dep-probe.cpp",
+      "purpose": "Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: write-dep-probe.cpp"
+    },
+    {
+      "path": "evidence/run2/diagnosis/write-dep-rejected.log",
+      "purpose": "Individually cited Run 2 evidence: write_dep rejection"
+    },
+    {
+      "path": "evidence/run2/direct-probe.log",
+      "purpose": "Individually cited Run 2 evidence: Direct I/O probe"
+    },
+    {
+      "path": "evidence/run2/empty-probe.log",
+      "purpose": "Individually cited Run 2 evidence: empty rejection"
+    },
+    {
+      "path": "evidence/run2/execution.log",
+      "purpose": "Individually cited Run 2 evidence: execution log"
+    },
+    {
+      "path": "evidence/run2/forward-probe.log",
+      "purpose": "Individually cited Run 2 evidence: forward probe"
+    },
+    {
+      "path": "evidence/run2/integrated-synthesis.log",
+      "purpose": "Individually cited Run 2 evidence: integrated synthesis"
+    },
+    {
+      "path": "evidence/run2/manual-probe.log",
+      "purpose": "Individually cited Run 2 evidence: manual prototype"
+    },
+    {
+      "path": "evidence/run2/python/checks.json",
+      "purpose": "Individually cited Run 2 evidence: fresh Python evidence"
+    },
+    {
+      "path": "evidence/run2/python/checks.log",
+      "purpose": "Individually cited Run 2 evidence: raw Python output"
+    },
+    {
+      "path": "evidence/run2/rtl/command_order.csv",
+      "purpose": "Individually cited Run 2 evidence: no-stall ordering"
+    },
+    {
+      "path": "evidence/run2/rtl/comparison.csv",
+      "purpose": "Individually cited Run 2 evidence: core RTL"
+    },
+    {
+      "path": "evidence/run2/rtl/cosim.log",
+      "purpose": "Individually cited Run 2 evidence: raw co-simulation log"
+    },
+    {
+      "path": "evidence/run2/rtl/external_comparison.csv",
+      "purpose": "Compact external-transfer scenario summary consumed by retained Run 2 audit"
+    },
+    {
+      "path": "evidence/run2/rtl/measurement.json",
+      "purpose": "Individually cited Run 2 evidence: measurement metadata"
+    },
+    {
+      "path": "evidence/run2/rtl/original-checker.log",
+      "purpose": "Individually cited Run 2 evidence: raw original-checker PASS"
+    },
+    {
+      "path": "evidence/run2/rtl/original-checker.vcd",
+      "purpose": "Individually cited Run 2 evidence: waveform"
+    },
+    {
+      "path": "evidence/run2/rtl/pre-barrier/cosim.log",
+      "purpose": "Individually cited Run 2 evidence: pre-barrier core cosim"
+    },
+    {
+      "path": "evidence/run2/rtl/pre-barrier/stress-4.log",
+      "purpose": "Individually cited Run 2 evidence: real integrated FAIL"
+    },
+    {
+      "path": "evidence/run2/rtl/pre-barrier/stress-4.vcd",
+      "purpose": "Individually cited Run 2 evidence: failing waveform"
+    },
+    {
+      "path": "evidence/run2/rtl/prefetch-trial/stress-0.log",
+      "purpose": "Individually cited Run 2 evidence: prefetch FAIL"
+    },
+    {
+      "path": "evidence/run2/rtl/prefetch-trial/stress-0.vcd",
+      "purpose": "Individually cited Run 2 evidence: waveform"
+    },
+    {
+      "path": "evidence/run2/rtl/qgemv_core_cosim.rpt",
+      "purpose": "Individually cited Run 2 evidence: native cosim report"
+    },
+    {
+      "path": "evidence/run2/rtl/stress-0.csv",
+      "purpose": "Individually cited Run 2 evidence: CSV"
+    },
+    {
+      "path": "evidence/run2/rtl/stress-0.log",
+      "purpose": "Individually cited Run 2 evidence: raw log"
+    },
+    {
+      "path": "evidence/run2/rtl/stress-0.vcd",
+      "purpose": "Individually cited Run 2 evidence: waveform"
+    },
+    {
+      "path": "evidence/run2/rtl/stress-1.csv",
+      "purpose": "Individually cited Run 2 evidence: CSV"
+    },
+    {
+      "path": "evidence/run2/rtl/stress-1.log",
+      "purpose": "Individually cited Run 2 evidence: raw log"
+    },
+    {
+      "path": "evidence/run2/rtl/stress-1.vcd",
+      "purpose": "Individually cited Run 2 evidence: waveform"
+    },
+    {
+      "path": "evidence/run2/rtl/stress-2.csv",
+      "purpose": "Individually cited Run 2 evidence: CSV"
+    },
+    {
+      "path": "evidence/run2/rtl/stress-2.log",
+      "purpose": "Individually cited Run 2 evidence: raw log"
+    },
+    {
+      "path": "evidence/run2/rtl/stress-2.vcd",
+      "purpose": "Individually cited Run 2 evidence: waveform"
+    },
+    {
+      "path": "evidence/run2/rtl/stress-3.csv",
+      "purpose": "Individually cited Run 2 evidence: CSV"
+    },
+    {
+      "path": "evidence/run2/rtl/stress-3.log",
+      "purpose": "Individually cited Run 2 evidence: raw log"
+    },
+    {
+      "path": "evidence/run2/rtl/stress-3.vcd",
+      "purpose": "Individually cited Run 2 evidence: waveform"
+    },
+    {
+      "path": "evidence/run2/rtl/stress-4.csv",
+      "purpose": "Individually cited Run 2 evidence: CSV"
+    },
+    {
+      "path": "evidence/run2/rtl/stress-4.log",
+      "purpose": "Individually cited Run 2 evidence: raw log"
+    },
+    {
+      "path": "evidence/run2/rtl/stress-4.vcd",
+      "purpose": "Individually cited Run 2 evidence: actual production-top waveform"
+    },
+    {
+      "path": "evidence/run2/rtl/stress-build.log",
+      "purpose": "Individually cited Run 2 evidence: stress build/result log"
+    },
+    {
+      "path": "evidence/run2/rtl/stress_summary.json",
+      "purpose": "Individually cited Run 2 evidence: stress summary"
+    },
+    {
+      "path": "evidence/run2/rtl/timing.csv",
+      "purpose": "Individually cited Run 2 evidence: external timing CSV"
+    },
+    {
+      "path": "evidence/run2/rtl/word_comparison.csv",
+      "purpose": "Individually cited Run 2 evidence: expected/observed word CSV"
+    },
+    {
+      "path": "evidence/run2/submission-baseline/README.md",
+      "purpose": "Bit-exact pre-submission document matching historical Run 2 SHA-256 record; packaging text updated in current document"
+    },
+    {
+      "path": "evidence/run2/submission-baseline/results.md",
+      "purpose": "Bit-exact pre-submission document matching historical Run 2 SHA-256 record; packaging text updated in current document"
+    },
+    {
+      "path": "evidence/run2/synthesis.log",
+      "purpose": "Individually cited Run 2 evidence: synthesis log"
+    },
+    {
+      "path": "evidence/run2/synthesis/integrated_timing.rpt",
+      "purpose": "Individually cited Run 2 evidence: integrated timing report"
+    },
+    {
+      "path": "evidence/run2/synthesis/integrated_utilization.rpt",
+      "purpose": "Individually cited Run 2 evidence: integrated utilization"
+    },
+    {
+      "path": "evidence/run2/synthesis/qgemv_core.v",
+      "purpose": "Individually cited Run 2 evidence: retained native core"
+    },
+    {
+      "path": "evidence/run2/synthesis/qgemv_core_Pipeline_compute_csynth.rpt",
+      "purpose": "Individually cited Run 2 evidence: compute report"
+    },
+    {
+      "path": "evidence/run2/synthesis/qgemv_core_Pipeline_receive_csynth.rpt",
+      "purpose": "Individually cited Run 2 evidence: receive report"
+    },
+    {
+      "path": "evidence/run2/synthesis/qgemv_core_control_s_axi.v",
+      "purpose": "Individually cited Run 2 evidence: native register RTL"
+    },
+    {
+      "path": "evidence/run2/synthesis/qgemv_core_csynth.rpt",
+      "purpose": "Individually cited Run 2 evidence: native report"
+    },
+    {
+      "path": "evidence/run2/synthesis/qgemv_core_csynth.xml",
+      "purpose": "Individually cited Run 2 evidence: native XML"
+    },
+    {
+      "path": "evidence/run2/synthesis/qgemv_core_regslice_both.v",
+      "purpose": "Individually cited Run 2 evidence: native register slice"
+    },
+    {
+      "path": "evidence/submission/SHA256SUMS",
+      "purpose": "SHA-256 checksums for every staged payload file except this checksum file itself"
+    },
+    {
+      "path": "evidence/submission/audit.json",
+      "purpose": "New independent submission checks: fresh Python, raw logs, native reports and external VCD decoding"
+    },
+    {
+      "path": "evidence/submission/selection.json",
+      "purpose": "Explicit selective-staging input with a reviewed purpose for every path"
+    },
+    {
+      "path": "evidence/submission/staged-files.tsv",
+      "purpose": "Exact staged path, byte-size and purpose inventory, including this inventory"
+    },
+    {
+      "path": "evidence/synthesis/initial/qgemv_csynth.rpt",
+      "purpose": "Individually cited Run 1 evidence: initial synthesis"
+    },
+    {
+      "path": "evidence/synthesis/qgemv_Pipeline_compute_csynth.rpt",
+      "purpose": "Individually cited Run 1 evidence: compute report"
+    },
+    {
+      "path": "evidence/synthesis/qgemv_Pipeline_receive_csynth.rpt",
+      "purpose": "Individually cited Run 1 evidence: receive report"
+    },
+    {
+      "path": "evidence/synthesis/qgemv_csynth.rpt",
+      "purpose": "Individually cited Run 1 evidence: native synthesis report"
+    },
+    {
+      "path": "evidence/synthesis/qgemv_csynth.xml",
+      "purpose": "Individually cited Run 1 evidence: native synthesis XML"
+    },
+    {
+      "path": "evidence/synthesis/registered_trial/qgemv_csynth.rpt",
+      "purpose": "Individually cited Run 1 evidence: trial synthesis"
+    },
+    {
+      "path": "fixtures/cases.txt",
+      "purpose": "Deterministic independent expected input/output/status fixture: cases.txt"
+    },
+    {
+      "path": "fixtures/manifest.json",
+      "purpose": "Deterministic independent expected input/output/status fixture: manifest.json"
+    },
+    {
+      "path": "fixtures/stress.txt",
+      "purpose": "Deterministic independent expected input/output/status fixture: stress.txt"
+    },
+    {
+      "path": "results.md",
+      "purpose": "Seven-section results; historical Run 1 FAIL and corrected Run 2 evidence"
+    },
+    {
+      "path": "scripts/analyze_rtl.py",
+      "purpose": "Current verification/report/build entry or production-top evidence reproduction: analyze_rtl.py"
+    },
+    {
+      "path": "scripts/audit.py",
+      "purpose": "Current verification/report/build entry or production-top evidence reproduction: audit.py"
+    },
+    {
+      "path": "scripts/audit_run2.py",
+      "purpose": "Current verification/report/build entry or production-top evidence reproduction: audit_run2.py"
+    },
+    {
+      "path": "scripts/capture.py",
+      "purpose": "Small historical capture/co-simulation/evidence helper retained for recorded command history"
+    },
+    {
+      "path": "scripts/cosim.tcl",
+      "purpose": "Small historical capture/co-simulation/evidence helper retained for recorded command history"
+    },
+    {
+      "path": "scripts/diagnose_run1.py",
+      "purpose": "Reproduce and diagnose original Run 1 failure without changing production source"
+    },
+    {
+      "path": "scripts/fixtures.py",
+      "purpose": "Independent golden/hand/NumPy checks and deterministic protocol fixtures"
+    },
+    {
+      "path": "scripts/model.py",
+      "purpose": "Independent golden/hand/NumPy checks and deterministic protocol fixtures"
+    },
+    {
+      "path": "scripts/probe_direct.tcl",
+      "purpose": "Reproduce recorded discarded interface/Direct-I-O diagnostic prototype"
+    },
+    {
+      "path": "scripts/probe_manual.tcl",
+      "purpose": "Reproduce recorded discarded interface/Direct-I-O diagnostic prototype"
+    },
+    {
+      "path": "scripts/report.py",
+      "purpose": "Current verification/report/build entry or production-top evidence reproduction: report.py"
+    },
+    {
+      "path": "scripts/report_run2.py",
+      "purpose": "Current verification/report/build entry or production-top evidence reproduction: report_run2.py"
+    },
+    {
+      "path": "scripts/reproduce_run1.tcl",
+      "purpose": "Reproduce and diagnose original Run 1 failure without changing production source"
+    },
+    {
+      "path": "scripts/reproduce_run1_suite.sh",
+      "purpose": "Reproduce and diagnose original Run 1 failure without changing production source"
+    },
+    {
+      "path": "scripts/reproduce_run1_suite.tcl",
+      "purpose": "Reproduce and diagnose original Run 1 failure without changing production source"
+    },
+    {
+      "path": "scripts/reproduce_run1_synth.tcl",
+      "purpose": "Reproduce and diagnose original Run 1 failure without changing production source"
+    },
+    {
+      "path": "scripts/retain.py",
+      "purpose": "Small historical capture/co-simulation/evidence helper retained for recorded command history"
+    },
+    {
+      "path": "scripts/retain_run2.py",
+      "purpose": "Current verification/report/build entry or production-top evidence reproduction: retain_run2.py"
+    },
+    {
+      "path": "scripts/run.sh",
+      "purpose": "Current verification/report/build entry or production-top evidence reproduction: run.sh"
+    },
+    {
+      "path": "scripts/run.tcl",
+      "purpose": "Current verification/report/build entry or production-top evidence reproduction: run.tcl"
+    },
+    {
+      "path": "scripts/run2.sh",
+      "purpose": "Current verification/report/build entry or production-top evidence reproduction: run2.sh"
+    },
+    {
+      "path": "scripts/run2_capture.py",
+      "purpose": "Small historical capture/co-simulation/evidence helper retained for recorded command history"
+    },
+    {
+      "path": "scripts/run2_cosim.tcl",
+      "purpose": "Current verification/report/build entry or production-top evidence reproduction: run2_cosim.tcl"
+    },
+    {
+      "path": "scripts/run2_integrated.tcl",
+      "purpose": "Current verification/report/build entry or production-top evidence reproduction: run2_integrated.tcl"
+    },
+    {
+      "path": "scripts/run2_original_checker.sh",
+      "purpose": "Current verification/report/build entry or production-top evidence reproduction: run2_original_checker.sh"
+    },
+    {
+      "path": "scripts/run2_stress.sh",
+      "purpose": "Current verification/report/build entry or production-top evidence reproduction: run2_stress.sh"
+    },
+    {
+      "path": "scripts/run2_stress_capture.tcl",
+      "purpose": "Current verification/report/build entry or production-top evidence reproduction: run2_stress_capture.tcl"
+    },
+    {
+      "path": "scripts/run2_synth.tcl",
+      "purpose": "Current verification/report/build entry or production-top evidence reproduction: run2_synth.tcl"
+    },
+    {
+      "path": "scripts/stress.sh",
+      "purpose": "Current verification/report/build entry or production-top evidence reproduction: stress.sh"
+    },
+    {
+      "path": "scripts/stress_capture.tcl",
+      "purpose": "Current verification/report/build entry or production-top evidence reproduction: stress_capture.tcl"
+    },
+    {
+      "path": "scripts/stress_fixtures.py",
+      "purpose": "Independent golden/hand/NumPy checks and deterministic protocol fixtures"
+    },
+    {
+      "path": "scripts/submission_audit.py",
+      "purpose": "Independent submission audit, exact reviewed manifest and Git-index validation"
+    },
+    {
+      "path": "scripts/synth.tcl",
+      "purpose": "Current verification/report/build entry or production-top evidence reproduction: synth.tcl"
+    },
+    {
+      "path": "src/kernel.cpp",
+      "purpose": "Corrected synthesizable HLS arithmetic, protocol and guarded header read"
+    },
+    {
+      "path": "src/qgemv.hpp",
+      "purpose": "Shared HLS types and corrected core interface"
+    },
+    {
+      "path": "src/qgemv.sv",
+      "purpose": "Production AXI wrapper; actual external handshake feedback counter"
+    },
+    {
+      "path": "src/rtl_stress.sv",
+      "purpose": "Unchanged original failed stress checker, rerun successfully on Run 2"
+    },
+    {
+      "path": "src/rtl_suite.sv",
+      "purpose": "Full external AXI scoreboard, backpressure/stability/order/recovery assertions"
+    },
+    {
+      "path": "src/tb.cpp",
+      "purpose": "Independent fixture-based C/native RTL testbench with fresh streams"
+    }
+  ]
+}

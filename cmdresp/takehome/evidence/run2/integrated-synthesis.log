@@ -1,0 +1,823 @@
+INFO: [Common 17-3922] A valid Vivado Design Suite ENTERPRISE license has been detected. Your current license is active and will expire on 31-jul-2027.
+
+****** Vivado v2026.1 (64-bit)
+  **** SW Build 6511674 on Tue Jun 16 11:01:26 MDT 2026
+  **** IP Build 6504888 on Tue Jun 09 09:05:25 MDT 2026
+  **** SharedData Build 6501428 on Mon Jun 08 17:34:18 MDT 2026
+  **** Start of session at: Wed Oct 28 17:34:14 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source scripts/run2_integrated.tcl -notrace
+Command: synth_design -top qgemv -part xc7z020clg484-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3469731
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2465.613 ; gain = 501.555 ; free physical = 932499 ; free virtual = 1213848
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'qgemv' [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/qgemv.sv:3]
+INFO: [Synth 8-6157] synthesizing module 'qgemv_core' [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core.v:9]
+INFO: [Synth 8-6157] synthesizing module 'qgemv_core_buffer_RAM_AUTO_1R1W' [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_buffer_RAM_AUTO_1R1W.v:7]
+	Parameter DataWidth bound to: 64 - type: integer 
+	Parameter AddressWidth bound to: 5 - type: integer 
+	Parameter AddressRange bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'qgemv_core_buffer_RAM_AUTO_1R1W' (0#1) [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_buffer_RAM_AUTO_1R1W.v:7]
+INFO: [Synth 8-6157] synthesizing module 'qgemv_core_qgemv_core_Pipeline_header' [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_header.v:9]
+INFO: [Synth 8-6157] synthesizing module 'qgemv_core_flow_control_loop_pipe_sequential_init' [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'qgemv_core_flow_control_loop_pipe_sequential_init' (0#1) [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_flow_control_loop_pipe_sequential_init.v:11]
+INFO: [Synth 8-6155] done synthesizing module 'qgemv_core_qgemv_core_Pipeline_header' (0#1) [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_header.v:9]
+INFO: [Synth 8-6157] synthesizing module 'qgemv_core_qgemv_core_Pipeline_receive' [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_receive.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'qgemv_core_qgemv_core_Pipeline_receive' (0#1) [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_receive.v:9]
+INFO: [Synth 8-6157] synthesizing module 'qgemv_core_qgemv_core_Pipeline_install_rows' [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_install_rows.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'qgemv_core_qgemv_core_Pipeline_install_rows' (0#1) [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_install_rows.v:9]
+INFO: [Synth 8-6157] synthesizing module 'qgemv_core_qgemv_core_Pipeline_compute' [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_compute.v:9]
+INFO: [Synth 8-6157] synthesizing module 'qgemv_core_mul_8s_8s_16_1_1' [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mul_8s_8s_16_1_1.v:5]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 1 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter dout_WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'qgemv_core_mul_8s_8s_16_1_1' (0#1) [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mul_8s_8s_16_1_1.v:5]
+INFO: [Synth 8-6157] synthesizing module 'qgemv_core_mac_muladd_8s_8s_16s_17_4_1' [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:45]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 16 - type: integer 
+	Parameter dout_WIDTH bound to: 17 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0' [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0' (0#1) [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'qgemv_core_mac_muladd_8s_8s_16s_17_4_1' (0#1) [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:45]
+INFO: [Synth 8-6157] synthesizing module 'qgemv_core_mac_muladd_8s_8s_17s_17_4_1' [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:45]
+	Parameter ID bound to: 1 - type: integer 
+	Parameter NUM_STAGE bound to: 4 - type: integer 
+	Parameter din0_WIDTH bound to: 8 - type: integer 
+	Parameter din1_WIDTH bound to: 8 - type: integer 
+	Parameter din2_WIDTH bound to: 17 - type: integer 
+	Parameter dout_WIDTH bound to: 17 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0' [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0' (0#1) [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'qgemv_core_mac_muladd_8s_8s_17s_17_4_1' (0#1) [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'qgemv_core_qgemv_core_Pipeline_compute' (0#1) [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_compute.v:9]
+INFO: [Synth 8-6157] synthesizing module 'qgemv_core_qgemv_core_Pipeline_install_bias' [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_install_bias.v:9]
+INFO: [Synth 8-6157] synthesizing module 'qgemv_core_partselect_16ns_64ns_6ns_16_1_1' [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_partselect_16ns_64ns_6ns_16_1_1.v:8]
+	Parameter ADDRWIDTH bound to: 6 - type: integer 
+	Parameter DATAWIDTH bound to: 64 - type: integer 
+	Parameter DATA1WIDTH bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'qgemv_core_partselect_16ns_64ns_6ns_16_1_1' (0#1) [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_partselect_16ns_64ns_6ns_16_1_1.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'qgemv_core_qgemv_core_Pipeline_install_bias' (0#1) [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_install_bias.v:9]
+INFO: [Synth 8-6157] synthesizing module 'qgemv_core_control_s_axi' [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_control_s_axi.v:9]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_control_s_axi.v:230]
+INFO: [Synth 8-6155] done synthesizing module 'qgemv_core_control_s_axi' (0#1) [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_control_s_axi.v:9]
+INFO: [Synth 8-6157] synthesizing module 'qgemv_core_regslice_both' [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_regslice_both.v:8]
+	Parameter DataWidth bound to: 64 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'qgemv_core_regslice_both' (0#1) [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_regslice_both.v:8]
+INFO: [Synth 8-6157] synthesizing module 'qgemv_core_regslice_both__parameterized0' [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_regslice_both.v:8]
+	Parameter DataWidth bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'qgemv_core_regslice_both__parameterized0' (0#1) [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_regslice_both.v:8]
+INFO: [Synth 8-6157] synthesizing module 'qgemv_core_regslice_both__parameterized1' [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_regslice_both.v:8]
+	Parameter DataWidth bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'qgemv_core_regslice_both__parameterized1' (0#1) [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_regslice_both.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'qgemv_core' (0#1) [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'qgemv' (0#1) [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/src/qgemv.sv:3]
+INFO: [Synth 8-6014] Unused sequential element int_ap_done_reg was removed.  [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_control_s_axi.v:305]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+WARNING: [Synth 8-7129] Port AWADDR[1] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AWADDR[0] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[31] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[30] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[29] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[28] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[27] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[26] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[25] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[24] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[23] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[22] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[21] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[20] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[19] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[18] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[17] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[16] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[15] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[14] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[13] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[12] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[11] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[10] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[9] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[8] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[6] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[5] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[4] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[3] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[2] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WSTRB[3] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WSTRB[2] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WSTRB[1] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rst in module qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TKEEP[7] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TKEEP[6] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TKEEP[5] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TKEEP[4] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TKEEP[3] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TKEEP[2] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TKEEP[1] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TKEEP[0] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TSTRB[7] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TSTRB[6] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TSTRB[5] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TSTRB[4] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TSTRB[3] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TSTRB[2] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TSTRB[1] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TSTRB[0] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port reset in module qgemv_core_buffer_RAM_AUTO_1R1W is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2581.582 ; gain = 617.523 ; free physical = 932345 ; free virtual = 1213696
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2584.551 ; gain = 620.492 ; free physical = 932351 ; free virtual = 1213703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg484-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2584.551 ; gain = 620.492 ; free physical = 932351 ; free virtual = 1213703
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg484-1
+INFO: [Synth 8-802] inferred FSM for state register 'wstate_reg' in module 'qgemv_core_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'rstate_reg' in module 'qgemv_core_control_s_axi'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'qgemv_core_regslice_both'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'qgemv_core_regslice_both__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'qgemv_core_regslice_both__parameterized1'
+INFO: [Synth 8-3936] Found unconnected internal register 'w_data_reg_1983_reg' and it is trimmed from '64' to '32' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core.v:1270]
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'ap_CS_fsm_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                             0001 |                               11
+*
+                  WRIDLE |                             0010 |                               00
+                  WRDATA |                             0100 |                               01
+                  WRRESP |                             1000 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wstate_reg' using encoding 'one-hot' in module 'qgemv_core_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                              001 |                               10
+*
+                  RDIDLE |                              010 |                               00
+                  RDDATA |                              100 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'rstate_reg' using encoding 'one-hot' in module 'qgemv_core_control_s_axi'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+*
+                    ZERO |                               01 |                               10
+                     ONE |                               11 |                               11
+                     TWO |                               10 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'qgemv_core_regslice_both'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+*
+                    ZERO |                               01 |                               10
+                     ONE |                               11 |                               11
+                     TWO |                               10 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'qgemv_core_regslice_both__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  iSTATE |                               00 |                               00
+*
+                    ZERO |                               01 |                               10
+                     ONE |                               11 |                               11
+                     TWO |                               10 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'qgemv_core_regslice_both__parameterized1'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2609.473 ; gain = 645.414 ; free physical = 932327 ; free virtual = 1213679
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   33 Bit       Adders := 8     
+	   2 Input   32 Bit       Adders := 14    
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input   19 Bit       Adders := 8     
+	   2 Input   18 Bit       Adders := 32    
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 5     
++---Registers : 
+	               64 Bit    Registers := 4     
+	               33 Bit    Registers := 9     
+	               32 Bit    Registers := 41    
+	               22 Bit    Registers := 1     
+	               18 Bit    Registers := 72    
+	               17 Bit    Registers := 8     
+	               16 Bit    Registers := 96    
+	                8 Bit    Registers := 79    
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 8     
+	                1 Bit    Registers := 127   
++---RAMs : 
+	               2K Bit	(32 X 64 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   64 Bit        Muxes := 5     
+	   2 Input   32 Bit        Muxes := 28    
+	   2 Input   22 Bit        Muxes := 3     
+	   2 Input   21 Bit        Muxes := 2     
+	   2 Input   19 Bit        Muxes := 1     
+	   2 Input   18 Bit        Muxes := 9     
+	   2 Input   17 Bit        Muxes := 2     
+	   2 Input   15 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 1     
+	   3 Input    8 Bit        Muxes := 8     
+	   2 Input    8 Bit        Muxes := 9     
+	   2 Input    7 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 4     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 3     
+	   2 Input    3 Bit        Muxes := 10    
+	   3 Input    3 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 42    
+	   4 Input    2 Bit        Muxes := 16    
+	   2 Input    1 Bit        Muxes := 63    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_17s_17_4_1_U44/qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/b_reg_reg' and it is trimmed from '18' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:30]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_17s_17_4_1_U48/qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U36/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U36/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U36/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/b_reg_reg' and it is trimmed from '18' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:30]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_17s_17_4_1_U52/qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U37/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U37/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U37/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/b_reg_reg' and it is trimmed from '18' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:30]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_17s_17_4_1_U56/qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U38/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U38/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U38/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/b_reg_reg' and it is trimmed from '18' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:30]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_17s_17_4_1_U60/qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U39/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U39/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U39/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/b_reg_reg' and it is trimmed from '18' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:30]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_17s_17_4_1_U64/qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U40/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U40/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U40/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/b_reg_reg' and it is trimmed from '18' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:30]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_17s_17_4_1_U68/qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U41/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U41/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U41/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/b_reg_reg' and it is trimmed from '18' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:30]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_17s_17_4_1_U72/qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U42/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U42/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U42/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/b_reg_reg' and it is trimmed from '18' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:30]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U74/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U74/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U70/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U70/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U66/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U66/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U62/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U62/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U58/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U58/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U54/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U54/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U50/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U50/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U46/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U46/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U46/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '25' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:30]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U73/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U73/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U69/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U69/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U65/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U65/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U61/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U61/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U57/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U57/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U53/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U53/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U49/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U49/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U45/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U45/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U45/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '25' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:30]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U71/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U71/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U67/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U67/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U63/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U63/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U59/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U59/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U55/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U55/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U51/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U51/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U47/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U47/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U43/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/p_reg_reg' and it is trimmed from '44' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:37]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U43/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U43/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '25' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:30]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U43/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/b_reg_reg' and it is trimmed from '18' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:30]
+INFO: [Synth 8-3936] Found unconnected internal register 'sext_ln71_cast_reg_3197_reg' and it is trimmed from '16' to '8' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_compute.v:2317]
+INFO: [Synth 8-3936] Found unconnected internal register 'sext_ln71_65_cast_reg_3157_reg' and it is trimmed from '17' to '16' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_compute.v:2306]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_17s_17_4_1_U72/qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_17s_17_4_1_U68/qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_17s_17_4_1_U64/qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_17s_17_4_1_U60/qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_17s_17_4_1_U56/qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_17s_17_4_1_U52/qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_17s_17_4_1_U48/qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_17s_17_4_1_U44/qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U/m_reg_reg' and it is trimmed from '43' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:31]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_17s_17_4_1_U44/qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U/a_reg_reg' and it is trimmed from '25' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:30]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_17s_17_4_1_U44/qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U/b_reg_reg' and it is trimmed from '18' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_17s_17_4_1.v:30]
+INFO: [Synth 8-3936] Found unconnected internal register 'sext_ln71_2_cast_reg_3187_reg' and it is trimmed from '16' to '8' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_compute.v:2288]
+INFO: [Synth 8-3936] Found unconnected internal register 'mac_muladd_8s_8s_16s_17_4_1_U47/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/b_reg_reg' and it is trimmed from '18' to '17' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_mac_muladd_8s_8s_16s_17_4_1.v:30]
+INFO: [Synth 8-3936] Found unconnected internal register 'sext_ln71_8_cast_reg_3152_reg' and it is trimmed from '16' to '8' bits. [/home/cp4523/hwdesign-qgemv-fresh/cmdresp/takehome/build_run2/solution1/syn/verilog/qgemv_core_qgemv_core_Pipeline_compute.v:2315]
+INFO: [Common 17-14] Message 'Synth 8-3936' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+DSP Report: Generating DSP mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg, operation Mode is: (A2*B'')'.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: operator mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: Generating DSP mac_muladd_8s_8s_16s_17_4_1_U36/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg, operation Mode is: (A2*B'')'.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U36/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U36/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U36/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U36/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U36/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U36/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U36/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: operator mac_muladd_8s_8s_16s_17_4_1_U36/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U36/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: Generating DSP mac_muladd_8s_8s_16s_17_4_1_U37/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg, operation Mode is: (A2*B'')'.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U37/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U37/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U37/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U37/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U37/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U37/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U37/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: operator mac_muladd_8s_8s_16s_17_4_1_U37/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U37/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: Generating DSP mac_muladd_8s_8s_16s_17_4_1_U38/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg, operation Mode is: (A2*B'')'.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U38/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U38/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U38/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U38/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U38/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U38/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U38/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: operator mac_muladd_8s_8s_16s_17_4_1_U38/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U38/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: Generating DSP mac_muladd_8s_8s_16s_17_4_1_U39/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg, operation Mode is: (A2*B'')'.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U39/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U39/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U39/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U39/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U39/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U39/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U39/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: operator mac_muladd_8s_8s_16s_17_4_1_U39/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U39/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: Generating DSP mac_muladd_8s_8s_16s_17_4_1_U40/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg, operation Mode is: (A2*B'')'.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U40/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U40/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U40/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U40/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U40/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U40/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U40/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: operator mac_muladd_8s_8s_16s_17_4_1_U40/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U40/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: Generating DSP mac_muladd_8s_8s_16s_17_4_1_U41/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg, operation Mode is: (A2*B'')'.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U41/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U41/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U41/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U41/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U41/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U41/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U41/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: operator mac_muladd_8s_8s_16s_17_4_1_U41/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U41/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: Generating DSP mac_muladd_8s_8s_16s_17_4_1_U42/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg, operation Mode is: (A2*B'')'.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U42/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U42/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U42/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U42/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/a_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U42/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: register mac_muladd_8s_8s_16s_17_4_1_U42/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U42/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+DSP Report: operator mac_muladd_8s_8s_16s_17_4_1_U42/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m is absorbed into DSP mac_muladd_8s_8s_16s_17_4_1_U42/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg.
+WARNING: [Synth 8-7129] Port AWADDR[1] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port AWADDR[0] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[31] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[30] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[29] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[28] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[27] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[26] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[25] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[24] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[23] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[22] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[21] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[20] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[19] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[18] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[17] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[16] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[15] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[14] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[13] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[12] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[11] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[10] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[9] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[8] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[6] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[5] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[4] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[3] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WDATA[2] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WSTRB[3] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WSTRB[2] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port WSTRB[1] in module qgemv_core_control_s_axi is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TKEEP[7] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TKEEP[6] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TKEEP[5] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TKEEP[4] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TKEEP[3] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TKEEP[2] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TKEEP[1] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TKEEP[0] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TSTRB[7] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TSTRB[6] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TSTRB[5] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TSTRB[4] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+WARNING: [Synth 8-7129] Port in_r_TSTRB[3] in module qgemv_core_qgemv_core_Pipeline_receive is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (core/control_s_axi_U/FSM_onehot_wstate_reg[0]) is unused and will be removed from module qgemv.
+WARNING: [Synth 8-3332] Sequential element (core/control_s_axi_U/FSM_onehot_rstate_reg[0]) is unused and will be removed from module qgemv.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2870.645 ; gain = 906.586 ; free physical = 932290 ; free virtual = 1213636
+---------------------------------------------------------------------------------
+ Sort Area is  mac_muladd_8s_8s_16s_17_4_1_U35/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg_0 : 0 0 : 1059 1059 : Used 1 time 0
+ Sort Area is  mac_muladd_8s_8s_16s_17_4_1_U36/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg_2 : 0 0 : 1059 1059 : Used 1 time 0
+ Sort Area is  mac_muladd_8s_8s_16s_17_4_1_U37/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg_3 : 0 0 : 1059 1059 : Used 1 time 0
+ Sort Area is  mac_muladd_8s_8s_16s_17_4_1_U38/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg_4 : 0 0 : 1059 1059 : Used 1 time 0
+ Sort Area is  mac_muladd_8s_8s_16s_17_4_1_U39/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg_5 : 0 0 : 1059 1059 : Used 1 time 0
+ Sort Area is  mac_muladd_8s_8s_16s_17_4_1_U40/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg_6 : 0 0 : 1059 1059 : Used 1 time 0
+ Sort Area is  mac_muladd_8s_8s_16s_17_4_1_U41/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg_7 : 0 0 : 1059 1059 : Used 1 time 0
+ Sort Area is  mac_muladd_8s_8s_16s_17_4_1_U42/qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U/m_reg_reg_8 : 0 0 : 1059 1059 : Used 1 time 0
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++------------+-----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object            | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|qgemv       | core/buffer_U/ram_reg | 32 x 64(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
++------------+-----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++---------------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                            | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|qgemv_core_qgemv_core_Pipeline_compute | (A2*B'')'   | 17     | 9      | -      | -      | 26     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|qgemv_core_qgemv_core_Pipeline_compute | (A2*B'')'   | 17     | 9      | -      | -      | 26     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|qgemv_core_qgemv_core_Pipeline_compute | (A2*B'')'   | 17     | 9      | -      | -      | 26     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|qgemv_core_qgemv_core_Pipeline_compute | (A2*B'')'   | 17     | 9      | -      | -      | 26     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|qgemv_core_qgemv_core_Pipeline_compute | (A2*B'')'   | 17     | 9      | -      | -      | 26     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|qgemv_core_qgemv_core_Pipeline_compute | (A2*B'')'   | 17     | 9      | -      | -      | 26     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|qgemv_core_qgemv_core_Pipeline_compute | (A2*B'')'   | 17     | 9      | -      | -      | 26     | 1    | 2    | -    | -    | -     | 1    | 0    | 
+|qgemv_core_qgemv_core_Pipeline_compute | (A2*B'')'   | 17     | 9      | -      | -      | 26     | 1    | 2    | -    | -    | -     | 1    | 0    | 
++---------------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 2870.645 ; gain = 906.586 ; free physical = 932288 ; free virtual = 1213634
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++------------+-----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name | RTL Object            | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------+-----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|qgemv       | core/buffer_U/ram_reg | 32 x 64(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
++------------+-----------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance core/buffer_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance core/buffer_U/ram_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:27 . Memory (MB): peak = 2878.652 ; gain = 914.594 ; free physical = 932262 ; free virtual = 1213608
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2992.465 ; gain = 1028.406 ; free physical = 932126 ; free virtual = 1213469
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:32 . Memory (MB): peak = 2992.465 ; gain = 1028.406 ; free physical = 932116 ; free virtual = 1213459
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 2992.465 ; gain = 1028.406 ; free physical = 932039 ; free virtual = 1213383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 2992.465 ; gain = 1028.406 ; free physical = 931969 ; free virtual = 1213312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 3001.371 ; gain = 1037.312 ; free physical = 932014 ; free virtual = 1213357
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 3001.371 ; gain = 1037.312 ; free physical = 932006 ; free virtual = 1213349
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+-------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                                            | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|qgemv       | core/grp_qgemv_core_Pipeline_compute_fu_731/icmp_ln79_reg_3223_pp0_iter9_reg_reg[0] | 10     | 1     | NO           | YES                | YES               | 1      | 0       | 
+|qgemv       | core/grp_qgemv_core_Pipeline_compute_fu_731/ap_loop_exit_ready_pp0_iter9_reg_reg    | 9      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++------------+-------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++---------------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name                            | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++---------------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|qgemv_core_qgemv_core_Pipeline_compute | (A'*B'')'   | 30     | 18     | -      | -      | 17     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|qgemv_core_qgemv_core_Pipeline_compute | (A'*B'')'   | 30     | 18     | -      | -      | 17     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|qgemv_core_qgemv_core_Pipeline_compute | (A'*B'')'   | 30     | 18     | -      | -      | 17     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|qgemv_core_qgemv_core_Pipeline_compute | (A'*B'')'   | 30     | 18     | -      | -      | 17     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|qgemv_core_qgemv_core_Pipeline_compute | (A'*B'')'   | 30     | 18     | -      | -      | 17     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|qgemv_core_qgemv_core_Pipeline_compute | (A'*B'')'   | 30     | 18     | -      | -      | 17     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|qgemv_core_qgemv_core_Pipeline_compute | (A'*B'')'   | 30     | 18     | -      | -      | 17     | 1    | 2    | -    | -    | -     | 0    | 1    | 
+|qgemv_core_qgemv_core_Pipeline_compute | (A'*B'')'   | 30     | 18     | -      | -      | 17     | 1    | 2    | -    | -    | -     | 0    | 1    | 
++---------------------------------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |  1384|
+|2     |DSP48E1  |     8|
+|3     |LUT1     |   529|
+|4     |LUT2     |  2913|
+|5     |LUT3     |  1046|
+|6     |LUT4     |  1607|
+|7     |LUT5     |  1504|
+|8     |LUT6     |  2272|
+|9     |MUXF7    |    16|
+|10    |RAMB36E1 |     1|
+|11    |SRL16E   |     2|
+|12    |FDRE     |  5552|
+|13    |FDSE     |    72|
++------+---------+------+
+
+Report Instance Areas: 
++------+---------------------------------------------------------+----------------------------------------------------+------+
+|      |Instance                                                 |Module                                              |Cells |
++------+---------------------------------------------------------+----------------------------------------------------+------+
+|1     |top                                                      |                                                    | 16906|
+|2     |  core                                                   |qgemv_core                                          | 16865|
+|3     |    buffer_U                                             |qgemv_core_buffer_RAM_AUTO_1R1W                     |    19|
+|4     |    control_s_axi_U                                      |qgemv_core_control_s_axi                            |   242|
+|5     |    grp_qgemv_core_Pipeline_compute_fu_731               |qgemv_core_qgemv_core_Pipeline_compute              | 14492|
+|6     |      flow_control_loop_pipe_sequential_init_U           |qgemv_core_flow_control_loop_pipe_sequential_init_4 |   113|
+|7     |      mac_muladd_8s_8s_16s_17_4_1_U35                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1              |    40|
+|8     |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_103  |    40|
+|9     |      mac_muladd_8s_8s_16s_17_4_1_U36                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_5            |    40|
+|10    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_102  |    40|
+|11    |      mac_muladd_8s_8s_16s_17_4_1_U37                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_6            |    40|
+|12    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_101  |    40|
+|13    |      mac_muladd_8s_8s_16s_17_4_1_U38                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_7            |    40|
+|14    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_100  |    40|
+|15    |      mac_muladd_8s_8s_16s_17_4_1_U39                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_8            |    40|
+|16    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_99   |    40|
+|17    |      mac_muladd_8s_8s_16s_17_4_1_U40                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_9            |    40|
+|18    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_98   |    40|
+|19    |      mac_muladd_8s_8s_16s_17_4_1_U41                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_10           |    40|
+|20    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_97   |    40|
+|21    |      mac_muladd_8s_8s_16s_17_4_1_U42                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_11           |    40|
+|22    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_96   |    40|
+|23    |      mac_muladd_8s_8s_16s_17_4_1_U43                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_12           |   402|
+|24    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_95   |   402|
+|25    |      mac_muladd_8s_8s_16s_17_4_1_U45                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_13           |   403|
+|26    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_94   |   403|
+|27    |      mac_muladd_8s_8s_16s_17_4_1_U46                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_14           |   402|
+|28    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_93   |   402|
+|29    |      mac_muladd_8s_8s_16s_17_4_1_U47                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_15           |   138|
+|30    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_92   |   138|
+|31    |      mac_muladd_8s_8s_16s_17_4_1_U49                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_16           |   139|
+|32    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_91   |   139|
+|33    |      mac_muladd_8s_8s_16s_17_4_1_U50                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_17           |   138|
+|34    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_90   |   138|
+|35    |      mac_muladd_8s_8s_16s_17_4_1_U51                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_18           |   138|
+|36    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_89   |   138|
+|37    |      mac_muladd_8s_8s_16s_17_4_1_U53                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_19           |   139|
+|38    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_88   |   139|
+|39    |      mac_muladd_8s_8s_16s_17_4_1_U54                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_20           |   138|
+|40    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_87   |   138|
+|41    |      mac_muladd_8s_8s_16s_17_4_1_U55                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_21           |   138|
+|42    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_86   |   138|
+|43    |      mac_muladd_8s_8s_16s_17_4_1_U57                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_22           |   139|
+|44    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_85   |   139|
+|45    |      mac_muladd_8s_8s_16s_17_4_1_U58                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_23           |   138|
+|46    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_84   |   138|
+|47    |      mac_muladd_8s_8s_16s_17_4_1_U59                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_24           |   138|
+|48    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_83   |   138|
+|49    |      mac_muladd_8s_8s_16s_17_4_1_U61                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_25           |   139|
+|50    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_82   |   139|
+|51    |      mac_muladd_8s_8s_16s_17_4_1_U62                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_26           |   138|
+|52    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_81   |   138|
+|53    |      mac_muladd_8s_8s_16s_17_4_1_U63                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_27           |   138|
+|54    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_80   |   138|
+|55    |      mac_muladd_8s_8s_16s_17_4_1_U65                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_28           |   139|
+|56    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_79   |   139|
+|57    |      mac_muladd_8s_8s_16s_17_4_1_U66                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_29           |   138|
+|58    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_78   |   138|
+|59    |      mac_muladd_8s_8s_16s_17_4_1_U67                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_30           |   138|
+|60    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_77   |   138|
+|61    |      mac_muladd_8s_8s_16s_17_4_1_U69                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_31           |   139|
+|62    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_76   |   139|
+|63    |      mac_muladd_8s_8s_16s_17_4_1_U70                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_32           |   138|
+|64    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_75   |   138|
+|65    |      mac_muladd_8s_8s_16s_17_4_1_U71                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_33           |   138|
+|66    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_74   |   138|
+|67    |      mac_muladd_8s_8s_16s_17_4_1_U73                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_34           |   139|
+|68    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_73   |   139|
+|69    |      mac_muladd_8s_8s_16s_17_4_1_U74                    |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_35           |   138|
+|70    |        qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_16s_17_4_1_DSP48_0      |   138|
+|71    |      mac_muladd_8s_8s_17s_17_4_1_U44                    |qgemv_core_mac_muladd_8s_8s_17s_17_4_1              |   403|
+|72    |        qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_72   |   403|
+|73    |      mac_muladd_8s_8s_17s_17_4_1_U48                    |qgemv_core_mac_muladd_8s_8s_17s_17_4_1_36           |   139|
+|74    |        qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_71   |   139|
+|75    |      mac_muladd_8s_8s_17s_17_4_1_U52                    |qgemv_core_mac_muladd_8s_8s_17s_17_4_1_37           |   139|
+|76    |        qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_70   |   139|
+|77    |      mac_muladd_8s_8s_17s_17_4_1_U56                    |qgemv_core_mac_muladd_8s_8s_17s_17_4_1_38           |   139|
+|78    |        qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_69   |   139|
+|79    |      mac_muladd_8s_8s_17s_17_4_1_U60                    |qgemv_core_mac_muladd_8s_8s_17s_17_4_1_39           |   139|
+|80    |        qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_68   |   139|
+|81    |      mac_muladd_8s_8s_17s_17_4_1_U64                    |qgemv_core_mac_muladd_8s_8s_17s_17_4_1_40           |   139|
+|82    |        qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_67   |   139|
+|83    |      mac_muladd_8s_8s_17s_17_4_1_U68                    |qgemv_core_mac_muladd_8s_8s_17s_17_4_1_41           |   139|
+|84    |        qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_66   |   139|
+|85    |      mac_muladd_8s_8s_17s_17_4_1_U72                    |qgemv_core_mac_muladd_8s_8s_17s_17_4_1_42           |   139|
+|86    |        qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0_U |qgemv_core_mac_muladd_8s_8s_17s_17_4_1_DSP48_0      |   139|
+|87    |      mul_8s_8s_16_1_1_U11                               |qgemv_core_mul_8s_8s_16_1_1                         |    97|
+|88    |      mul_8s_8s_16_1_1_U12                               |qgemv_core_mul_8s_8s_16_1_1_43                      |    97|
+|89    |      mul_8s_8s_16_1_1_U13                               |qgemv_core_mul_8s_8s_16_1_1_44                      |    97|
+|90    |      mul_8s_8s_16_1_1_U14                               |qgemv_core_mul_8s_8s_16_1_1_45                      |    97|
+|91    |      mul_8s_8s_16_1_1_U15                               |qgemv_core_mul_8s_8s_16_1_1_46                      |    97|
+|92    |      mul_8s_8s_16_1_1_U16                               |qgemv_core_mul_8s_8s_16_1_1_47                      |    97|
+|93    |      mul_8s_8s_16_1_1_U17                               |qgemv_core_mul_8s_8s_16_1_1_48                      |    97|
+|94    |      mul_8s_8s_16_1_1_U18                               |qgemv_core_mul_8s_8s_16_1_1_49                      |    97|
+|95    |      mul_8s_8s_16_1_1_U19                               |qgemv_core_mul_8s_8s_16_1_1_50                      |    97|
+|96    |      mul_8s_8s_16_1_1_U20                               |qgemv_core_mul_8s_8s_16_1_1_51                      |    97|
+|97    |      mul_8s_8s_16_1_1_U21                               |qgemv_core_mul_8s_8s_16_1_1_52                      |    97|
+|98    |      mul_8s_8s_16_1_1_U22                               |qgemv_core_mul_8s_8s_16_1_1_53                      |    97|
+|99    |      mul_8s_8s_16_1_1_U23                               |qgemv_core_mul_8s_8s_16_1_1_54                      |    97|
+|100   |      mul_8s_8s_16_1_1_U24                               |qgemv_core_mul_8s_8s_16_1_1_55                      |    97|
+|101   |      mul_8s_8s_16_1_1_U25                               |qgemv_core_mul_8s_8s_16_1_1_56                      |    97|
+|102   |      mul_8s_8s_16_1_1_U26                               |qgemv_core_mul_8s_8s_16_1_1_57                      |    97|
+|103   |      mul_8s_8s_16_1_1_U27                               |qgemv_core_mul_8s_8s_16_1_1_58                      |    97|
+|104   |      mul_8s_8s_16_1_1_U28                               |qgemv_core_mul_8s_8s_16_1_1_59                      |    97|
+|105   |      mul_8s_8s_16_1_1_U29                               |qgemv_core_mul_8s_8s_16_1_1_60                      |    97|
+|106   |      mul_8s_8s_16_1_1_U30                               |qgemv_core_mul_8s_8s_16_1_1_61                      |    97|
+|107   |      mul_8s_8s_16_1_1_U31                               |qgemv_core_mul_8s_8s_16_1_1_62                      |    97|
+|108   |      mul_8s_8s_16_1_1_U32                               |qgemv_core_mul_8s_8s_16_1_1_63                      |    97|
+|109   |      mul_8s_8s_16_1_1_U33                               |qgemv_core_mul_8s_8s_16_1_1_64                      |    97|
+|110   |      mul_8s_8s_16_1_1_U34                               |qgemv_core_mul_8s_8s_16_1_1_65                      |    97|
+|111   |    grp_qgemv_core_Pipeline_header_fu_639                |qgemv_core_qgemv_core_Pipeline_header               |    21|
+|112   |      flow_control_loop_pipe_sequential_init_U           |qgemv_core_flow_control_loop_pipe_sequential_init_3 |     9|
+|113   |    grp_qgemv_core_Pipeline_install_bias_fu_821          |qgemv_core_qgemv_core_Pipeline_install_bias         |    32|
+|114   |      flow_control_loop_pipe_sequential_init_U           |qgemv_core_flow_control_loop_pipe_sequential_init_2 |    16|
+|115   |    grp_qgemv_core_Pipeline_install_rows_fu_662          |qgemv_core_qgemv_core_Pipeline_install_rows         |    36|
+|116   |      flow_control_loop_pipe_sequential_init_U           |qgemv_core_flow_control_loop_pipe_sequential_init_1 |    20|
+|117   |    grp_qgemv_core_Pipeline_receive_fu_646               |qgemv_core_qgemv_core_Pipeline_receive              |   103|
+|118   |      flow_control_loop_pipe_sequential_init_U           |qgemv_core_flow_control_loop_pipe_sequential_init   |    34|
+|119   |    regslice_both_out_r_V_data_V_U                       |qgemv_core_regslice_both                            |   220|
+|120   |    regslice_both_out_r_V_keep_V_U                       |qgemv_core_regslice_both__parameterized0            |    11|
+|121   |    regslice_both_out_r_V_last_V_U                       |qgemv_core_regslice_both__parameterized1            |    10|
+|122   |    regslice_both_out_r_V_strb_V_U                       |qgemv_core_regslice_both__parameterized0_0          |    11|
++------+---------------------------------------------------------+----------------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 3001.371 ; gain = 1037.312 ; free physical = 931958 ; free virtual = 1213301
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 105 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 3001.371 ; gain = 1037.312 ; free physical = 931938 ; free virtual = 1213281
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:33 . Memory (MB): peak = 3004.340 ; gain = 1037.312 ; free physical = 931936 ; free virtual = 1213280
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.09 . Memory (MB): peak = 3014.246 ; gain = 0.000 ; free physical = 932182 ; free virtual = 1213525
+INFO: [Netlist 29-17] Analyzing 1409 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3164.766 ; gain = 0.000 ; free physical = 932073 ; free virtual = 1213418
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 492d114b
+INFO: [Common 17-83] Releasing license: Synthesis
+170 Infos, 102 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:00:40 . Memory (MB): peak = 3167.734 ; gain = 1203.676 ; free physical = 932076 ; free virtual = 1213422
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2342.103; main = 2342.103; forked = 345.134
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4576.004; main = 3167.738; forked = 1680.348
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "ap_clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+report_timing_summary: Time (s): cpu = 00:00:15 ; elapsed = 00:00:09 . Memory (MB): peak = 3231.766 ; gain = 64.031 ; free physical = 932124 ; free virtual = 1213465
+INFO: [Common 17-206] Exiting Vivado at Wed Oct 28 17:35:09 2026...

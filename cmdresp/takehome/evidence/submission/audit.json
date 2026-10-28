@@ -1,0 +1,458 @@
+{
+  "result": "PASS",
+  "specification": 1,
+  "prompt_sha256": "93c2e1f3b63165f66e2da3a189efbeff1f66b5cc05eb86a09cd436fa0521db9b",
+  "run1_preserved_as": "FAIL",
+  "run2_verified_as": "PASS",
+  "python": {
+    "hand_checks": 7,
+    "numpy_int64_comparisons": 3200,
+    "seed": 814,
+    "result": "PASS"
+  },
+  "python_reexecution_stdout": "PASS independent golden checks; generated 67 activations",
+  "c_scenarios": 67,
+  "native_rtl_scenarios": 67,
+  "integrated_rtl_scenarios": 335,
+  "external_traces": [
+    {
+      "mode": 0,
+      "activations": 67,
+      "input_transfers": 1298,
+      "output_transfers": 435,
+      "statuses": 67,
+      "stalled_cycles": 2175,
+      "ready_withdrawals_after_valid": 248,
+      "batches": [
+        {
+          "scenario": "batch32_0",
+          "command": 1,
+          "first_input_ps": 700000,
+          "first_result_ps": 1124000,
+          "final_result_ps": 2612000,
+          "first_result_cycles": 54,
+          "batch_cycles": 240
+        },
+        {
+          "scenario": "batch32_0",
+          "command": 2,
+          "first_input_ps": 2756000,
+          "first_result_ps": 3180000,
+          "final_result_ps": 4668000,
+          "first_result_cycles": 54,
+          "batch_cycles": 240
+        },
+        {
+          "scenario": "batch32_1",
+          "command": 1,
+          "first_input_ps": 5612000,
+          "first_result_ps": 6036000,
+          "final_result_ps": 7524000,
+          "first_result_cycles": 54,
+          "batch_cycles": 240
+        },
+        {
+          "scenario": "batch32_1",
+          "command": 2,
+          "first_input_ps": 7668000,
+          "first_result_ps": 8092000,
+          "final_result_ps": 9580000,
+          "first_result_cycles": 54,
+          "batch_cycles": 240
+        },
+        {
+          "scenario": "batch32_2",
+          "command": 1,
+          "first_input_ps": 10524000,
+          "first_result_ps": 10948000,
+          "final_result_ps": 12436000,
+          "first_result_cycles": 54,
+          "batch_cycles": 240
+        },
+        {
+          "scenario": "batch32_2",
+          "command": 2,
+          "first_input_ps": 12580000,
+          "first_result_ps": 13004000,
+          "final_result_ps": 14492000,
+          "first_result_cycles": 54,
+          "batch_cycles": 240
+        },
+        {
+          "scenario": "batch32_3",
+          "command": 1,
+          "first_input_ps": 15436000,
+          "first_result_ps": 15860000,
+          "final_result_ps": 17348000,
+          "first_result_cycles": 54,
+          "batch_cycles": 240
+        },
+        {
+          "scenario": "batch32_3",
+          "command": 2,
+          "first_input_ps": 17492000,
+          "first_result_ps": 17916000,
+          "final_result_ps": 19404000,
+          "first_result_cycles": 54,
+          "batch_cycles": 240
+        }
+      ]
+    },
+    {
+      "mode": 1,
+      "activations": 67,
+      "input_transfers": 1298,
+      "output_transfers": 435,
+      "statuses": 67,
+      "stalled_cycles": 2610,
+      "ready_withdrawals_after_valid": 435,
+      "batches": [
+        {
+          "scenario": "batch32_0",
+          "command": 1,
+          "first_input_ps": 708000,
+          "first_result_ps": 1140000,
+          "final_result_ps": 2876000,
+          "first_result_cycles": 55,
+          "batch_cycles": 272
+        },
+        {
+          "scenario": "batch32_0",
+          "command": 2,
+          "first_input_ps": 3020000,
+          "first_result_ps": 3452000,
+          "final_result_ps": 5188000,
+          "first_result_cycles": 55,
+          "batch_cycles": 272
+        },
+        {
+          "scenario": "batch32_1",
+          "command": 1,
+          "first_input_ps": 6124000,
+          "first_result_ps": 6556000,
+          "final_result_ps": 8292000,
+          "first_result_cycles": 55,
+          "batch_cycles": 272
+        },
+        {
+          "scenario": "batch32_1",
+          "command": 2,
+          "first_input_ps": 8436000,
+          "first_result_ps": 8868000,
+          "final_result_ps": 10604000,
+          "first_result_cycles": 55,
+          "batch_cycles": 272
+        },
+        {
+          "scenario": "batch32_2",
+          "command": 1,
+          "first_input_ps": 11540000,
+          "first_result_ps": 11972000,
+          "final_result_ps": 13708000,
+          "first_result_cycles": 55,
+          "batch_cycles": 272
+        },
+        {
+          "scenario": "batch32_2",
+          "command": 2,
+          "first_input_ps": 13852000,
+          "first_result_ps": 14284000,
+          "final_result_ps": 16020000,
+          "first_result_cycles": 55,
+          "batch_cycles": 272
+        },
+        {
+          "scenario": "batch32_3",
+          "command": 1,
+          "first_input_ps": 16956000,
+          "first_result_ps": 17388000,
+          "final_result_ps": 19124000,
+          "first_result_cycles": 55,
+          "batch_cycles": 272
+        },
+        {
+          "scenario": "batch32_3",
+          "command": 2,
+          "first_input_ps": 19268000,
+          "first_result_ps": 19700000,
+          "final_result_ps": 21436000,
+          "first_result_cycles": 55,
+          "batch_cycles": 272
+        }
+      ]
+    },
+    {
+      "mode": 2,
+      "activations": 67,
+      "input_transfers": 1298,
+      "output_transfers": 435,
+      "statuses": 67,
+      "stalled_cycles": 362,
+      "ready_withdrawals_after_valid": 362,
+      "batches": [
+        {
+          "scenario": "batch32_0",
+          "command": 1,
+          "first_input_ps": 676000,
+          "first_result_ps": 1068000,
+          "final_result_ps": 1564000,
+          "first_result_cycles": 50,
+          "batch_cycles": 112
+        },
+        {
+          "scenario": "batch32_0",
+          "command": 2,
+          "first_input_ps": 1708000,
+          "first_result_ps": 2092000,
+          "final_result_ps": 2588000,
+          "first_result_cycles": 49,
+          "batch_cycles": 111
+        },
+        {
+          "scenario": "batch32_1",
+          "command": 1,
+          "first_input_ps": 3500000,
+          "first_result_ps": 3892000,
+          "final_result_ps": 4388000,
+          "first_result_cycles": 50,
+          "batch_cycles": 112
+        },
+        {
+          "scenario": "batch32_1",
+          "command": 2,
+          "first_input_ps": 4532000,
+          "first_result_ps": 4916000,
+          "final_result_ps": 5412000,
+          "first_result_cycles": 49,
+          "batch_cycles": 111
+        },
+        {
+          "scenario": "batch32_2",
+          "command": 1,
+          "first_input_ps": 6324000,
+          "first_result_ps": 6716000,
+          "final_result_ps": 7212000,
+          "first_result_cycles": 50,
+          "batch_cycles": 112
+        },
+        {
+          "scenario": "batch32_2",
+          "command": 2,
+          "first_input_ps": 7356000,
+          "first_result_ps": 7740000,
+          "final_result_ps": 8236000,
+          "first_result_cycles": 49,
+          "batch_cycles": 111
+        },
+        {
+          "scenario": "batch32_3",
+          "command": 1,
+          "first_input_ps": 9148000,
+          "first_result_ps": 9540000,
+          "final_result_ps": 10036000,
+          "first_result_cycles": 50,
+          "batch_cycles": 112
+        },
+        {
+          "scenario": "batch32_3",
+          "command": 2,
+          "first_input_ps": 10180000,
+          "first_result_ps": 10564000,
+          "final_result_ps": 11060000,
+          "first_result_cycles": 49,
+          "batch_cycles": 111
+        }
+      ]
+    },
+    {
+      "mode": 3,
+      "activations": 67,
+      "input_transfers": 1298,
+      "output_transfers": 435,
+      "statuses": 67,
+      "stalled_cycles": 459,
+      "ready_withdrawals_after_valid": 182,
+      "batches": [
+        {
+          "scenario": "batch32_0",
+          "command": 1,
+          "first_input_ps": 676000,
+          "first_result_ps": 1068000,
+          "final_result_ps": 1588000,
+          "first_result_cycles": 50,
+          "batch_cycles": 115
+        },
+        {
+          "scenario": "batch32_0",
+          "command": 2,
+          "first_input_ps": 1740000,
+          "first_result_ps": 2148000,
+          "final_result_ps": 2748000,
+          "first_result_cycles": 52,
+          "batch_cycles": 127
+        },
+        {
+          "scenario": "batch32_1",
+          "command": 1,
+          "first_input_ps": 3708000,
+          "first_result_ps": 4092000,
+          "final_result_ps": 4612000,
+          "first_result_cycles": 49,
+          "batch_cycles": 114
+        },
+        {
+          "scenario": "batch32_1",
+          "command": 2,
+          "first_input_ps": 4764000,
+          "first_result_ps": 5164000,
+          "final_result_ps": 5636000,
+          "first_result_cycles": 51,
+          "batch_cycles": 110
+        },
+        {
+          "scenario": "batch32_2",
+          "command": 1,
+          "first_input_ps": 6580000,
+          "first_result_ps": 6972000,
+          "final_result_ps": 7460000,
+          "first_result_cycles": 50,
+          "batch_cycles": 111
+        },
+        {
+          "scenario": "batch32_2",
+          "command": 2,
+          "first_input_ps": 7620000,
+          "first_result_ps": 8004000,
+          "final_result_ps": 8516000,
+          "first_result_cycles": 49,
+          "batch_cycles": 113
+        },
+        {
+          "scenario": "batch32_3",
+          "command": 1,
+          "first_input_ps": 9436000,
+          "first_result_ps": 9820000,
+          "final_result_ps": 10228000,
+          "first_result_cycles": 49,
+          "batch_cycles": 100
+        },
+        {
+          "scenario": "batch32_3",
+          "command": 2,
+          "first_input_ps": 10372000,
+          "first_result_ps": 10756000,
+          "final_result_ps": 11348000,
+          "first_result_cycles": 49,
+          "batch_cycles": 123
+        }
+      ]
+    },
+    {
+      "mode": 4,
+      "activations": 67,
+      "input_transfers": 1298,
+      "output_transfers": 435,
+      "statuses": 67,
+      "stalled_cycles": 0,
+      "ready_withdrawals_after_valid": 0,
+      "batches": [
+        {
+          "scenario": "batch32_0",
+          "command": 1,
+          "first_input_ps": 676000,
+          "first_result_ps": 1060000,
+          "final_result_ps": 1308000,
+          "first_result_cycles": 49,
+          "batch_cycles": 80
+        },
+        {
+          "scenario": "batch32_0",
+          "command": 2,
+          "first_input_ps": 1468000,
+          "first_result_ps": 1852000,
+          "final_result_ps": 2100000,
+          "first_result_cycles": 49,
+          "batch_cycles": 80
+        },
+        {
+          "scenario": "batch32_1",
+          "command": 1,
+          "first_input_ps": 3020000,
+          "first_result_ps": 3404000,
+          "final_result_ps": 3652000,
+          "first_result_cycles": 49,
+          "batch_cycles": 80
+        },
+        {
+          "scenario": "batch32_1",
+          "command": 2,
+          "first_input_ps": 3812000,
+          "first_result_ps": 4196000,
+          "final_result_ps": 4444000,
+          "first_result_cycles": 49,
+          "batch_cycles": 80
+        },
+        {
+          "scenario": "batch32_2",
+          "command": 1,
+          "first_input_ps": 5364000,
+          "first_result_ps": 5748000,
+          "final_result_ps": 5996000,
+          "first_result_cycles": 49,
+          "batch_cycles": 80
+        },
+        {
+          "scenario": "batch32_2",
+          "command": 2,
+          "first_input_ps": 6156000,
+          "first_result_ps": 6540000,
+          "final_result_ps": 6788000,
+          "first_result_cycles": 49,
+          "batch_cycles": 80
+        },
+        {
+          "scenario": "batch32_3",
+          "command": 1,
+          "first_input_ps": 7708000,
+          "first_result_ps": 8092000,
+          "final_result_ps": 8340000,
+          "first_result_cycles": 49,
+          "batch_cycles": 80
+        },
+        {
+          "scenario": "batch32_3",
+          "command": 2,
+          "first_input_ps": 8500000,
+          "first_result_ps": 8884000,
+          "final_result_ps": 9132000,
+          "first_result_cycles": 49,
+          "batch_cycles": 80
+        }
+      ]
+    }
+  ],
+  "immediate_error_recoveries_per_mode": 27,
+  "synthesis_estimate_ns": 6.943,
+  "loops": {
+    "compute": {
+      "II": 1,
+      "depth": 11
+    },
+    "receive": {
+      "II": 1,
+      "depth": 2
+    }
+  },
+  "production_top": "src/qgemv.sv",
+  "source_level_fix_and_wrapper_present": true,
+  "no_required_open_items": true,
+  "v2_necessary": false,
+  "intentional_packaging_document_updates": [
+    "README.md",
+    "results.md"
+  ],
+  "original_raw_files_checked_unchanged": 101,
+  "hardware_tools_rerun_for_submission": false,
+  "commit_or_push_performed": false,
+  "reviewed_file_count": 182
+}

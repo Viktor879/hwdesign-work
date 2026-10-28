@@ -1,0 +1,10 @@
+{
+  "source": "evidence/rtl/external.vcd",
+  "clock_ps": 8000,
+  "activations": 67,
+  "input_transfers": 1298,
+  "output_transfers": 435,
+  "measured_batches": 8,
+  "pre_edge_sampling": true,
+  "result": "PASS"
+}

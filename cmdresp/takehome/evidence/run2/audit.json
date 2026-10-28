@@ -1,0 +1,102 @@
+{
+  "run": 2,
+  "specification": 1,
+  "overall": "PASS",
+  "production_top": "src/qgemv.sv",
+  "prompt_unchanged": true,
+  "prompt_sha256": "93c2e1f3b63165f66e2da3a189efbeff1f66b5cc05eb86a09cd436fa0521db9b",
+  "run1_evidence_preserved": true,
+  "generated_rtl_unmodified": true,
+  "clock_estimate_ns": 6.943,
+  "loops": {
+    "compute": {
+      "II": 1,
+      "depth": 11
+    },
+    "receive": {
+      "II": 1,
+      "depth": 2
+    }
+  },
+  "hls_resources": {
+    "LUT": 7429,
+    "FF": 5274,
+    "DSP": 40,
+    "BRAM_18K": 2
+  },
+  "whole_vivado_resources": {
+    "Slice LUTs": 7869,
+    "Slice Registers": 5624,
+    "DSPs": 8,
+    "Block RAM Tile": 1
+  },
+  "c_activations": 67,
+  "native_core_rtl_activations": 67,
+  "integrated_rtl_activations": 335,
+  "external_modes": [
+    {
+      "mode": 0,
+      "activations": 67,
+      "output_transfers": 435,
+      "stalled_cycles": 2175,
+      "header_stalls": 575,
+      "payload_stalls": 1600,
+      "tlast_stalls": 935,
+      "after_valid_stalls": 0,
+      "result": "PASS"
+    },
+    {
+      "mode": 1,
+      "activations": 67,
+      "output_transfers": 435,
+      "stalled_cycles": 2610,
+      "header_stalls": 690,
+      "payload_stalls": 1920,
+      "tlast_stalls": 1122,
+      "after_valid_stalls": 435,
+      "result": "PASS"
+    },
+    {
+      "mode": 2,
+      "activations": 67,
+      "output_transfers": 435,
+      "stalled_cycles": 362,
+      "header_stalls": 82,
+      "payload_stalls": 280,
+      "tlast_stalls": 118,
+      "after_valid_stalls": 0,
+      "result": "PASS"
+    },
+    {
+      "mode": 3,
+      "activations": 67,
+      "output_transfers": 435,
+      "stalled_cycles": 459,
+      "header_stalls": 130,
+      "payload_stalls": 329,
+      "tlast_stalls": 188,
+      "after_valid_stalls": 0,
+      "result": "PASS"
+    },
+    {
+      "mode": 4,
+      "activations": 67,
+      "output_transfers": 435,
+      "stalled_cycles": 0,
+      "header_stalls": 0,
+      "payload_stalls": 0,
+      "tlast_stalls": 0,
+      "after_valid_stalls": 0,
+      "result": "PASS"
+    }
+  ],
+  "measured_batches": 8,
+  "first_result_cycles": "49",
+  "batch_cycles": "80",
+  "cycles_per_vector": "2.5",
+  "all_report_paths_resolve": true,
+  "generated_trees_excluded": true,
+  "no_required_open_items": true,
+  "v2_needed": false,
+  "commit_status": "Uncommitted; no automatic commit/push"
+}

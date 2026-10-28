@@ -1,0 +1,183 @@
+path	bytes	purpose
+.gitattributes	535	Preserve native output/provenance bytes; exempt only immutable evidence from formatting checks
+.gitignore	356	Exclude disposable projects, simulators, caches and credentials
+README.md	5252	Current production-top integration and reproducible verification instructions
+evidence/.gitignore	4084	Exact reviewed evidence allowlist; prevent incidental generated files entering Git
+evidence/artifact-sha256.json	755	Historical Run 1 source/fixture/native-report/waveform integrity record
+evidence/audit.json	507	Individually cited Run 1 evidence: audit
+evidence/csim/comparison.csv	2203	Individually cited Run 1 evidence: C comparisons
+evidence/csim/compile-width-failure.log	3558	Individually cited Run 1 evidence: width failure
+evidence/csim/component-link-failure.log	3834	Individually cited Run 1 evidence: component flow
+evidence/csim/fixture-format-failure.log	3331	Individually cited Run 1 evidence: fixture failure
+evidence/csim/initial-comparison.csv	2203	Individually cited Run 1 evidence: C checkpoint
+evidence/csim/initial-link-failure.log	3764	Individually cited Run 1 evidence: initial link
+evidence/csim/qgemv_csim.log	1225	Individually cited Run 1 evidence: C log
+evidence/csim/retry-link-failure.log	4001	Individually cited Run 1 evidence: retry link
+evidence/csim/source-registration-failure.log	4004	Individually cited Run 1 evidence: renamed source
+evidence/python/checks.json	93	Individually cited Run 1 evidence: Python evidence
+evidence/rtl/command_order.csv	7344	Individually cited Run 1 evidence: external ordering trace
+evidence/rtl/comparison.csv	2203	Individually cited Run 1 evidence: RTL comparisons
+evidence/rtl/external.vcd	263135	Individually cited Run 1 evidence: port waveform
+evidence/rtl/initial/comparison.csv	2203	Individually cited Run 1 evidence: initial comparisons
+evidence/rtl/initial/cosim.log	54242	Individually cited Run 1 evidence: initial completion
+evidence/rtl/initial/external.vcd	263135	Essential waveform backing cited first full Run 1 checkpoint timing
+evidence/rtl/initial/stress-testbench-failure.log	6226	Individually cited Run 1 evidence: first testbench coverage failure
+evidence/rtl/initial/stress.log	6720	Individually cited Run 1 evidence: diagnostic result
+evidence/rtl/initial/timing.csv	752	Individually cited Run 1 evidence: initial timing
+evidence/rtl/measurement.json	213	Individually cited Run 1 evidence: measurement metadata
+evidence/rtl/qgemv_cosim.rpt	1255	Individually cited Run 1 evidence: native cosim report
+evidence/rtl/qgemv_cosim_random_stall.json	1360	Individually cited Run 1 evidence: native stall configuration
+evidence/rtl/registered_trial/external.vcd	279173	Essential waveform backing cited registered-output trial timing
+evidence/rtl/registered_trial/stress.log	7596	Individually cited Run 1 evidence: registered stress log
+evidence/rtl/registered_trial/timing.csv	728	Individually cited Run 1 evidence: trial timing
+evidence/rtl/stress.log	6589	Individually cited Run 1 evidence: direct RTL stress log
+evidence/rtl/stress.vcd	8246	Individually cited Run 1 evidence: stress waveform
+evidence/rtl/timing.csv	790	Individually cited Run 1 evidence: RTL timing CSV
+evidence/rtl/word_comparison.csv	136547	Individually cited Run 1 evidence: word-by-word expected/observed CSV
+evidence/run1-final-tool.log	90722	Individually cited Run 1 evidence: registered trial
+evidence/run1-final.log	84521	Individually cited Run 1 evidence: synthesis log
+evidence/run1-nb-synth.log	13267	Individually cited Run 1 evidence: rejected synthesis log
+evidence/run1-source/kernel.cpp	2689	Original Run 1 HLS source required for isolated failure reproduction and hash verification
+evidence/run1-source/results.md	38179	Exact historical Run 1 report template required by current report generator
+evidence/run1-source/rtl_stress.sv	4502	Original unchanged stress source snapshot for reproducible equality audit
+evidence/run1-tool.log	45786	Individually cited Run 1 evidence: capture abort
+evidence/run1.log	2852	Individually cited Run 1 evidence: license failure
+evidence/run2/artifact-sha256.json	2599	Historical Run 2 frozen source and evidence integrity record; packaging documents subsequently updated
+evidence/run2/audit.json	2343	Individually cited Run 2 evidence: Run 2 audit
+evidence/run2/csim/comparison.csv	2203	Individually cited Run 2 evidence: final C
+evidence/run2/csim/qgemv_core_csim.log	1225	Individually cited Run 2 evidence: C log
+evidence/run2/diagnosis/diagnosis.md	2641	Individually cited Run 2 evidence: diagnosis
+evidence/run2/diagnosis/direct.cpp	190	Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: direct.cpp
+evidence/run2/diagnosis/empty-probe.cpp	2842	Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: empty-probe.cpp
+evidence/run2/diagnosis/final-source-before-clean-run.cpp	3276	Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: final-source-before-clean-run.cpp
+evidence/run2/diagnosis/forward-probe.cpp	2780	Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: forward-probe.cpp
+evidence/run2/diagnosis/manual-include-failure.log	3221	Individually cited Run 2 evidence: include correction
+evidence/run2/diagnosis/manual.cpp	524	Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: manual.cpp
+evidence/run2/diagnosis/manual_tb.cpp	345	Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: manual_tb.cpp
+evidence/run2/diagnosis/original-0.log	1622	Individually cited Run 2 evidence: initial FAIL log
+evidence/run2/diagnosis/original-0.vcd	11376	Individually cited Run 2 evidence: initial waveform
+evidence/run2/diagnosis/original-1.log	1699	Individually cited Run 2 evidence: post-VALID FAIL log
+evidence/run2/diagnosis/original-1.vcd	3479	Individually cited Run 2 evidence: post-VALID waveform
+evidence/run2/diagnosis/original-synthesis.log	30955	Individually cited Run 2 evidence: original synthesis
+evidence/run2/diagnosis/original-transitions.csv	830	Individually cited Run 2 evidence: exact transition CSV
+evidence/run2/diagnosis/outer-fsm-probe.cpp	3386	Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: outer-fsm-probe.cpp
+evidence/run2/diagnosis/outlined-poll-probe.cpp	3222	Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: outlined-poll-probe.cpp
+evidence/run2/diagnosis/outlined-poll-synthesis.log	35080	Individually cited Run 2 evidence: outlined polling
+evidence/run2/diagnosis/pre-barrier-synthesis.log	35625	Individually cited Run 2 evidence: pre-barrier synthesis
+evidence/run2/diagnosis/pre-barrier.cpp	3168	Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: pre-barrier.cpp
+evidence/run2/diagnosis/protocol-probe-synthesis.log	36049	Individually cited Run 2 evidence: invalid protocol warnings
+evidence/run2/diagnosis/protocol-probe.cpp	3329	Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: protocol-probe.cpp
+evidence/run2/diagnosis/qgemv.v	85095	Individually cited Run 2 evidence: original native RTL
+evidence/run2/diagnosis/qgemv_qgemv_Pipeline_compute.v	117547	Individually cited Run 2 evidence: compute RTL
+evidence/run2/diagnosis/reproduction.log	1604	Individually cited Run 2 evidence: reproduction log
+evidence/run2/diagnosis/run1-cycles.csv	1075	Individually cited Run 2 evidence: pre-edge cycle CSV
+evidence/run2/diagnosis/run1-reproduction.vcd	8417	Individually cited Run 2 evidence: original snapshot trace
+evidence/run2/diagnosis/wait-probe-synthesis.log	35624	Individually cited Run 2 evidence: wait probe
+evidence/run2/diagnosis/wait-probe.cpp	3367	Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: wait-probe.cpp
+evidence/run2/diagnosis/write-dep-probe.cpp	3305	Retained source for an actual recorded interface/control diagnostic or frozen-source comparison: write-dep-probe.cpp
+evidence/run2/diagnosis/write-dep-rejected.log	4710	Individually cited Run 2 evidence: write_dep rejection
+evidence/run2/direct-probe.log	10700	Individually cited Run 2 evidence: Direct I/O probe
+evidence/run2/empty-probe.log	12490	Individually cited Run 2 evidence: empty rejection
+evidence/run2/execution.log	37	Individually cited Run 2 evidence: execution log
+evidence/run2/forward-probe.log	36439	Individually cited Run 2 evidence: forward probe
+evidence/run2/integrated-synthesis.log	110873	Individually cited Run 2 evidence: integrated synthesis
+evidence/run2/manual-probe.log	41051	Individually cited Run 2 evidence: manual prototype
+evidence/run2/python/checks.json	93	Individually cited Run 2 evidence: fresh Python evidence
+evidence/run2/python/checks.log	57	Individually cited Run 2 evidence: raw Python output
+evidence/run2/rtl/command_order.csv	7359	Individually cited Run 2 evidence: no-stall ordering
+evidence/run2/rtl/comparison.csv	2203	Individually cited Run 2 evidence: core RTL
+evidence/run2/rtl/cosim.log	59407	Individually cited Run 2 evidence: raw co-simulation log
+evidence/run2/rtl/external_comparison.csv	1775	Compact external-transfer scenario summary consumed by retained Run 2 audit
+evidence/run2/rtl/measurement.json	218	Individually cited Run 2 evidence: measurement metadata
+evidence/run2/rtl/original-checker.log	7181	Individually cited Run 2 evidence: raw original-checker PASS
+evidence/run2/rtl/original-checker.vcd	10171	Individually cited Run 2 evidence: waveform
+evidence/run2/rtl/pre-barrier/cosim.log	60778	Individually cited Run 2 evidence: pre-barrier core cosim
+evidence/run2/rtl/pre-barrier/stress-4.log	1483	Individually cited Run 2 evidence: real integrated FAIL
+evidence/run2/rtl/pre-barrier/stress-4.vcd	339822	Individually cited Run 2 evidence: failing waveform
+evidence/run2/rtl/prefetch-trial/stress-0.log	1499	Individually cited Run 2 evidence: prefetch FAIL
+evidence/run2/rtl/prefetch-trial/stress-0.vcd	4038	Individually cited Run 2 evidence: waveform
+evidence/run2/rtl/qgemv_core_cosim.rpt	1255	Individually cited Run 2 evidence: native cosim report
+evidence/run2/rtl/stress-0.csv	3261	Individually cited Run 2 evidence: CSV
+evidence/run2/rtl/stress-0.log	5804	Individually cited Run 2 evidence: raw log
+evidence/run2/rtl/stress-0.vcd	402090	Individually cited Run 2 evidence: waveform
+evidence/run2/rtl/stress-1.csv	3265	Individually cited Run 2 evidence: CSV
+evidence/run2/rtl/stress-1.log	5809	Individually cited Run 2 evidence: raw log
+evidence/run2/rtl/stress-1.vcd	413715	Individually cited Run 2 evidence: waveform
+evidence/run2/rtl/stress-2.csv	3109	Individually cited Run 2 evidence: CSV
+evidence/run2/rtl/stress-2.log	5761	Individually cited Run 2 evidence: raw log
+evidence/run2/rtl/stress-2.vcd	378645	Individually cited Run 2 evidence: waveform
+evidence/run2/rtl/stress-3.csv	3112	Individually cited Run 2 evidence: CSV
+evidence/run2/rtl/stress-3.log	5763	Individually cited Run 2 evidence: raw log
+evidence/run2/rtl/stress-3.vcd	368211	Individually cited Run 2 evidence: waveform
+evidence/run2/rtl/stress-4.csv	3101	Individually cited Run 2 evidence: CSV
+evidence/run2/rtl/stress-4.log	5751	Individually cited Run 2 evidence: raw log
+evidence/run2/rtl/stress-4.vcd	344970	Individually cited Run 2 evidence: actual production-top waveform
+evidence/run2/rtl/stress-build.log	6299	Individually cited Run 2 evidence: stress build/result log
+evidence/run2/rtl/stress_summary.json	1156	Individually cited Run 2 evidence: stress summary
+evidence/run2/rtl/timing.csv	767	Individually cited Run 2 evidence: external timing CSV
+evidence/run2/rtl/word_comparison.csv	136596	Individually cited Run 2 evidence: expected/observed word CSV
+evidence/run2/submission-baseline/README.md	4975	Bit-exact pre-submission document matching historical Run 2 SHA-256 record; packaging text updated in current document
+evidence/run2/submission-baseline/results.md	78850	Bit-exact pre-submission document matching historical Run 2 SHA-256 record; packaging text updated in current document
+evidence/run2/synthesis.log	31481	Individually cited Run 2 evidence: synthesis log
+evidence/run2/synthesis/integrated_timing.rpt	19385	Individually cited Run 2 evidence: integrated timing report
+evidence/run2/synthesis/integrated_utilization.rpt	8764	Individually cited Run 2 evidence: integrated utilization
+evidence/run2/synthesis/qgemv_core.v	99473	Individually cited Run 2 evidence: retained native core
+evidence/run2/synthesis/qgemv_core_Pipeline_compute_csynth.rpt	50680	Individually cited Run 2 evidence: compute report
+evidence/run2/synthesis/qgemv_core_Pipeline_receive_csynth.rpt	9076	Individually cited Run 2 evidence: receive report
+evidence/run2/synthesis/qgemv_core_control_s_axi.v	14631	Individually cited Run 2 evidence: native register RTL
+evidence/run2/synthesis/qgemv_core_csynth.rpt	29673	Individually cited Run 2 evidence: native report
+evidence/run2/synthesis/qgemv_core_csynth.xml	10531	Individually cited Run 2 evidence: native XML
+evidence/run2/synthesis/qgemv_core_regslice_both.v	3251	Individually cited Run 2 evidence: native register slice
+evidence/submission/SHA256SUMS	17964	SHA-256 checksums for every staged payload file except this checksum file itself
+evidence/submission/audit.json	12720	New independent submission checks: fresh Python, raw logs, native reports and external VCD decoding
+evidence/submission/selection.json	27170	Explicit selective-staging input with a reviewed purpose for every path
+evidence/submission/staged-files.tsv	19118	Exact staged path, byte-size and purpose inventory, including this inventory
+evidence/synthesis/initial/qgemv_csynth.rpt	26350	Individually cited Run 1 evidence: initial synthesis
+evidence/synthesis/qgemv_Pipeline_compute_csynth.rpt	53246	Individually cited Run 1 evidence: compute report
+evidence/synthesis/qgemv_Pipeline_receive_csynth.rpt	8950	Individually cited Run 1 evidence: receive report
+evidence/synthesis/qgemv_csynth.rpt	26350	Individually cited Run 1 evidence: native synthesis report
+evidence/synthesis/qgemv_csynth.xml	9676	Individually cited Run 1 evidence: native synthesis XML
+evidence/synthesis/registered_trial/qgemv_csynth.rpt	27826	Individually cited Run 1 evidence: trial synthesis
+fixtures/cases.txt	37671	Deterministic independent expected input/output/status fixture: cases.txt
+fixtures/manifest.json	136438	Deterministic independent expected input/output/status fixture: manifest.json
+fixtures/stress.txt	42490	Deterministic independent expected input/output/status fixture: stress.txt
+results.md	78907	Seven-section results; historical Run 1 FAIL and corrected Run 2 evidence
+scripts/analyze_rtl.py	5522	Current verification/report/build entry or production-top evidence reproduction: analyze_rtl.py
+scripts/audit.py	163	Current verification/report/build entry or production-top evidence reproduction: audit.py
+scripts/audit_run2.py	7674	Current verification/report/build entry or production-top evidence reproduction: audit_run2.py
+scripts/capture.py	746	Small historical capture/co-simulation/evidence helper retained for recorded command history
+scripts/cosim.tcl	138	Small historical capture/co-simulation/evidence helper retained for recorded command history
+scripts/diagnose_run1.py	2724	Reproduce and diagnose original Run 1 failure without changing production source
+scripts/fixtures.py	4471	Independent golden/hand/NumPy checks and deterministic protocol fixtures
+scripts/model.py	366	Independent golden/hand/NumPy checks and deterministic protocol fixtures
+scripts/probe_direct.tcl	200	Reproduce recorded discarded interface/Direct-I-O diagnostic prototype
+scripts/probe_manual.tcl	312	Reproduce recorded discarded interface/Direct-I-O diagnostic prototype
+scripts/report.py	203	Current verification/report/build entry or production-top evidence reproduction: report.py
+scripts/report_run2.py	26678	Current verification/report/build entry or production-top evidence reproduction: report_run2.py
+scripts/reproduce_run1.tcl	378	Reproduce and diagnose original Run 1 failure without changing production source
+scripts/reproduce_run1_suite.sh	817	Reproduce and diagnose original Run 1 failure without changing production source
+scripts/reproduce_run1_suite.tcl	219	Reproduce and diagnose original Run 1 failure without changing production source
+scripts/reproduce_run1_synth.tcl	234	Reproduce and diagnose original Run 1 failure without changing production source
+scripts/retain.py	921	Small historical capture/co-simulation/evidence helper retained for recorded command history
+scripts/retain_run2.py	987	Current verification/report/build entry or production-top evidence reproduction: retain_run2.py
+scripts/run.sh	64	Current verification/report/build entry or production-top evidence reproduction: run.sh
+scripts/run.tcl	498	Current verification/report/build entry or production-top evidence reproduction: run.tcl
+scripts/run2.sh	874	Current verification/report/build entry or production-top evidence reproduction: run2.sh
+scripts/run2_capture.py	600	Small historical capture/co-simulation/evidence helper retained for recorded command history
+scripts/run2_cosim.tcl	139	Current verification/report/build entry or production-top evidence reproduction: run2_cosim.tcl
+scripts/run2_integrated.tcl	351	Current verification/report/build entry or production-top evidence reproduction: run2_integrated.tcl
+scripts/run2_original_checker.sh	632	Current verification/report/build entry or production-top evidence reproduction: run2_original_checker.sh
+scripts/run2_stress.sh	933	Current verification/report/build entry or production-top evidence reproduction: run2_stress.sh
+scripts/run2_stress_capture.tcl	165	Current verification/report/build entry or production-top evidence reproduction: run2_stress_capture.tcl
+scripts/run2_synth.tcl	412	Current verification/report/build entry or production-top evidence reproduction: run2_synth.tcl
+scripts/stress.sh	71	Current verification/report/build entry or production-top evidence reproduction: stress.sh
+scripts/stress_capture.tcl	167	Current verification/report/build entry or production-top evidence reproduction: stress_capture.tcl
+scripts/stress_fixtures.py	1413	Independent golden/hand/NumPy checks and deterministic protocol fixtures
+scripts/submission_audit.py	15504	Independent submission audit, exact reviewed manifest and Git-index validation
+scripts/synth.tcl	412	Current verification/report/build entry or production-top evidence reproduction: synth.tcl
+src/kernel.cpp	3276	Corrected synthesizable HLS arithmetic, protocol and guarded header read
+src/qgemv.hpp	291	Shared HLS types and corrected core interface
+src/qgemv.sv	3501	Production AXI wrapper; actual external handshake feedback counter
+src/rtl_stress.sv	4502	Unchanged original failed stress checker, rerun successfully on Run 2
+src/rtl_suite.sv	8282	Full external AXI scoreboard, backpressure/stability/order/recovery assertions
+src/tb.cpp	1467	Independent fixture-based C/native RTL testbench with fresh streams

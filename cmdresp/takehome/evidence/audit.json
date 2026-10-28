@@ -1,0 +1,19 @@
+{
+  "prompt_unchanged": true,
+  "prompt_sha256": "93c2e1f3b63165f66e2da3a189efbeff1f66b5cc05eb86a09cd436fa0521db9b",
+  "clock_ns": 6.943,
+  "resources": {
+    "LUT": 7245,
+    "FF": 5359,
+    "DSP": 40,
+    "BRAM_18K": 2
+  },
+  "full_c_activations": 67,
+  "full_rtl_activations": 67,
+  "measured_batches": 8,
+  "evidence_paths_resolve": true,
+  "generated_trees_excluded": true,
+  "axi_backpressure": "FAIL",
+  "overall_binding_requirements": "FAIL",
+  "commit_status": "Uncommitted per user instruction"
+}

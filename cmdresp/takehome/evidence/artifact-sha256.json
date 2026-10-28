@@ -1,0 +1,10 @@
+{
+  "src/kernel.cpp": "1bf2241ebf4db8297c83da8bd7c6f10c39c50025c3a794a44af5e8c9d9638e04",
+  "src/qgemv.hpp": "55af113023d0bf2a0be46c16ab9f5589f83663ae458e3710cf9ba70abc93b12a",
+  "src/tb.cpp": "7b929c4b12134e10ebaccf5f5aab4ece4f8cb36fcbbceebbcadbb2c45384cc3b",
+  "fixtures/cases.txt": "61af79057c0d51ba2351c431bf58523575fa1e9acf197e72ef5c07cf5f705806",
+  "fixtures/manifest.json": "e1048c981fff3bd49548df8e5b4b5353d186ded657f4a1a5b1dd8db89431985d",
+  "evidence/rtl/external.vcd": "0a6d405b99481a858d6f338f420c698d7eacc5ff4e50795b1d617f6411f6935e",
+  "evidence/rtl/stress.vcd": "e642d1e3af17f95cbe748ea0a60807930c48be62f278f8c6bf1f1951f16fd951",
+  "evidence/synthesis/qgemv_csynth.xml": "4e87e60182821dc7c642f8b00a7d77c935f979064042448fca7e0c13bec9da60"
+}
