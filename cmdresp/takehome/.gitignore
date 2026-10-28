@@ -39,7 +39,7 @@ venv/
 /evidence/wave_inspect2.log
 /evidence/wave_inspect3.log
 
-# Vitis project: retain only reports, raw test vectors, and the waveform
+# Vitis project: retain only reports, control-map RTL, and the waveform
 # inputs needed by export_wave.tcl. Do not ignore evidence/*.log or *.dat.
 /qgemv_hls/*
 !/qgemv_hls/solution1/
@@ -59,14 +59,10 @@ venv/
 
 /qgemv_hls/solution1/sim/*
 !/qgemv_hls/solution1/sim/report/
-!/qgemv_hls/solution1/sim/tv/
 !/qgemv_hls/solution1/sim/qgemv_cosim_random_stall.json
 !/qgemv_hls/solution1/sim/verilog/
 /qgemv_hls/solution1/sim/verilog/*
 !/qgemv_hls/solution1/sim/verilog/qgemv.wdb
-!/qgemv_hls/solution1/sim/verilog/qgemv.wcfg
-!/qgemv_hls/solution1/sim/verilog/qgemv.protoinst
-!/qgemv_hls/solution1/sim/verilog/qgemv.autotb.v
 
 # Independent v3 project: same evidence-only retention policy.
 /qgemv_hls_v3/*
@@ -87,11 +83,7 @@ venv/
 
 /qgemv_hls_v3/solution1/sim/*
 !/qgemv_hls_v3/solution1/sim/report/
-!/qgemv_hls_v3/solution1/sim/tv/
 !/qgemv_hls_v3/solution1/sim/qgemv_cosim_random_stall.json
 !/qgemv_hls_v3/solution1/sim/verilog/
 /qgemv_hls_v3/solution1/sim/verilog/*
 !/qgemv_hls_v3/solution1/sim/verilog/qgemv.wdb
-!/qgemv_hls_v3/solution1/sim/verilog/qgemv.wcfg
-!/qgemv_hls_v3/solution1/sim/verilog/qgemv.protoinst
-!/qgemv_hls_v3/solution1/sim/verilog/qgemv.autotb.v

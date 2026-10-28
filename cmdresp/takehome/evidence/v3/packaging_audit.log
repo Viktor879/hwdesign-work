@@ -1,0 +1,6 @@
+PASS 82 index removals; all local bytes preserved and ignored
+PASS native allowlist: 50 retained; zero uncited generated simulation trees tracked
+PASS all original sources, fixtures, run logs, measurements, verdicts and historical evidence byte-identical
+PASS only v2 provenance row changed; v3 requirements/history unchanged; seven report sections; historical hashes archived
+PASS 181 concrete documentation references resolve; referenced files tracked; waveform scripts unchanged
+PASS current manifest: 118 files; self/current audit log excluded; diff checks clean
